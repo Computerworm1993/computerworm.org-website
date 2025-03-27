@@ -18,6 +18,10 @@
 	a {
 		color: red;
 		}
+
+        table {
+            text-align: center;
+        }
 * {
   box-sizing: border-box;
 }
@@ -33,26 +37,53 @@
 }
 	</style>
 </head>
-  <body><h1>Computer Worm 1993</h1>
+  <body><h1>
+	<img src="Art/Home/comp worm.gif" height="66" width="500" /></h1>
 <p><a href="index.html">Return Home</a></p>
 
 <p><strong>VHS Retro Gaming Rig</strong></p>
-<p><img src="Art/VHS/vhscomplete.jpg" height="300" width="289" /></p>
+
+<div class="row">
+	<div class="column">
+		<img src="Art/VHS/vhscomplete.jpg" style="width:100%" >
+	</div>
+	<div class="column">
+		<img src="Art/VHS//gifs/defender2.gif" style="width:100%" >
+	</div>
+<div class="column">
+		<img src="Art/VHS/vhsguts.jpg" style="width:100%" >
+	</div>
+</div>
 <p>My retro gaming rig consists of a Raspberry Pi 4 single board computer loaded out with retropie and emulationstation, which I have crammed into [its
 atually quite spacious] an old VHS cassette tape. The tape itself is one I accidentally ruined when testing out the CRT tv 
 I used for Adzukis vivarium. It chewed up the tape pretty good, but it makes a perfect case for the pi. Thats about all there is to it hardware wise, asides from
-a keyboard switch I wired to the GPIO pins that functions as an on/off switch. The left half of the cassette is the most interesting, with the bird skeleton I found in
+a keyboard switch I wired to the GPIO pins that functions as an on/off switch. Start up from the halt state doesn't require any code, as when the button is pressed it energizes pin 5/6 which wakes up the computer.
+As for shutdown, I wrote a python script and put it into rc.local file so that it starts running as soon as the computer turns on. This script basically just listens for a key press [hold for 2 seconds] and then runs "-shutdown" in the terminal.
+The left half of the cassette is the most interesting, with the bird skeleton I found in
 the old decommisioned water treatment plant. Probably was in there for a decade before I found it. I attatched it to the circuit board of a two way radio I found in the 
 electronic waste bin at the local waste transfer site because I just think it looks neat :)</p>
-<p><img src="Art/VHS/vhsguts.jpg" height="300" width="289" /></p>
+
+<p><img src="Art/VHS/vhsfull.jpg" height="928" width="600" /></p>
+<p><em>I typically game on my mech. keyboard however you can use pretty much any controller you can hook up to a usb or bluetooth. I have a cheap chinese gamecube knockoff one I use occasionally or sometimes bluetooth my xbox one controller</em></p>
 <p>Software wise, asides from retropie and some customizations I made with the emulators, the biggest thing is alll the custom artwork I made. It was all done in Krita, with lots
-also done just pencil crayon and paper I took a picture of and edited into the .XML files, as well as some other changes in the xmls for font sizes and image sizes and positiong, etc. Each system has its own unique artwork, as well as a loading screen when launching a games ROM files.</p>
+also done just pencil crayon and paper I took a picture of and edited into the .XML files, as well as some other changes in the xmls for font sizes and image sizes and positioning, etc. Each system has its own unique artwork, as well as a loading screen when launching a games ROM files.</p>
+
+<p><img src="Art/VHS/gifs/flowerbar.gif" height="50" style="width:100%" /></p>
 <p>Additionally I animated two short .mp4 videos to play during system boot up, as it takes a while to initialize and it gives the user something to look at while it does. I'll post my
-system art below but as for loading animations I'm not sure how to embed videos inside a webpage yet and I'm not sure I really care enough to learn lol. But you can find one of them at least
-on my instagram. I decided to emulate no later of a sytem than the N64 console, as the RPi 4 uses an ARM processor and begins to struggle with anything more modern. I've heard of people overclocking there pis
+system art below <s>but as for loading animations I'm not sure how to embed videos inside a webpage yet and I'm not sure I really care enough to learn lol</s></p>
+ <video width="450" height="450" controls>
+  <source src="Art/VHS/wormSS.mp4" type="video/mp4">
+Error: ur browser cant play my vid, srry
+</video>  
+
+
+<p>I decided to emulate no later of a sytem than the N64 console, as the RPi 4 uses an ARM processor and begins to struggle with anything more modern. I've heard of people overclocking there pis
 to get gamecube running but I was happy with what I have here. I'm considering building another rig for gamecube,wii,nintendo DS, original xbox and ps2,  and some early PC games as well. 
 But it makes more sense to run that on an actual full computer to be honest.</p>
-<p><img src="Art/VHS/gifs/firewal.gif" height="50" style="width:100%" /></p>
+
+<p><img src="Art/VHS/gifs/fireborder.gif" style="width:100%" /></p>
+
+<p><strong>Current ROM Collection... More to come</strong></p>
 <table>
 	<tr>
 		<th>Console</th>
@@ -104,7 +135,7 @@ But it makes more sense to run that on an actual full computer to be honest.</p>
 	</tr>
 	<tr>
 		<td>Television</td>
-		<td>mostly shows, some movies</td>
+		<td>mostly anime, some movies</td>
 	</tr>
 	<tr>
 		<td>Settings</td>
@@ -112,7 +143,7 @@ But it makes more sense to run that on an actual full computer to be honest.</p>
 	</tr>	
 </table>
 
-
+<p><strong> My Custom Systems Artwork</strong></p>
  </body>
 
 <div class="row">
@@ -125,8 +156,39 @@ But it makes more sense to run that on an actual full computer to be honest.</p>
 	<div class="column">
 		<img src="Art/VHS/NES-Console-Set.png" style="width:100%" >
 	</div>
+	<div class="column">
+		<img src="Art/VHS/dreamcast.png" style="width:100%" >
+	</div>
+	<div class="column">
+		<img src="Art/VHS/colecovision2.png" style="width:100%" >
+	</div>
+	<div class="column">
+		<img src="Art/VHS/snes.png" style="width:100%" >
+	</div>
+	<div class="column">
+		<img src="Art/VHS/gb.png" style="width:100%" >
+	</div>
+	<div class="column">
+		<img src="Art/VHS/gba.png" style="width:100%" >
+	</div>
+	<div class="column">
+		<img src="Art/VHS/gbc.png" style="width:100%" >
+	</div>
+	<div class="column">
+		<img src="Art/VHS/psx.png" style="width:100%" >
+	</div>
+	<div class="column">
+		<img src="Art/VHS/tv.png" style="width:100%" >
+	</div>
+	<div class="column">
+		<img src="Art/VHS/retropie.png" style="width:100%" >
+	</div>
+	<div class="column">
+		<img src="Art/VHS/SEL 2.jpg" style="width:100%" >
+	</div>
 </div>
 	
-
+<p>This last image "Connor" serves as a folder for my custom collection of favourite games. Currently it has Warioland 4[gba], Silent Hill[psx], Crash Bandicoot[psx], Spyro the Dragon[psx],
+ Jet Set Radio[dreamcast], Res. Evil:CV[dreamcast], and a few others. 
 <p><a href="index.html">Return Home</a></p>
 </html>
