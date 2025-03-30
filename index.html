@@ -12,18 +12,27 @@
 		}
 	.leftcolumn {
 		display: table-cell;
-		width: 25%;
+		width: 15%;
 		}
 	.rightcolumn {
 		display: table-cell;
-		width: 25%;
+		width: 15%;
 		}
 	.projectscolumn {
 		display: table-cell;
 		vertical-align: top;
 		text-align: center;
-		width: 48%;
-		border: 3px solid white;
+		width: 35%;
+		border: 3px solid gray;
+
+		}
+	.blogcolumn {
+		display: table-cell;
+		vertical-align: top;
+			margin-left: auto;
+			margin-right: auto;
+		text-align: center;
+		width: 40%;
 
 		}
 
@@ -56,7 +65,8 @@
 	}
         th {
             
-		color:white
+		color:white;
+		font-size:18px;
         }
 	td {
 		font-size:14px;
@@ -98,8 +108,14 @@
 
 
 <h2>
-	<img src="Art/Home/blog.png" style="width:40%" >
+	<img src="Art/Home/blog.png" class="project" >
 
+<div class="projectsRow">
+	<div class="leftcolumn">
+		<img src="Art/Home/ufrolic.gif" width="100" />
+	</div>
+	<div class="blogcolumn">
+		<div>
 <table>
 	<tr>
 		<th>Captains Log</th>
@@ -109,6 +125,29 @@
 		<td><a href="CL0001.html">0001</a></td>
 		<td>March 26/2025</td>
 	</tr>
+
+</table>
+		</div>
+	</div>
+	<div class="rightcolumn">
+		<img style="float: right; margin: 0px 0px 0px;" src="Art/Home/computer.gif" width="100" />
+	</div>
+</div>
+</h2>
+<h3>
+	<img src="Art/Home/experimental.png" class="project" >
+
+<div class="projectsRow">
+	<div class="leftcolumn">
+		<img src="Art/Home/house_nuke.gif" width="100" />
+	</div>
+	<div class="blogcolumn">
+		<div>
+<table>
+	<tr>
+		<th>Test ID :</th>
+		<th> Date </th>
+	</tr>
 	<tr>
 		<td><a href="Inspo.html">0002 inspo.exe</a></td>
 		<td>March 27/2025</td>
@@ -117,8 +156,18 @@
 		<td><a href="prayer.html">0003 prayer</a></td>
 		<td>March 28/2025</td>
 	</tr>
+
 </table>
-</h2>
+		</div>
+	</div>
+	<div class="rightcolumn">
+		<img style="float: right; margin: 0px 0px 0px;" src="Art/Home/itchy.gif" width="100" />
+	</div>
+</div>
+</h3>
+
+
+
  <p style="text-align: center"><span><small>
 ...downloading Self-replicating malware directly into your brainstem...</small></p>
  </body>
