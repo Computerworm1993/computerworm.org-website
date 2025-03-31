@@ -16,37 +16,77 @@
 		padding: 1rem;
 		margin: 0 auto;
 		max-width: 640px;
+		background: teal;
 		}
 	a {
 		color: red;
 		}
-	.button1{
+	.button{
 		padding: 32px 32px;
 		}
-	#image {
-		display:none;
-	}
+	.image-container {
+		position: relative;
+		width: 250px;
+		height: 300px;
+		}
+	#cocoon {
+		margin-left: 55px;
+		width: 250px;
+		height: 300px;
+		position: absolute;
+		}
+	#god {
+		margin-left: 55px;
+		width: 250px;
+		height: 300px;
+		position: absolute;
+		}
+	#rep {
+		margin-left: 55px;
+		width: 250px;
+		height: 300px;
+		position: absolute;
+		}
+
 	</style>
 <script>
-	function popUp() {
-		window.alert("ayyyy im a pop up lmao, how r u");
-		}
-	function showgod() {
-		document.getElementById('image').style.display = "block";
-	}
+let x = 0;
+	function showgod() {	
+			if (x == 0){
+				document.getElementById("god").style.visibility="visible";
+				document.getElementById("cocoon").style.visibility="hidden";
+				document.getElementById('hate').play();
+				document.getElementById('butt1').value="R E P E N T";
+				x = 1;
+				} else {
+				document.getElementById("god").style.visibility="hidden";
+				document.getElementById("rep").style.visibility="visible";
+				}
+			}
+
 		
 </script>
 </head>
   <body><h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
-<p><a href="index.html">Return Home</a></p>
+	<p><a href="index.html">Return Home</a></p>
+<audio id="myAudio" src="Art/pray/pray.mp3" autoplay>
+</audio>
+<audio id="hate" src="Art/pray/hateyou.mp3">
+</audio>
 
 <p><strong>Pious Experiment</strong></p>
 <p><small>March 28, 2025</small></p>
 <p>"Sky coloured shoes to hide from the devil, earth coloured hat to hide from God"</p>
 
-<img id ="image" src="Art/Home/lucy.jpg" style="width:100%" />
-<input type="button" onclick="popUp()" value="Click here to repent" />
-<input type="button" onclick="showgod()" value="Click here to see God" />
+<div class="image-container">
+	<div id="GodContainer">
+		<img id="cocoon" src="Art/pray/cocoon.png" style="visibility:visible" >
+		<img id="god" src="Art/pray/RoughGod.gif" style="visibility:hidden" >
+		<img id="rep" src="Art/pray/rep.gif" style="visibility:hidden" >
+	</div>
+</div>
+
+<input type="button" onclick="showgod()" value="Click to witness God" id="butt1"/>
 
 <p><a href="index.html">Return Home</a></p>
 
