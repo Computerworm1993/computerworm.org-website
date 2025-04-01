@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Guest Book</title>
+	<style>
+	body{
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 640px;
+		background: teal;
+		}
+	a {
+		color: red;
+		}
+	textarea {
+		padding: 10px;
+		max-width: 100%;
+		border: 2px solid black;
+		}
+	p span{
+		position:relative;
+		display:inline-block;
+		background:navy;
+		color:white;
+		}
+	</style>
+</head>
+ <body><h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
+	<p><a href="index.html">Return Home</a></p>
+	<p><strong>Guest Book</strong></p>
+	<p><small>March 31, 2025</small></p>
+
+
+<p><strong>Sign my guest book for a chance to win $1,000,000,000,000</strong></p>
+<p><span>NOTE: This doesnt actually save your comments, just because of the nature of my website. [being static/hosted on github]
+I cant send user inputs to edit a database file or something like that. Not that I know of anyways. This is mostly just
+me experimenting with "textareas"</p>
+<div id="comment-container">
+</div>
+<textarea name="" id="new-comment" cols="60" rows="1">
+</textarea>
+<br>
+<button id="btn_post">P O S T</button>
+
+<script>
+	document.getElementById("btn_post").addEventListener("click", function () {
+		const newComment = document.getElementById("new-comment").value;
+		const commentContainer = document.getElementById("comment-container");
+		const commentElement = document.createElement("p");		
+
+		commentElement.innerText = newComment;
+		commentContainer.appendChild(commentElement);
+		document.getElementById("new-comment").value = "";
+	});
+</script>
+
+<p><a href="index.html">Return Home</a></p>
+ 
+ </body>
+</html>
