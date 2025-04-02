@@ -42,7 +42,10 @@
 <p><a href="index.html">Return Home</a></p>
 
 <p><strong>VHS Retro Gaming Rig</strong></p>
-
+<img src="Art/VHS/cover.jpg" style="width:100%" >
+<p>My retro gaming rig consists of a Raspberry Pi 4 single board computer loaded out with retropie and emulationstation, which I have crammed into [its
+atually quite spacious] an old VHS cassette tape. The tape itself is one I accidentally ruined when testing out the CRT tv 
+I used for Adzukis vivarium. It chewed up the tape pretty good, but it makes a perfect case for the pi.</p>
 <div class="row">
 	<div class="column">
 		<img src="Art/VHS/vhscomplete.jpg" style="width:100%" >
@@ -55,21 +58,30 @@
 	</div>
 </div>
 
-<p>My retro gaming rig consists of a Raspberry Pi 4 single board computer loaded out with retropie and emulationstation, which I have crammed into [its
-atually quite spacious] an old VHS cassette tape. The tape itself is one I accidentally ruined when testing out the CRT tv 
-I used for Adzukis vivarium. It chewed up the tape pretty good, but it makes a perfect case for the pi. Thats about all there is to it hardware wise, asides from
+<p>Thats about all there is to it hardware wise, asides from
 a keyboard switch I wired to the GPIO pins that functions as an on/off switch. Start up from the halt state doesn't require any code, as when the button is pressed it energizes pin 5/6 which wakes up the computer.
 As for shutdown, I wrote a python script and put it into rc.local file so that it starts running as soon as the computer turns on. This script basically just listens for a key press [hold for 2 seconds] and then runs "-shutdown" in the terminal.
 The left half of the cassette is the most interesting, with the bird skeleton I found in
-the old decommisioned water treatment plant. Probably was in there for a decade before I found it. I attatched it to the circuit board of a two way radio I found in the 
+the old decommisioned water treatment plant. Probably was in there for a decade before I found it. I attatched it to a random circuit board I found in the 
 electronic waste bin at the local waste transfer site because I just think it looks neat :)</p>
 
-<p><img src="Art/VHS/vhsfull.jpg" style="width:100%" style="width:100%"</p>
-<p><em>I typically game on my mech. keyboard however you can use pretty much any controller you can hook up to a usb or bluetooth. I have a cheap chinese gamecube knockoff one I use occasionally or sometimes bluetooth my xbox one controller</em></p>
+<p><img src="Art/VHS/ports.jpg" style="width:100%"</p>
+<p>Another awesome thing about using a VHS for a case, is that the spring-loaded plastic tape protector works as an excellent cover for all of your ports and your power button as well. The cassette has an indent that turned out to be the perfect
+size for the button to sit in</p>
+
+
+<p><img src="Art/VHS/vhsfull.jpg" style="width:100%"</p>
+<p><em>I typically game on my mechanical keyboard however you can use pretty much any controller you can hook up to a usb or bluetooth. 
+Actually you could even make your own controller if you really wanted by wiring buttons or momentary switches dircetly to the GPIO pins. When im not on the keyboard, I have a cheap chinese gamecube knockoff one I use occasionally or sometimes bluetooth my xbox one controller</em></p>
+<p><img src="Art/VHS/tv.jpg" style="width:100%" style="width:100%"</p>
+<p>Considering the era most of these ROMs where developed in, I think they get their best experience on a good old Cathode Ray Tube tv set, [via RCA->3.5 mm jack]. You can HDMI to a newer screen as well, however the process of switching composite to digital
+can be a bit annoying. As you have to go into the system settings/configuration. Which requires you powering on the device connected to a screen you want to switch off of. I've considered writing a python script and adding a second button for a simple video output switch, just havent had time
+yet but I think it's as easy as [on button press -> edit .cfg text file -> "-reboot"] (I'm guessing, i havent done any research on the matter)
+<p><img src="Art/VHS/gifs/flowerbar.gif" height="50" style="width:100%" /></p>
+
 <p>Software wise, asides from retropie and some customizations I made with the emulators, the biggest thing is alll the custom artwork I made. It was all done in Krita, with lots
 also done just pencil crayon and paper I took a picture of and edited into the .XML files, as well as some other changes in the xmls for font sizes and image sizes and positioning, etc. Each system has its own unique artwork, as well as a loading screen when launching a games ROM files.</p>
 
-<p><img src="Art/VHS/gifs/flowerbar.gif" height="50" style="width:100%" /></p>
 <p>Additionally I animated two short .mp4 videos to play during system boot up, as it takes a while to initialize and it gives the user something to look at while it does. I'll post my
 system art below <s>but as for loading animations I'm not sure how to embed videos inside a webpage yet and I'm not sure I really care enough to learn lol</s></p>
  <video width="300" height="300" controls>
@@ -190,6 +202,6 @@ But it makes more sense to run that on an actual full computer to be honest.</p>
 </div>
 	
 <p>This last image "Connor" serves as a folder for my custom collection of favourite games. Currently it has Warioland 4[gba], Silent Hill[psx], Crash Bandicoot[psx], Spyro the Dragon[psx],
- Jet Set Radio[dreamcast], Res. Evil:CV[dreamcast], and a few others. 
+ Jet Set Radio[dreamcast], Resident Evil[dreamcast], Super Mario 64[N64] and a few others. 
 <p><a href="index.html">Return Home</a></p>
 </html>
