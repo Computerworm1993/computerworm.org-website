@@ -51,6 +51,15 @@
 
 	</style>
 <script>
+const myTimeout =
+setTimeout(showButt, 8000);
+
+function showButt(){
+	document.getElementById('butt1').style.visibility="visible";
+	}
+
+
+
 let x = 0;
 	function showgod() {	
 			if (x == 0){
@@ -62,6 +71,7 @@ let x = 0;
 				} else {
 				document.getElementById("god").style.visibility="hidden";
 				document.getElementById("rep").style.visibility="visible";
+				document.getElementById('butt1').style.visibility="hidden";
 				}
 			}
 
@@ -87,7 +97,7 @@ let x = 0;
 	</div>
 </div>
 
-<input type="button" onclick="showgod()" value="Click to witness God" id="butt1"/>
+<input type="button" onclick="showgod()" value="Click to witness God" id="butt1" style="visibility:hidden"/>
 
 <p><a href="index.html">Return Home</a></p>
 
