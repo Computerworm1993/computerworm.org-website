@@ -53,11 +53,11 @@ body{
 
 .scheme { grid-area: scheme; background-image: url("Art/Adzuki/scheme.png"); background-repeat: no-repeat; background-size: 99%;}
 
-.pic2 { grid-area: pic2; background-color: blue;}
+.pic2 { grid-area: pic2; background-image: url("Art/Adzuki/pic2.png"); background-repeat: no-repeat; background-size: 99%;}
 
-.texthand { grid-area: texthand; background-color: green;}
+.texthand { grid-area: texthand; background-image: url("Art/Adzuki/handtext.png"); background-repeat: no-repeat; background-size: 100%;}
 
-.small1 { grid-area: small1; background-color: yellow; }
+.small1 { grid-area: small1; background-image: url("Art/Adzuki/small1.png"); background-repeat: no-repeat; background-size: 100%; }
 
 .small2 { grid-area: small2; background-color: red;}
 
