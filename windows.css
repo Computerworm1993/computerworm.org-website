@@ -47,7 +47,7 @@ body{
 
 .butt { grid-area: butt; background-color: red; }
 
-.pic1 { grid-area: pic1; background-image: url("Art/Adzuki/reruns.png"); background-repeat: no-repeat; background-size: 100%;}
+.pic1 { grid-area: pic1; background-image: url("Art/Adzuki/reruns.png"); background-repeat: no-repeat; background-size: 99%;}
 
 .hardware { grid-area: hardware; background-image: url("Art/Adzuki/hardware.png"); background-repeat: no-repeat; background-size: 100%;}
 
