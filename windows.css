@@ -49,7 +49,7 @@ body{
 
 .pic1 { grid-area: pic1; background-color: pink; }
 
-.hardware { grid-area: hardware; background-color: gray;}
+.hardware { grid-area: hardware; background-image: url("Art/Adzuki/hardware.png"); background-repeat: no-repeat; background-size: 100%;}
 
 .scheme { grid-area: scheme; background-color: black; }
 
