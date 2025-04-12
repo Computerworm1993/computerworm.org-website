@@ -51,7 +51,7 @@ body{
 
 .hardware { grid-area: hardware; background-image: url("Art/Adzuki/hardware.png"); background-repeat: no-repeat; background-size: 100%;}
 
-.scheme { grid-area: scheme; background-color: black; }
+.scheme { grid-area: scheme; background-image: url("Art/Adzuki/scheme.png"); background-repeat: no-repeat; background-size: 100%;}
 
 .pic2 { grid-area: pic2; background-color: blue;}
 

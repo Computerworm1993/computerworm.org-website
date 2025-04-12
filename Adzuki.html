@@ -27,8 +27,17 @@ margin-top: 11px;
 
 </style>
 <script>
-	function pauseAudio() {
-		document.getElementById('myAudio').pause();
+let x = 0;
+	function cntrlmp3() {
+		if (x == 0){
+			document.getElementById('myAudio').pause();
+			document.getElementById('butt1').value="°.- P L A Y -.°";
+			x = 1;
+			} else {
+			document.getElementById('myAudio').play();
+			document.getElementById('butt1').value="°.- M U T E -.°";
+			x = 0;
+			}
 		}
 </script>
 </head>
@@ -45,7 +54,7 @@ Srry bb no audio, its ur web browsers fault not my websites
 <div class="container">
   <div class="music">
 	<div class="vertical-center">
-		<input type="button" onclick="pauseAudio()" value="°.- M U T E -.°" />
+		<input type="button" onclick="cntrlmp3()" value="°.- M U T E -.°" id="butt1" />
 	</div>
 	</div>
   <div class="screensave"><img src="Art/Adzuki/screensave.png"  style="width:100%" ></div>
@@ -75,7 +84,7 @@ Srry bb no audio, its ur web browsers fault not my websites
 	</p>
 	</div>
 </div>
-  <div class="scheme"><img src="Art/Adzuki/scheme.png"  style="width:100%" ></div>
+  <div class="scheme"></div>
   <div class="pic2"><img src="Art/Adzuki/3x3.png"  style="width:100%" ></div>
   <div class="texthand"><img src="Art/Adzuki/2x4.png"  style="width:100%" ></div>
   <div class="small1"><img src="Art/Adzuki/1x2.png"  style="width:100%" ></div>
