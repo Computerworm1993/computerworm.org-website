@@ -1,0 +1,76 @@
+
+body{
+	padding: 1rem;
+	margin: 0 auto;
+	max-width: 640px;
+}
+
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 6px 6px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "music music music music screensave screensave"
+    "music music music music introtext introtext"
+    "music music music music introtext introtext"
+    "music music music music introtext introtext"
+    "hardware hardware hardware butt introtext introtext"
+    "hardware hardware hardware pic1 pic1 pic1"
+    "hardware hardware hardware pic1 pic1 pic1"
+    "hardware hardware hardware pic1 pic1 pic1"
+    "scheme scheme scheme scheme scheme scheme"
+    "scheme scheme scheme scheme scheme scheme"
+    "scheme scheme scheme scheme scheme scheme"
+    "scheme scheme scheme scheme scheme scheme"
+    "scheme scheme scheme scheme scheme scheme"
+    "scheme scheme scheme scheme scheme scheme"
+    "pic2 pic2 pic2 texthand texthand small1"
+    "pic2 pic2 pic2 texthand texthand small1"
+    "pic2 pic2 pic2 texthand texthand small2"
+    "video video video texthand texthand small2"
+    "video video video picadz picadz picadz"
+    "video video video picadz picadz picadz"
+    "text3 text3 text3 picadz picadz picadz"
+    "text3 text3 text3 picwire picwire picwire"
+    "gifscreens gifscreens gifscreens picwire picwire picwire"
+    "gifscreens gifscreens gifscreens fill fill fill"
+    "python python python fill fill fill"
+    ". . . . . .";
+}
+
+.music { grid-area: music; background-image: url("Art/Adzuki/music.png"); background-repeat: no-repeat; background-size: 100%;}
+
+.screensave { grid-area: screensave; }
+
+.introtext { grid-area: introtext;  background-image: url("Art/Adzuki/intro.png"); background-repeat: no-repeat; background-size: 100%;}
+
+.butt { grid-area: butt; background-color: red; }
+
+.pic1 { grid-area: pic1; background-color: pink; }
+
+.hardware { grid-area: hardware; background-color: gray;}
+
+.scheme { grid-area: scheme; background-color: black; }
+
+.pic2 { grid-area: pic2; background-color: blue;}
+
+.texthand { grid-area: texthand; background-color: green;}
+
+.small1 { grid-area: small1; background-color: yellow; }
+
+.small2 { grid-area: small2; background-color: red;}
+
+.picadz { grid-area: picadz; background-color: pink;}
+
+.video { grid-area: video; background-color: grey; }
+
+.text3 { grid-area: text3; background-color: black; }
+
+.picwire { grid-area: picwire; background-color: blue;}
+
+.gifscreens { grid-area: gifscreens; background-color: green;}
+
+.python { grid-area: python; background-color: yellow;}
+
+.fill { grid-area: fill; background-color: red;}

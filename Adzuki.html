@@ -3,68 +3,25 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Worm Project-_-Adzuki</title>
+	<link rel="stylesheet" href="windows.css">
 <style>
+	body{
+		background-color: #2596be;
+	}
 	a {
 		color: red;
 		}
 p {
   font-size: 14px;
+margin-left: 10px;
+margin-top: 22px;
 }
-	body{
-		padding: 1rem;
-		margin: 0 auto;
-		max-width: 640px;
-		background-color: #f8ebf1;
-		}
-.grid-container {
-  display: grid;
-  grid-template-columns: 20%;
-  grid-template-rows: 20%;
-  gap: 10px;
-  background-color: dodgerblue;
-  padding: 10px;
+.vertical-center {
+  margin-left: 10%;
+  position: absolute;
+  top:85%;
 }
 
-.grid-container > div {
-  text-align: center;
-  padding: 10px;
-  font-size: 30px;
-}
-.item1 {
-	grid-area: 1 / 1 / 4 / 4;
-	background-image: url("Art/Adzuki/intro.png");
- 	background-repeat: no-repeat;
-	background-size: contain;
-    }
-.item2 {
-	grid-area: 1 / 4 / 2 / 6;
-    }
-.item3 {
-	grid-area: 2 / 4 / 5 / 6;
-	background-image: url("Art/Adzuki/hardware.png");
- 	background-repeat: no-repeat;
-	background-size: auto;
-	th { 
-		font-size:18px;
-	}
-	td {
-		font-size:10px;
-	}
-    }
-.item4 {
-	grid-area: 4 / 1 / 5 / 3;
-	background-image: url("Art/Adzuki/music.png");
- 	background-repeat: no-repeat;
-	background-size: contain;
-	}
- .item5 {
- 	grid-area: 4 / 3 / 4 / 4;
-	background-image: url("Art/Adzuki/ak47.gif");
- 	background-repeat: no-repeat;
-	background-size: contain;
-    }
-    
-    
 </style>
 <script>
 	function pauseAudio() {
@@ -72,6 +29,7 @@ p {
 		}
 </script>
 </head>
+
 <body>
 <audio id="myAudio" src="Art/Adzuki/strxwberry.mp3" autoplay>
 Srry bb no audio, its ur web browsers fault not my websites
@@ -79,70 +37,37 @@ Srry bb no audio, its ur web browsers fault not my websites
 <h1><img src="Art/Home/comp worm.gif" style="width:100%" ></h1>
 <p><a href="index.html">Return Home</a></p>
 
-<div class="grid-container">
-  <div class="item1"><p>Adzuki is the name of my millipede [named after the adzuki bean].
-		Millipedes like a fairly constant temperature of around 21 -24 deg C, and 70-80% 
-		Humidity. And what better way to provide this than with an automated vivarium. I have built it all
-		inside of this old CRT television set, and control it with the modest RPi 02w</p></div>
-  <div class="item2"><img src="Art/Adzuki/screensave.png" style="width:100%" ></div>
-  <div class="item3">
-<table style="background-color:#FFFFE0;">
-	<tr>
-		<th>Component</th>
-		<th>Cost</th>
-	</tr>
-	<tr>
-		<td>RPi 02w</td>
-		<td>$25.45</td>
-	</tr>
-	<tr>
-		<td>Relay Board</td>
-		<td>$22.45</td>
-	</tr>
-	<tr>
-		<td>DHT22 Sensor</td>
-		<td>$10.99</td>
-	</tr>
-	<tr>
-		<td>Cermaic Heat Elem.</td>
-		<td>$6.49</td>
-	</tr>
-	<tr>
-		<td>Mist Unit</td>
-		<td>$27.60</td>
-	</tr>
-	<tr>
-		<td>Cooling Fan</td>
-		<td>$14</td>
-	</tr>
-	<tr>
-		<td>2.23" OLED</td>
-		<td>$20.95</td>
-	</tr>
-	<tr>
-		<td>LED strip</td>
-		<td>$6.00</td>
-	</tr>
-	<tr>
-		<td>2 Step down Voltage Regulators</td>
-		<td>$10</td>
-	</tr>
-	<tr>
-		<td>Micro submersable Pump</td>
-		<td>$4.49</td>
-	</tr>
-	<br>
-	<tr>
-		<td>TOTAL</td>
-		<td>$143.56</td>
-	</tr>
-</table>
-</div>  
-  <div class="item4">
-<input type="button" onclick="pauseAudio()" value="°.- M U T E -.°" />
-</div>
-  <div class="item5"><p><small><br><br><br><br>H e l l  Y e a h </small></p></div>
- 
+
+
+<div class="container">
+  <div class="music">
+	<div class="vertical-center">
+		<input type="button" onclick="pauseAudio()" value="°.- M U T E -.°" />
+	</div>
+	</div>
+  <div class="screensave"><img src="Art/Adzuki/screensave.png"  style="width:100%" ></div>
+  <div class="introtext">
+	<p>This heres some of my intro text... testing testing 1234 see how it fits, and whats going on
+		ipsum lorem ipsum lorem yadda yabba dabba doo mofo. As you can see its looking pretty good
+		so far. I like it. I had to add some margins on the top and the left to let it sit properly
+		within this little window. but im glad i figured it out. test writing please ignore
+	</p>
+	</div>
+  <div class="butt"><img src="Art/Adzuki/ak47.gif"  style="width:100%" ></div>
+  <div class="pic1"><img src="Art/Adzuki/3x3.png"  style="width:100%" ></div>
+  <div class="hardware"><img src="Art/Adzuki/hardware.png"  style="width:100%" ></div>
+  <div class="scheme"><img src="Art/Adzuki/scheme.png"  style="width:100%" ></div>
+  <div class="pic2"><img src="Art/Adzuki/3x3.png"  style="width:100%" ></div>
+  <div class="texthand"><img src="Art/Adzuki/2x4.png"  style="width:100%" ></div>
+  <div class="small1"><img src="Art/Adzuki/1x2.png"  style="width:100%" ></div>
+  <div class="small2"><img src="Art/Adzuki/1x2.png"  style="width:100%" ></div>
+  <div class="picadz"><img src="Art/Adzuki/3x3.png"  style="width:100%" ></div>
+  <div class="video"><img src="Art/Adzuki/3x3.png"  style="width:100%" ></div>
+  <div class="text3"><img src="Art/Adzuki/3x2.png"  style="width:100%" ></div>
+  <div class="picwire"><img src="Art/Adzuki/3x2.png"  style="width:100%" ></div>
+  <div class="gifscreens"><img src="Art/Adzuki/3x2.png"  style="width:100%" ></div>
+  <div class="python"></div>
+  <div class="fill"></div>
 </div>
 
 </body>
