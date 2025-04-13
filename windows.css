@@ -57,7 +57,7 @@ body{
 
 .texthand { grid-area: texthand; background-image: url("Art/Adzuki/handtext.png"); background-repeat: no-repeat; background-size: 100%;}
 
-.small1 { grid-area: small1; background-image: url("Art/Adzuki/small1.png"); background-repeat: no-repeat; background-size: 100%; }
+.small1 { grid-area: small1; background-image: url("Art/Adzuki/small.png"); background-repeat: no-repeat; background-size: 100%; }
 
 .small2 { grid-area: small2; background-color: red;}
 
