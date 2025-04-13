@@ -42,6 +42,18 @@ let x = 0;
 			x = 0;
 			}
 		}
+let y = 0;
+	function cntrlmp4() {
+		if (y == 0){
+			document.getElementById('myVideo').play();
+			document.getElementById('butt2').value="..death-process..";
+			y = 1;
+			} else {
+			document.getElementById('myVideo').pause();
+			document.getElementById('butt2').value="rebirth-sequence";
+			y = 0;
+			}
+		}
 </script>
 </head>
 
@@ -70,11 +82,12 @@ Srry bb no audio, its ur web browsers fault not my websites
   <div class="butt"><img src="Art/Adzuki/ak47.gif"  style="width:100%" ></div>
   <div class="pic1">
 	<div class="vid">
-		 <video width=90% controls>
+		 <video id="myVideo" width=90% >
   		<source src="Art/Adzuki/placehold.mp4" type="video/mp4">
 		Error: ur browser cant play my vid, srry
 		</video>  
 	</div>
+	<input type="button" onclick="cntrlmp4()" value="rebirth-sequence" id="butt2" />
 </div>
   <div class="hardware">
 	<div class="costp">
