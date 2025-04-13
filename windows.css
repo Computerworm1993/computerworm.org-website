@@ -65,9 +65,9 @@ body{
 
 .video { grid-area: video; background-image: url("Art/Adzuki/roteater.png"); background-repeat: no-repeat; background-size: 100%; }
 
-.text3 { grid-area: text3; background-color: black; }
+.text3 { grid-area: text3; background-image: url("Art/Adzuki/3x2text.png"); background-repeat: no-repeat; background-size: 100%;}
 
-.picwire { grid-area: picwire; background-color: blue;}
+.picwire { grid-area: picwire; background-image: url("Art/Adzuki/wires.png"); background-repeat: no-repeat; background-size: 100%;}
 
 .gifscreens { grid-area: gifscreens; background-color: green;}
 
