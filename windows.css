@@ -63,7 +63,7 @@ body{
 
 .picadz { grid-area: picadz; background-color: pink;}
 
-.video { grid-area: video; background-color: grey; }
+.video { grid-area: video; background-image: url("Art/Adzuki/roteater.png"); background-repeat: no-repeat; background-size: 100%; }
 
 .text3 { grid-area: text3; background-color: black; }
 
