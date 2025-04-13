@@ -47,7 +47,7 @@ body{
 
 .butt { grid-area: butt; }
 
-.pic1 { grid-area: pic1; background-image: url("Art/Adzuki/placehold.png"); background-repeat: no-repeat; background-size: 99%;}
+.pic1 { grid-area: pic1; background-image: url("Art/Adzuki/videoback.png"); background-repeat: no-repeat; background-size: 99%;}
 
 .hardware { grid-area: hardware; background-image: url("Art/Adzuki/hardware.png"); background-repeat: no-repeat; background-size: 100%;}
 
