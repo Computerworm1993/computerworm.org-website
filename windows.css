@@ -71,6 +71,6 @@ body{
 
 .gifscreens { grid-area: gifscreens; background-color: green;}
 
-.python { grid-area: python; background-color: yellow;}
+.python { grid-area: python; background-image: url("Art/Adzuki/pyback.png"); background-repeat: no-repeat; background-size: 100%;}
 
 .fill { grid-area: fill; background-color: red;}
