@@ -61,7 +61,7 @@ body{
 
 .small2 { grid-area: small2; background-image: url("Art/Adzuki/small2.png"); background-repeat: no-repeat; background-size: 100%;}
 
-.picadz { grid-area: picadz; background-color: pink;}
+.picadz { grid-area: picadz; background-image: url("Art/Adzuki/glass.jpg"); background-repeat: no-repeat; background-size: 100%;}
 
 .video { grid-area: video; background-image: url("Art/Adzuki/roteater.png"); background-repeat: no-repeat; background-size: 100%; }
 
