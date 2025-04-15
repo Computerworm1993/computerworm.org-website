@@ -39,7 +39,7 @@ body{
     ". . . . . .";
 }
 
-.music { grid-area: music; background-image: url("Art/Adzuki/music.png"); background-repeat: no-repeat; background-size: 100%;}
+.music { grid-area: music; background-image: url("Art/Adzuki/videoback.png"); background-repeat: no-repeat; background-size: 100%;}
 
 .screensave { grid-area: screensave; }
 
@@ -47,7 +47,7 @@ body{
 
 .butt { grid-area: butt; }
 
-.pic1 { grid-area: pic1; background-image: url("Art/Adzuki/videoback.png"); background-repeat: no-repeat; background-size: 99%;}
+.pic1 { grid-area: pic1; background-image: url("Art/Adzuki/music.png"); background-repeat: no-repeat; background-size: 100%;}
 
 .hardware { grid-area: hardware; background-image: url("Art/Adzuki/hardware.png"); background-repeat: no-repeat; background-size: 100%;}
 
