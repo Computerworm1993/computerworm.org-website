@@ -4,7 +4,7 @@
 	
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title>Virtual Friend 4 Loserz</title>
+	<title>Virtual Friend 4 Worms</title>
 	<style>
 	html {
 		background-image: url("Art/about/yellowline.png");
@@ -50,8 +50,10 @@
 <p>4 losers</p>
 <img src="Art/friend/finishedfriend.png" style="width:100%" >
 <p><span>This is a virtual friend style game I made, inspired by the Tamagotchis of the early 2000's and other "virtual pet" style games.
-It's not very fun to play but I learned a lot making it<br><br><br>
-The friend in question is Lain from the 1998 anime "Serial Experiments Lain".
+It's not very fun to play but I learned a lot making it<br><br></p>
+
+<p><strong>Step 1:</strong></p>
+<p><span>The friend in question is Lain from the 1998 anime "Serial Experiments Lain".
 I made simple animations out of screenshots from the anime, isolating Lain and segmenting the body where I would make it move</p>
 <div class="row">
 	<div class="column">
@@ -64,13 +66,58 @@ I made simple animations out of screenshots from the anime, isolating Lain and s
 
 <p><span>I've never tried animating like this before but it turned out pretty good I think. Nice for me because I suck at drawing and I just use a trackpad on my computer so it can be difficult to get details right.
 And I didn't need much motion, just enough to add a bit of life/make simple idle animations. Here is the result</p>
-
 <p><img src="Art/Friend/bearlainslouch.gif" style="width:100%"</p>
 <p><span>Looking closely it looks a bit messy, but considering my display is 2 inches-240x320, it doesn't really matter</p>
+<br>
+<p><strong>Step 2:</strong></p>
+<img src="Art/Friend/logic.png" style="width:100%" >
+<p><span>Next I wrote out the main portion of the code without any animation, just text based, to get everything functioning in order. 165 lines of code/ 6 functions is all it took</p>
 
+<p><strong>Step 3:</strong></p>
+<p><span>Next is figuring out how ill display/hide/navigate through my animations with button inputs. I experimented with
+displaying my animations directly into the linux terminal but the few libraries I tried seemed to have the limitation of it turning out VERY pixely.
+It is kind of a vibe though, especially when you think about how the old Tamagotchis used to look. It was cool to try anyways and I might do something like this for another project.</p>
+	<div class="column">
+		<img src="Art/Friend/lainterm.png" style="width:100%" >
+	</div>
+	<div class="column">
+		<img src="Art/Friend/Tama.jpeg" style="width:100%" >
+	</div>
+	</div>
 
+<p><span>In the end I decided on building my first python GUI, which I made using the Tkinter library. [I would later learn that this is notoriously bad at handling animation lol]. Basically you cant just load up a gif file like any other image
+you have to program Tkinter to go through each frame and repeat. Fine and dandy. But then I discovered that switching back and forth from each gif makes them incrementaly speed up, so every time you press a button poor lain is dancing 
+like she took too much Accela in club Cyberia
+<img src="Art/Friend/dance.gif" style="width:100%" >
 
-<p><span>The case is an old Zenith tv remote I found in the e-waste bin at the dump. I've reused some of the button caps and placed my own switches inside. The remote was really gross when I found it so I gutted it and gave it a 
+<p><img src="Art/Friend/menu.jpg" style="width:100%" /></p>
+<p><span> I love this menu I made. Its a screenshot from the anime of the NAVI computer I just edited the screen for my own actions menu.</span></p> 
+
+<p><strong>Step 4: </strong></p>
+<p><img src="Art/Friend/rasp.jpg" style="width:100%" /></p>
+<p><span> This step was a bit of a pain to get working, took me 2 days of fiddling. The driver for this screen is a bit depreciated and doesn't work with new images of Raspbian OS [bookworm]so I had to go online and find a legacy version of bullseye.
+ This is my second waveshare product/display/screen I've bought that I've really struggled with getting to work. The documentation from the manufacturer leaves something to be desired. But at last here we are displaying the desktop through framebuffering through SPI.</p>
+
+<p><strong>Step 5: </strong></p>
+<p><span>With my animations and menus sorted out, I figured the raspberry pi is way too powerful for just playing gifs, why not add every episode of the show into a menu as well. Next is programming a little mp4 video playback controller that my buttons can interface with.
+</p>
+
+ <video width="300" height="300" controls>
+  <source src="Art/Friend/episode.mp4" type="video/mp4">
+Error: ur browser cant play my vid, srry
+</video>  
+<p><span>Here is where I discover the limitations of SPI. The framerate is pretty poor slow. I've yet to dedicate some time into seeing if this can be optimized. 
+Considering the headache of getting this to work at all for the framerate I'm certain I should have went with a normal HDMI connection but at the same time this screen only cost me $16 lol, and I did end
+up learning a bunch. I'm sure I'll have other projects better suited for this type of display in the future. 
+I also want to buy a little speaker amp circuit board, i got some super cheap micro speakers that I think I can fit in the remote
+for some sound</p>
+
+<p><strong>Step 6: </strong></p>
+<p><span> Next is onto forcing my program to automatically open in full screen mode everytime the computer boots up, as well as hiding the window bar at the top and the exit and minimize buttons as well. I might add in a special passcode/backdoor with my buttons that will kill my program
+and take you back to the desktop or terminal or something. We will see</p>
+
+<p><strong>Step XX:</strong></p>
+<p><span>Hardware:: The case is an old Zenith tv remote I found in the e-waste bin at the dump. I've reused the button caps and placed my own switches inside underneath. The remote was really gross when I found it so I gutted it and gave it a 
 scrub with a toothbrush lol. </p>
 <div class="row">
 	<div class="column">
@@ -82,27 +129,9 @@ scrub with a toothbrush lol. </p>
 	</div>
 <p><span>I used the nice hard plastic case of an old cassette tape, cut to size with my dremel, to mount my switches on.
 Programming a power button same way as I did on my VHS game rig. And buttons 1-9 to the GPIO pins.</p>
-<p><img src="Art/Friend/menu.jpg" style="width:100%" /></p>
-<p><span> I love this menu I made. Its a screenshot from the anime of the NAVI computer I just edited the screen for my own actions menu.<br><br><br>
-I also included a menu "NAVI media player" you can access from the main menu which lets you play all 13 episodes of the anime. Though framebuffering through SPI seems to
-have absolutely god awful frame rates. I'm still experimenting on how to improve this and make it smoother. But it is watchable anyhow. In the future if I were to do something like this again where I need to render video I would abandon the idea of SPI displays and just go with an HDMI or something
-but they are a lot bigger/clunkier</span></p> 
 
- <video width="300" height="300" controls>
-  <source src="Art/Friend/episode.mp4" type="video/mp4">
-Error: ur browser cant play my vid, srry
-</video>  
 
-<p><span>I also experimented with displaying my animations directly into the linux terminal but the few libraries I tried seemed to have the limitation of it turning out VERY pixely.
-It is kind of a vibe though, especially when you think about how the old Tamagotchis used to look. It was cool to try anyways and I might do something like this for another project.</p>
-	<div class="column">
-		<img src="Art/Friend/lainterm.png" style="width:100%" >
-	</div>
-	<div class="column">
-		<img src="Art/Friend/Tama.jpeg" style="width:100%" >
-	</div>
-	</div>
 <p><span>Now that the code is programmed and everything is wired up it would be a breeze to add in other characters or some of my own designs, and I have set it up that it can be added in on a "Friend Select" menu right when you boot up. Not sure if
-I ever will though. I do think a virtual friend Carl from "Aqua Team Hunger Force" would be 2wicked.</p>
+I ever will though. All you'd really have to do it copy/paste the main code and swap out the animation art files/maybe edit a menu or too. I do think a virtual friend Carl from "Aqua Team Hunger Force" would be 2wicked.</p>
 <p><a href="index.html">Return Home</a></p>
 </html>
