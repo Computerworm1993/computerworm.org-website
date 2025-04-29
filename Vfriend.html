@@ -103,8 +103,13 @@ like she took too much Accela in club Cyberia
 This took some messing around for me to get working properly, as well as other bugs with tkinters gif handling where it would display the animations all distorted for some reason. In the end the solution was to import the PIL library and use it to open the image as a variable first, 
 and then pass it onto tkinters photoimage function. A bit silly and round about but it worked like a charm :).</p>
 <p><strong>Step 4: </strong></p>
-<p>TO DO:: Add in status variables [Hunger. Sleep. Boredom], using "import time" to have them slowly decay. create status bar art and overlap it with lain main idle screen.
-Will require a bit of code rewrite, I've used tkinter's label.pack() fuction and will need to replace it with label.place() in order to overlap the animations.</p>
+<p><img src="Art/Friend/status.png" style="width:100%" /></p>
+<p><span> Next I created 3 variables for Hunger/Mood/Energy that start at 100 and I would schedule a function to decrease their values by 1 every x minutes. And also add x amount back on when completeing a task through
+the Action Menu I made, such as sleeping to increase Energy. Still fiddling with the values and decay rates to make it not too annoying. And I also had to make sure it doesn't go negative and also you can't overcharge past 100 by spamming Actions. 
+<br> I think the old Tamagotchis if you got down to 0 your pet would just straight up die, but thats so cruel lol. Maybe I'll make Lain transcend to the wired if she stays awake too long lol idk <br>
+I also made it so the stats dont start to decay until youve gone through the first 2 intro screens and actually started the "game", and it's kind of nice too as now when you exit from the Action Menu it acts as a sort of Pause screen
+if you want to take a break
+<img src="Art/Friend/dead.gif" style="width:75%" /></p>
 
 <p><strong>Step 5: </strong></p>
 <p><span> TO DO:: At this point in the game I have the program controlled by keyboard presses [# 1-9], so to have it run on my rpi I need to import the gpiozero library and change my keybinds to gpio button presses. <br> Seeing as I have it running beautifully on windows I decided to make it a standalone 
@@ -124,9 +129,10 @@ executable file using pyInstaller. What this does is bundles up what is required
 Error: ur browser cant play my vid, srry
 </video>  
 <p><span>Here is where I discover the limitations of SPI. The framerate is pretty poor slow. I've yet to dedicate some time into seeing if this can be optimized. 
-Considering the headache of getting this to work at all for the framerate I'm certain I should have went with a normal HDMI connection but at the same time this screen only cost me $16 lol, and I did end
-up learning a bunch. I'm sure I'll have other projects better suited for this type of display in the future. 
-I also want to buy a little speaker amp circuit board, i got some super cheap micro speakers that I think I can fit in the remote
+Considering the headache of getting this to work at all for the framerate I wish I could have went with a normal HDMI connection but at the same time this screen only cost me $16
+and I don't think they even make hdmi screens this tiny lol, and I did end
+up learning a bunch anyways. I'm sure I'll have other projects better suited for this type of display in the future. 
+I also want to buy a little speaker amp circuit board, i got some super cheap $2.50 micro speakers that I think I can fit in the remote
 for some sound</p>
 
 <p><strong>Step 8: </strong></p>
