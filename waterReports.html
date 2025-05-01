@@ -35,7 +35,8 @@ and some simple math to get units from liters/min to cubic meters/day and calc. 
 to write it. And I will admit it took me a long time, seeing as it was my first project I had a lot of learning to do.</p>
 <p><span>The code is definetly not perfect, and it requires me to place the compelted excel doc into a specific folder before running the script. I've contemplated rewriting it in python and
 compiling it into an .exe file. I've never made a stand alone executable python script like that before so it would be interesting. And it would give me a chance to iron out some of the bugs I have with the current one.
-For example if the water treatment plants PC performs a windows update, I lose recorded data for that period of time. This affects my free chlorine "contact time" calculations, which are based on lowest cl2. It's like dividing by 0. And then when this blank null "value"
+For example if the water treatment plants PC performs a windows update, I lose recorded data for that period of time. This affects my free chlorine "contact time" calculations, which are based on lowest recorded value of mg/L of cl2. 
+It's like trying to divide by 0, or more aptly trying to divide by nothing at all. And then when this blank null "value"
 is attempted to put into the webform, it pulls an error. It's easy enough to work around for how rarely it happens but still something id like fixed. Bugs aside, the code is messy and inefficient and I'd like another
 crack at it. Currently it uses the "send key" function to tell my computer that I'm hitting [cntl]+c & [cntrl]+v to just copy and paste each data piece where it should go on the webpage. 
 It's silly and brutish but its worked well for me lol. My work PC sounds like a jet engine when I run the script though because im essentially telling it im spamming thousands of
