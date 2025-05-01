@@ -50,18 +50,17 @@
 <p>4 losers</p>
 <img src="Art/friend/finishedfriend.png" style="width:100%" >
 <p><span>This is a virtual friend style game I made, inspired by the Tamagotchis of the early 2000's and other "virtual pet" style games.
-It's not the most exciting gameplay wise, but it was a lot of fun to make and to see if I could even do it<br><br></p>
-<br><p>Bugs:<br>April 28/25: Noticed that if you open up action menu and hit back repeatedly really fast it makes your hunger decay lol. Not sure
-how ill have to rearrange my code to not make that happen</p>
+It's not the most exciting gameplay wise, but it was a lot of fun to make and to see if I could even do it. I ended up learning a lot in the process<br><br></p>
+<br>
 <p><strong>Introduction:</strong></p>
 <p><span>The friend in question is Lain from the 1998 anime "Serial Experiments Lain".
 <br> Here is a good article descibing the gist of the show if you haven't seen it <br>
 <a href="https://www.looper.com/485715/the-ending-of-serial-experiments-lain-explained/">Lain Spoiler</a>
  <br>
 <br>
-<p> Here is a download link to my virtual friend program, it might get flagged as suspicious because it's an executable file, and despite the name "worm.exe" there is no computer worm inside it xD<br>
-Also only for windows, I don't know anyone who uses a mac tbh -- v2.2 </p>
-<p><a href="worm.exe" download>download worm.exe</a></p>
+<p> Here is a download link to my virtual friend program, it might get flagged as suspicious from your anti-virus because it's an executable file, and despite the name "worm.exe" there is no computer worm inside it xD<br>
+Also only for windows.</p>
+<p><a href="worm.exe" download>download worm.exe v2.2</a></p>
 
 <p><strong>Process:<br>Step 1</strong></p>
 <p>I made simple animations out of screenshots from the anime, isolating Lain and segmenting the body where I would make it move</p>
@@ -92,11 +91,11 @@ But I think it's only noticable if your looking for it, and see it side by side 
 <br>
 <p><strong>Step 2:</strong></p>
 <img src="Art/Friend/logic.png" style="width:100%" >
-<p><span>Next I wrote out the main portion of the code without any animation, just text based, to get everything functioning in order. 165 lines of code/ 6 functions is all it took</p>
+<p><span>Next I wrote out the main bare bones portion of the code without any animation or stats, just text based, to get the basic logic and everything functioning in order. Even just a terminal text based adventure would be fun to program sometime</p>
 
 <p><strong>Step 3:</strong></p>
 <p><span>Next is figuring out how ill display/hide/navigate through my animations with button inputs. I experimented with
-displaying my animations directly into the linux terminal but the few libraries I tried seemed to have the limitation of it turning out VERY pixely.
+displaying my animations directly into the terminal but the few libraries I tried seemed to have the limitation of it turning out VERY pixely.
 It is kind of a vibe though, especially when you think about how the old Tamagotchis used to look. It was cool to try anyways and I might do something like this for another project.</p>
 	<div class="column">
 		<img src="Art/Friend/lainterm.png" style="width:100%" >
@@ -114,20 +113,27 @@ This took some messing around for me to get working properly, as well as other b
 and then pass it onto tkinters photoimage function. A bit silly and round about but it worked like a charm :).</p>
 <p><strong>Step 4: </strong></p>
 <p><img src="Art/Friend/status.png" style="width:100%" /></p>
-<p><span> Next I created 3 variables for Hunger/Mood/Energy that start at 100 and I would schedule a function to decrease their values by 1 every x minutes. And also add x amount back on when completeing a task through
-the Action Menu I made, such as sleeping to increase Energy. Still fiddling with the values and decay rates to make it not too annoying. And I also had to make sure it doesn't go negative and also you can't overcharge past 100 by spamming Actions. 
-<br> I think the old Tamagotchis if you got down to 0 your pet would just straight up die, but thats so cruel lol. Maybe I'll make Lain transcend to the wired if she stays awake too long lol idk <br>
-I also made it so the stats dont start to decay until youve gone through the first 2 intro screens and actually started the "game", and it's kind of nice too as now when you exit from the Action Menu it acts as a sort of Pause screen
-if you want to take a break
-<img src="Art/Friend/dead.gif" style="width:75%" /></p>
+<p><span> Next I created 3 variables for Hunger/Mood/Energy that start at 25 and I scheduled a function to decrease their values by 1 every x minutes. And also add x amount back on when completeing a task through
+the Action Menu I made, such as sleeping to increase Energy. Still fiddling with the values and decay rates to make it not too annoying, but as of now [worm.exe V2.2] its as follows: </p>
+<br>
+<p style="color:green;">Hunger decays by 1 every minute. Mood decays by 1 every 2 minutes. Energy decays 1 every 4 minutes. If either Energy or Hunger goes below 20, then Mood goes to 0 and triggers Lain=Mad.</p>
+<p><img src="Art/Friend/mad.gif" style="width:100%" ></p>
+<p style="color:green;">Mood cannot be increased if Energy OR Hunger are below 20. If either Hunger or Energy reach 0 then it triggers Lain=Dead.</p>
+<p><img src="Art/Friend/dead2.gif" style="width:100%" ></p>
+<p><span>I also had to make sure it doesn't go negative and also you can't overcharge past 100 by spamming Actions. 
+<br> I think the old Tamagotchis if you got down to 0 your pet would just straight up die, but thats so cruel lol. So instead I made Lain transcend to the wired if she stays awake/starves too long <br>
+<p style="color:green;">I also made it so the stats dont decay until youve gone through the first 2 intro screens and actually started the "game", as well as while performing an action. Quitting to the main friend select menu will restart Lains stats.</p>
+
+<p><img src="Art/Friend/dead.gif" style="width:75%" /></p>
 
 <p><strong>Step 5: </strong></p>
 <p><span> TO DO:: At this point in the game I have the program controlled by keyboard presses [# 1-9], so to have it run on my rpi I need to import the gpiozero library and change my keybinds to gpio button presses. <br> Seeing as I have it running beautifully on windows I decided to make it a standalone 
-executable file using pyInstaller. What this does is bundles up what is required for python to run the script, so that people who don't have python installed on their computers can still run my program. Download link here</p>
+executable file using pyInstaller. What this does is bundles up what is required for python to run the script, so that people who don't have python installed on their computers can still run my program. <br>
+This is good too because bundled up as an .exe people won't see my noob/beginner  "spaghetti code" lol. It ended up being around 486 lines of code(without the video player extra menu) <br>TO DO: #Add Download worm.exe link at top of page#</p>
 
 <p><strong>Step 6: </strong></p>
 <p><img src="Art/Friend/rasp.jpg" style="width:100%" /></p>
-<p><span> This step was a bit of a pain to get working, took me 2 days of fiddling. The driver for this screen is a bit depreciated and doesn't work with new images of Raspbian OS [bookworm]so I had to go online and find a legacy version of bullseye.
+<p><span>2" waveshare LED display:: This step was a bit of a pain to get working, took me 2 days of fiddling. The driver for this screen is a bit depreciated and doesn't work with new images of Raspbian OS [bookworm]so I had to go online and find a legacy version of bullseye.
  This is my second waveshare product/display/screen I've bought that I've really struggled with getting to work. The documentation from the manufacturer leaves something to be desired. But at last here we are displaying the desktop through framebuffering through SPI.</p>
 
 <p><strong>Step 7: </strong></p>
@@ -138,10 +144,10 @@ executable file using pyInstaller. What this does is bundles up what is required
   <source src="Art/Friend/episode.mp4" type="video/mp4">
 Error: ur browser cant play my vid, srry
 </video>  
-<p><span>Here is where I discover the limitations of SPI. The framerate is pretty poor slow. I've yet to dedicate some time into seeing if this can be optimized. 
+<p><span>Here is where I discover the limitations of SPI. The framerate is pretty poor/slow. I've yet to dedicate some time into seeing if this can be optimized. 
 Considering the headache of getting this to work at all for the framerate I wish I could have went with a normal HDMI connection but at the same time this screen only cost me $16
 and I don't think they even make hdmi screens this tiny lol, and I did end
-up learning a bunch anyways. I'm sure I'll have other projects better suited for this type of display in the future. 
+up learning a bunch anyways. I'm sure I'll have other projects better suited for this type of display in the future, but its pretty painful trying to watch a video on it. 
 I also want to buy a little speaker amp circuit board, i got some super cheap $2.50 micro speakers that I think I can fit in the remote
 for some sound</p>
 
@@ -192,7 +198,9 @@ Programming a power button same way as I did on my VHS game rig. And buttons 0-9
 	</div>
 
 
-<p><span>Now that the code is programmed and everything is wired up it would be a breeze to add in other characters or some of my own designs, and I have set it up that it can be added in on a "Friend Select" menu right when you boot up. Not sure if
-I ever will though. All you'd really have to do it copy/paste the main code and swap out the animation art files/maybe edit a menu or too. I do think a virtual friend Carl from "Aqua Team Hunger Force" would be 2wicked.</p>
+<p><span>Now that the code is programmed and everything is wired up it would be a breeze to add in other characters or some of my own designs, and I have set it up that it can be added in on a "Friend Select" menu right when you boot up.
+<p><img src="Art/Friend/select24.gif" style="width:100%" ></p>
+<p><span>Not sure if I ever will though. All you'd really have to do it copy/paste the main code and swap out the animation art files/maybe edit a menu or too. I do think a virtual friend Carl from "Aqua Team Hunger Force" would be 2wicked.</p></span>
+<br>
 <p><a href="index.html">Return Home</a></p>
 </html>
