@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Worm-_-0004</title>
+	<style>
+	body{
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 640px;
+		background: teal;
+		}
+	a {
+		color: red;
+		}
+		p span{
+		position:relative;
+		display:inline-block;
+		color: white;
+		font-family: "Courier New", Times, serif;
+
+	
+	</style>
+</head>
+  <body><h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
+<p><a href="index.html">Return Home</a></p>
+
+<p><span><strong>Captains Log 0004</strong></p>
+<p><small><span>May 1, 2025</small></p>
+
+
+<p><span><strong>Executable Scripts</strong></p>
+<p><span>
+What I've learned using PyInstaller to bundle my programs. The purpose is to allow people who do not have python installed to be able
+to run my programs. <br><br>First test: installed pyinstaller. Open up my terminal session and run the command  
+"pyinstaller --noconsole --onefile --icon worm.ico --name worm wormfriend.py" <br> This seemed like it worked, --noconsole [doesnt open a terminal sesh when program is ran]
+--onefile [bundles everything up into a single .exe], --icon [sets icon to my file "worm.ico"], --name [name of program] and then "wormfriend.py which is the name of my script.
+<br><br>
+Testing it on my computer it works fine, but I have python so I sent it to my work PC which doesn't and discovered I got an error that it cannot open worm.ico, no such file exists. So my art files didn't
+make it into the bundling process. Trying something new <br><br>
+<p><span>
+edit code to call the "relative path" for file locations you need to add to the onefile, then include them when building it with pyinstaller like I did below. See if this works. <br>
+<br></p></span>
+<p>pyinstaller --noconsole --onefile --add-data="artfile.gif;wormart" --icon="worm.ico;wormart" worm.py</p>
+<img src="Art/cl/relativepaths.png" style="width:100%" />
+
+<p><span> seems like this does the trick :)<br><br>
+</span></p>
+<p><a href="index.html">Return Home</a></p>
+ 
+ </body>
+</html>
