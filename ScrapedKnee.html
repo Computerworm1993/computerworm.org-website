@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>*o u c h i e*</title>
+	<style>
+	body{
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 640px;
+		background: teal;
+		}
+	a {
+		color: red;
+		}
+		p span{
+		position:relative;
+		display:inline-block;
+		color: white;
+		font-family: "Courier New", Times, serif;
+
+	
+	</style>
+</head>
+  <body><h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
+<p><a href="index.html">Return Home</a></p>
+
+<p><span><strong>Scraped Knees</strong></p>
+<p><small><span>May 14, 2025</small></p>
+
+
+<p><span><strong>Auto webscraper</strong></p>
+<p><span>This is a webscraping program I built that scrapes my friends blog to see when the last post was. I also scrape the title of the latest post. Next my program opens a .txt file I use as a sort of database and cross references
+the date of the blog post, with the date recorded in the text file. If they are different dates, the program will send me a text to notify me that there is new content on the blog to check out. How freaking cool is this.
+</p>
+<p><img src="Art/ScrapedKnee/update.png" style="width:100%" /></p>
+<p><span>Heres how the text message looks</p>
+<p><img src="Art/ScrapedKnee/textmsg2.jpg" style="width:100%" /></p>
+<p><span>*I manually edited the database file to be different to test it, thats why it says wormtober. And since wormtober != May 12, the program sent the text :)<p>
+<p><span>If however the scraped data matches my database text file, then it will simply print this text to the screen and not text me. It auto scrapes every 15 minutes
+but if you want to quickly check you can hit space</p>
+<p><img src="Art/ScrapedKnee/noUpdate.png" style="width:100%" /></p>
+<p><span>The idea is to stick this code into my vivarium project I'm working on, since the vivarium controller will be running contiously it might as well do a quick webscrape every few minute as well. I'l probably add a few more websites to scrape data
+from as well but I can't think of anything I care enough about to receive text updates for lol. Could scrape anything really. Get a text when a stock price falls below a certain value? idk</p>
+<p><span>Anyways the process of sending the text is really cool, it uses the koodo/telus SMS Gateway to send it from my email. Here is how it works if you'd like to try it yourself</p>
+<img src="Art/ScrapedKnee/textmsg.png" style="width:100%" />
+<p><span>Obviously my server isn't gmail since I'm using my own domains email [computerowrm.org] but this is what youd put if you used a gmail address. And as for the recipient I blanked out my phone # so put your own there and replace the phone carrier 
+gateway at the end [@msg.telus.com] with whoever you are with according to this link</p>
+<a href="https://www.fbbbrown.com/help-faq/app-help/runsafe/list-of-mobile-carrier-gateway-addresses/" style="color:pink">SMS Gateways List</a>
+<p><span>This was a fun project, I've had a blast learning the "Rich" python library to make these sort of terminal UI's, and the webscraping was done using the "Beautiful Soup" library. I've also been playing with
+Selenium webdriving firefoxs "geckodriver" but I don't use that here. Selenium and B.S both have pretty similar applications but with Soup you don't actually visit the webpage to scrape the data you parse the html source code. 
+Selenium is cool too though you can actually control the webpage, which is what I'm doing to rebuild/upgrade my Drinking Water Autoreporter</p>
+<p><a href="index.html">Return Home</a></p>
+ </body>
+</html>
