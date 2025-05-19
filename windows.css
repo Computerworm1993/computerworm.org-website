@@ -73,4 +73,4 @@ body{
 
 .python { grid-area: python; background-image: url("Art/Adzuki/pyback.png"); background-repeat: no-repeat; background-size: 100%;}
 
-.fill { grid-area: fill; background-color: red;}
+.fill { grid-area: fill; background-image: url("Art/Adzuki/callout.png"); background-repeat: no-repeat; background-size: 100%;}
