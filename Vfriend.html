@@ -48,9 +48,9 @@
 	<img src="Art/Home/comp worm.gif" style="width:100%" ></h1>
 <p><a href="index.html">Return Home</a></p>
 
-<p><strong>Virtual Friend</strong></p>
-<p>4 losers</p>
-<img src="Art/friend/finishedfriend.png" style="width:100%" >
+<p><strong>Virtual Friend A.K.A worm.exe</strong></p>
+<p><small>4 losers</small></p>
+<img src="Art/friend/finalFriend.jpg" style="width:100%" >
 <p><span>This is a virtual friend style game I made, inspired by the Tamagotchis of the early 2000's and other "virtual pet" style games.
 It's not the most exciting gameplay wise, but it was a lot of fun to make and to see if I could even do it. I ended up learning a lot in the process<br><br></p>
 <br>
@@ -128,92 +128,18 @@ the Action Menu I made, such as sleeping to increase Energy. Still fiddling with
 <p><img src="Art/Friend/dead.gif" style="width:75%" /></p>
 
 <p><strong>Step 5: </strong></p>
-<p><span> TO DO:: At this point in the game I have the program controlled by keyboard presses [# 1-9], so to have it run on my rpi I need to import the gpiozero library and change my keybinds to gpio button presses. <br> Seeing as I have it running beautifully on windows I decided to make it a standalone 
+<p><span> At this point in the project I have the program controlled by keyboard presses [# 1-9], so to have it run on my rpi I need to import the gpiozero library and change my keybinds to programed gpio button presses. <br> Seeing as I have it running beautifully on windows I decided to make it a standalone 
 executable file using pyInstaller. What this does is bundles up what is required for python to run the script, so that people who don't have python installed on their computers can still run my program. <br>
-This is good too because bundled up as an .exe people won't see my noob/beginner  "spaghetti code" lol. It ended up being around 486 lines of code(without the video player extra menu) <br>TO DO: #Add Download worm.exe link at top of page#</p>
+This is good too because bundled up as an .exe people won't see my noob/beginner  "spaghetti code" lol. It ended up being around 486 lines of code(without the video player extra menu)</p>
 
-<p><strong>Step 6: </strong></p>
-<p><img src="Art/Friend/rasp.jpg" style="width:100%" /></p>
-<p><span>2" waveshare LED display:: This step was a bit of a pain to get working, took me 2 days of fiddling. The driver for this screen is a bit depreciated and doesn't work with new images of Raspbian OS [bookworm]so I had to go online and find a legacy version of bullseye.
- This is my second waveshare product/display/screen I've bought that I've really struggled with getting to work. The documentation from the manufacturer leaves something to be desired. But at last here we are displaying the desktop through framebuffering through SPI.</p>
-
-<p><strong>Step 7: </strong></p>
-<p><span>With my animations and menus sorted out, I figured the raspberry pi is way too powerful for just playing gifs, why not add every episode of the show into a menu as well. Next is programming a little mp4 video playback controller that my buttons can interface with.
-</p>
-
- <video width="300" height="300" controls>
-  <source src="Art/Friend/episode.mp4" type="video/mp4">
-Error: ur browser cant play my vid, srry
-</video>  
-<p><span>Here is where I discover the limitations of SPI. The framerate is pretty poor/slow. I've yet to dedicate some time into seeing if this can be optimized. 
-Considering the headache of getting this to work at all for the framerate I wish I could have went with a normal HDMI connection but at the same time this screen only cost me $16
-and I don't think they even make hdmi screens this tiny lol, and I did end
-up learning a bunch anyways. I'm sure I'll have other projects better suited for this type of display in the future, but its pretty painful trying to watch a video on it. 
-I also want to buy a little speaker amp circuit board, i got some super cheap $2.50 micro speakers that I think I can fit in the remote
-for some sound</p>
-<br>
-<p><span>I originally attempted to use tkvideoplayer module but it was wack trying to install it so I decided on importing VLC since that comes on raspbian OS anyways, I can just call up an instance from my script. 
-
-<p><strong>Step 8: </strong></p>
-<p><span> Next is onto forcing my program to automatically open in full screen mode everytime the computer boots up, as well as hiding the window bar at the top and the exit and minimize buttons as well. I might add in a special passcode/backdoor with my buttons that will kill my program
-and take you back to the desktop or terminal or something. We will see</p>
-
-<p><strong>Step XX:</strong></p>
-<p><span>Hardware:: The case is an old Zenith tv remote I found in the e-waste bin at the dump. I've reused the button caps and placed my own switches inside underneath. The remote was really gross when I found it so I gutted it and gave it a 
-scrub with a toothbrush lol. </p>
-<div class="row">
-	<div class="column">
-		<img src="Art/Friend/scrub.jpg" style="width:100%" >
-	</div>
-	<div class="column">
-		<img src="Art/Friend/parts.jpg" style="width:100%" >
-	</div>
-	</div>
-
-<p><span>Cutting a hole for my screen</p>
-<div class="row">
-	<div class="column">
-		<img src="Art/Friend/parts1.jpg" style="width:100%" >
-	</div>
-	<div class="column">
-		<img src="Art/Friend/screen1.jpg" style="width:100%" >
-	</div>
-	</div>
-<p><span> When connecting to the display with the provided port, the wires stick out the side too much so that
-I can't close the case up, so I cut the connector off and soldered the wires directly to the pcb.
-	<div class="column">
-		<img src="Art/Friend/port.jpg" style="width:100%" >
-	</div>
-	<div class="column">
-		<img src="Art/Friend/mount.jpg" style="width:100%" >
-	</div>
-	</div>
-
-<p><span>I used the nice hard plastic case of an old cassette tape, cut to size with my dremel, to mount my switches on.
-Programming a power button same way as I did on my VHS game rig. And buttons 0-9, Volume up+down, Channel up+down to the GPIO pins.</p>
-<div class="row">
-	<div class="column">
-		<img src="Art/Friend/wires1.jpg" style="width:100%" >
-	</div>
-	<div class="column">
-		<img src="Art/Friend/wires2.jpg" style="width:100%" >
-	</div>
-	</div>
-<p>And here I am working on trying to fit it all in, and also realizing it is way to thick to close up again. I also realize now that all of my buttons are soldered incorrectly lol. Each switch has 4 pins,
-you can solder pin 1 and 3 or 1 and 4. I unfortunetly solder 1 and 2. So the button is just bypassed completely. Real shame on that but thats what I get for not confirming on google before diving in with the solder lol.
-It does work out too because I think I'll have to attatch the switches directly to the back plate of the remote and run the wires out the back. It is the only way I'll be able to close it all up. Considering it's a Lain tamagotchi 
-the wires will kinda fit the theme anyways so I'm not too disappointed about that</p>
-	<div class="column">
-		<img src="Art/Friend/fitprog.jpg" style="width:100%" >
-	</div>
-	<div class="column">
-		<img src="Art/Friend/switch.jpg" style="width:100%" >
-	</div>
-	</div>
-
-<p><span>Now that the code is programmed and everything is wired up it would be a breeze to add in other characters or some of my own designs, and I have set it up that it can be added in on a "Friend Select" menu right when you boot up.
+<p><span>Now that the code is all programmed it would be a breeze to add in other characters or some of my own designs, and I have set it up that it can be added in on a "Friend Select" menu right when you boot up.
 <p><img src="Art/Friend/select24.gif" style="width:100%" ></p>
 <p><span>Not sure if I ever will though. All you'd really have to do it copy/paste the main code and swap out the animation art files/maybe edit a menu or too. I do think a virtual friend Carl from "Aqua Team Hunger Force" would be 2wicked.</p></span>
 <br>
+<p><strong>Afterword:</strong></p>
+<br>
+<p><span>This program was intended to go inside my Zenith remote but the way I wrote this around the tkinter GUI library has caused some hiccups for that. I got all my buttons to control it perfectly fine but the trouble is with the LCD display. It's not hooked up by hdmi or anything standard but goes through
+SPI [serial periphary Interface]. What this means is that it gets a bit tricky trying to framebuffer your desktop environment on to it. I got it to work but to be honest it looks pretty awful and is kind of laggy/glitchy. So I think someday I'll try rewriting it using the LCDs display driver directly instead of 
+framebuffering. Sadly if I do that I won't be able to have an episodes menu where you can watch them all right on the Zenith remote. That was the main reason I chose tkinter to begin with was so it could handle the mp4 files, but oh well. Wasn't a complete waste because now I have worm.exe for windows which is pretty cool too.</p>
 <p><a href="index.html">Return Home</a></p>
 </html>
