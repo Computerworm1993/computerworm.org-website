@@ -25,6 +25,7 @@
 <p><img src="Art/Zenith/wifi.gif" style="width:40%" /><img src="Art/Zenith/B.gif" style="width:40%" /></p>
 <p><span>I programmed this keyboard in the most brutish way possible without using any arrays or idexs, and no I'm not going to elaborate on that lol. HOWEVER, it is very much funtional and actually works remarkably well.
 The controls I set to a simple up/down/left/right using 8/2/4/6 buttons. This moves a little animated leaf selector. 5 enters in your currently selected letter, and adds that letter to the string variable displayed on the screen. I set 0 as a spacebar and 7 as a backspace.
+<img src="Art/Zenith/keybCntrl.jpg" style="width:40%" />
 Lastly when you hit Ent key it takes the string variable and writes it to a text file. Next it clears out the string variable and now you can enter the wifis password. When enter is hit for the second time, my script opens a config file found in /etc/wpa_supplicant and adds in a text block
 containing the information you entered on the keyboard and properly formats it. Now a quick reboot and the pi connects to that network.</p> 
 <p><span>I designed my keyboard to be multi-purpose. Not just for connecting to wifi. The text at the top "Enter ssid" is actually a string read from that same text file. What this allows me to do is change what it says depending on which program opens the keyboard script. <br>
