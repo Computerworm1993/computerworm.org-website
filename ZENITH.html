@@ -1,123 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta property="og:image" content="Art/Friend/logo.png" />
-	<meta name="description" content=".*✩⚬° all they ever play anymore are reruns, whatever °⚬✩*." />
-
-	<title>Worm Project//ZENITH</title>
+	<title>ZENITH</title>
 	<style>
-	html {
-		background-image: url("Art/about/yellowline.png");
-		font-size: 18px;
-		}
 	body{
 		padding: 1rem;
 		margin: 0 auto;
 		max-width: 640px;
-		}
-	a {
-		color: red;
+		background: teal;
 		}
 
-	p span{
-	position:relative;
-	display:inline-block;
-	font-family: "Courier New", Times, serif;
-	}
-        table {
-            text-align: center;
-        }
-* {
-  box-sizing: border-box;
-}
-	.column{
-	float: left;
-	width: 50%;
-	padding: 5px;
-}
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+
+	
 	</style>
 </head>
-  <body><h1>
-	<img src="Art/Home/comp worm.gif" style="width:100%" ></h1>
-<p><a href="index.html">Return Home</a></p>
+  <body><h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
+<p><a href="index.html" style="color:red">Return Home</a></p>
 
-<p><img src="Art/Friend/mainmenu.jpg" style="width:75%" /></p>
-
-<p><span>The case is an old remote I found in the e-waste bin at the dump. I've reused the button caps and placed my own switches inside underneath. The remote was really gross when I found it so I gutted it and gave it a 
-scrub with a toothbrush lol. </p>
-<div class="row">
-	<div class="column">
-		<img src="Art/Friend/scrub.jpg" style="width:100%" >
-	</div>
-	<div class="column">
-		<img src="Art/Friend/parts.jpg" style="width:100%" >
-	</div>
-	</div>
-
-<p><span>Cutting a hole for my screen</p>
-<div class="row">
-	<div class="column">
-		<img src="Art/Friend/parts1.jpg" style="width:100%" >
-	</div>
-	<div class="column">
-		<img src="Art/Friend/screen1.jpg" style="width:100%" >
-	</div>
-
-
-<p><span>I used the nice hard plastic case of an old cassette tape, cut to size with my dremel, to mount my switches on.
-Programming a power button same way as I did on my VHS game rig. And buttons 0-9, Volume up+down, Channel up+down to the GPIO pins.</p>
-<div class="row">
-	<div class="column">
-		<img src="Art/Friend/wires1.jpg" style="width:100%" >
-	</div>
-	<div class="column">
-		<img src="Art/Friend/wires2.jpg" style="width:100%" >
-	</div>
-	</div>
-	<div class="column">
-		<img src="Art/Friend/buttonsin.jpg" style="width:100%" >
-	</div>
-	<div class="column">
-		<img src="Art/Friend/buttonsout.jpg" style="width:100%" >
-	</div>
-<p>Starting to fit things in together</p>
-	<div class="column">
-		<img src="Art/Friend/screenin.jpg" style="width:100%" >
-	</div>
-	<div class="column">
-		<img src="Art/Friend/switch.jpg" style="width:100%" >
-	</div>
-	</div>
-<p>Battry pack / UPS. Looks so good sandwhiched all together neat and tidy like this I love it.</p>
-	<div class="column">
-		<img src="Art/Friend/upsHAT.jpg" style="width:100%" >
-	</div>
-	<div class="column">
-		<img src="Art/Friend/sandwhich.jpg" style="width:100%" >
-	</div>
-<p>teeny-tiny $6 amp and speaker. Adorable. I haven't gotten this chip wired in yet, I need to do more research on this one. My pi 02w doesn't have any real audio output but I read something
-about removing the usb and soldering onto where that was sitting on the circuit board. More research required on that one.</p>
-	<div class="column">
-		<img src="Art/Friend/amp.jpg" style="width:100%" >
-	</div>
-<p>I have no idea why I thought this was all going to fit inside this thin remote lol. When I planned it out at the begining I kind of thought the pi
-would go behind the display but there just isn't the room lol. It looks super cool like this but I'll try and think of a secondary case I can attatch to protect the hardware here</p>
-	<div class="column">
-		<img src="Art/Friend/thick.jpg" style="width:100%" >
-	</div>
-	<div class="column">
-		<img src="Art/Friend/zenithscheme.jpg" style="width:100%" >
-	</div>
-
-<p><span>Not sure what all I'll make this thing even do just mostly for testing out stuff. Right now I have it so it can ping my website to see if its down. Or do a quick network scan of IP addresses connected to the same wifi. The pi can only connect
-to 2.4 GHz so thats all it can see I guess. All my other crap doesn't show up, but my laptop does. Maybe because it was connected by SSH while I ran that. I'll try again later and investigate. But still cool being able to see my other raspberries I have connected like my VHS and Vivarium ones.
-<p><span>Eventually I'd like to get my Virtual Friend/lainagotchi game put in here but it'll take some code rewrite because it's written for windows right now</p>
-<p><a href="index.html">Return Home</a></p>
+<p><span><strong>ZENITH-Worm</strong></p>
+<p><small><span>June3, 2025</small></p>
+<br>
+<p><img src="Art/Zenith/zenith.jpg" style="width:65%" /></p>
+<p><a href="ZENITHhardware.html" style="color:pink">Hardware</a></p>
+<p><span>
+<p><span><strong>Software:</strong></p>
+<p><span>Introduction: On boot my main menu script opens. Navigated by channel up and down on the remote to cycle through the different programs. Pressing enter will open the selected script and then the newly opened script will
+terminate the main menu. Power button from any of my programs will do the reverse and relaunch the main menu program. This keeps things from getting bogged down with
+too much running at once and allows me to keep all my programs neat and tidy in there own seperate files. Opened and closed as needed.</p>
+<p><strong>Wifi Configurator</p></strong>
+<p><img src="Art/Zenith/wifi.gif" style="width:40%" /><img src="Art/Zenith/B.gif" style="width:40%" /></p>
+<p><span>A virtual keyboard I built from scratch to let me enter in wifi names and passwords using nothing but the buttons on the zenith</p>
+<p><a href="ZENITHwifi.html" style="color:pink">wifi config: read more</a></p>
+<br>
+<p><strong>Lainagotchi</p></strong>
+<p><img src="Art/Zenith/lain.gif" style="width:40%" /><img src="Art/Zenith/select1.gif" style="width:40%" /></p>
+<p><span>Tamagotchi inspired game. Written for windows [see download page], ported to my zenith</p>
+<p><a href="Vfriend.html" style="color:pink">lainagotchi: read more</a></p>
+<p><span></span></p>
+<p><a href="index.html" style="color:red">Return Home</a></p>
+ 
+ </body>
 </html>

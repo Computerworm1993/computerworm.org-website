@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>ZENITH</title>
+	<style>
+	body{
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 640px;
+		background: teal;
+		}
+
+
+	
+	</style>
+</head>
+  <body><h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
+<p><a href="ZENITH.html" style="color:red">Return</a></p>
+
+<p><span><strong>ZENITH-Worm</strong></p>
+<p><small><span>June3, 2025</small></p>
+<p><span><strong>Wifi Configurator</strong></p>
+<p><span></p>
+<p><img src="Art/Zenith/wifi.gif" style="width:40%" /><img src="Art/Zenith/B.gif" style="width:40%" /></p>
+<p><span>I programmed this keyboard in the most brutish way possible without using any arrays or idexs, and no I'm not going to elaborate on that lol. HOWEVER, it is very much funtional and actually works remarkably well.
+The controls I set to a simple up/down/left/right using 8/2/4/6 buttons. This moves a little animated leaf selector. 5 enters in your currently selected letter, and adds that letter to the string variable displayed on the screen. I set 0 as a spacebar and 7 as a backspace.
+Lastly when you hit Ent key it takes the string variable and writes it to a text file. Next it clears out the string variable and now you can enter the wifis password. When enter is hit for the second time, my script opens a config file found in /etc/wpa_supplicant and adds in a text block
+containing the information you entered on the keyboard and properly formats it. Now a quick reboot and the pi connects to that network.</p> 
+<p><span>I designed my keyboard to be multi-purpose. Not just for connecting to wifi. The text at the top "Enter ssid" is actually a string read from that same text file. What this allows me to do is change what it says depending on which program opens the keyboard script. <br>
+In the future for example I would like to make a program to utilize this keyboard to send commands to the terminal. So when you select my terminal script from the main menu the first thing it will do is edit the text file for keyboard title, and then launch the keyboard itself. Pretty nifty I think</span></p>
+<p><img src="Art/Zenith/wifiPass.jpg" style="width:40%" /><img src="Art/Zenith/wifiSSID.jpg" style="width:40%" /></p>
+<p><a href="ZENITH.html" style="color:red">Return</a></p>
+ 
+ </body>
+</html>
