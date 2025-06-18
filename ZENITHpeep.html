@@ -46,7 +46,7 @@
 <p><span><strong>Utility Peeper</strong></p>
 <p><span></p>
 <p><img src="Art/Zenith/peeper.gif" style="width:60%" />
-<p><span> This is a utlitiy meter reading program I'm still working on. It works by utilizing an rtl-sdr dongle to scan the 900 MHz range where Canadas radio broadcasting rules have
+<p><span> This is a utlitiy meter reading program I'm working on. It works by utilizing an rtl-sdr dongle to scan the 900 MHz range where Canadas radio broadcasting rules have
 banished utility meters to broadcast at. It then uses an rtlamr decoding program I scooped off of github <a href="https://github.com/bemasher/rtlamr" style="color:pink">github repo link</a>
  and then sends that data to a text file I have set up. I messed around a lot trying to pipe the stdout data
 directly from running the rtlamr program as a subprocess but couldn't for the life of me get it to work properly. So this was my solution.</p> 
@@ -86,22 +86,34 @@ directly from running the rtlamr program as a subprocess but couldn't for the li
 			</table>
 		</div>
 	</div>
-<p><span>Selecting a 'mode' pretty much just adds various filters ive programmed in. For example 2. filters out for only my houses erts id. while selecting 3 filters for just the pw workshop. Just copy and pasted the code for my house and changed the filter id #'s so I can show it off to my coworkers. 
+<p><span>Selecting a 'mode' pretty much just adds various filters ive programmed in. For example 2. filters out for only my houses erts id. while selecting 1 has no filters and runs a tally, counting by meter type. I'm not sure of a practical way
+	to display hundreds of meters on this tiny 2" LCD so I just write the data to a seperate text file. I could program in some sort of scrolling bar/multiple pages of data but it's a lot of work for a feature I will
+	never use lol. Mode 3 and 4 are probably temporary as well, just copy and pasted the code for my house and changed the filter id #'s so I can show it off to my coworkers. 
 Anyways heres a blank screen that I use as a backdrop to print the read results to [pulled out of the text file and drawn on each frame of this gif using the python PIL module]</p>
 <p><img src="Art/Zenith/scan1.gif" style="width:60%" /></p>
 <p><span>And heres what that looks like filled in with some data. <br><p style="color: white">Left [mode 1. Scan All] -- scans for any signal and writes the data to a .txt file, counts/catagorizes the meter type<br>Right [mode 2. Scan my house] -- self explanitory//scans for signals whos endpoint id # matches my houses meters</p><br>
 <p><img src="Art/Zenith/scanAll.jpg" style="width:45%;border: 3px solid #ffffff" /><img src="Art/Zenith/myHouse.jpg" style="width:45%;border: 3px solid #ffffff" /></p>
-<p><span><strong>Conclusion:</p></strong>
-<p><span>This project was mostly for the fuck of it to be honest, to see if I could. I have no interest in reading anyones meter data but my own so I doubt I will keep this radio attatched to my ZENITH as its kind of clunky in an already
-clunky device. What I may do in the future is set it up to monitor my home when I go on vacations in the winter. It would be quite simple to set it up to monitor usage and send me a text alert if there is water consumption when I am away. [leak notification]
-or in the winter if there is no gas usage [furnace has gone out]. Also it would be pretty easy to have it log the data and graph it or something, why not.</p>
-<p><span>The gas and the water were easy for me to identify, but I get a lot of other reads from devices I can only assume are the electricity ones. But strangely enough I cant seem to match any of these mystery devices to my GE electricity meter. None of the consumption data
+<p><span><strong>Conclusion + Final Ramblings:</p></strong>
+<p><span>This project was mostly for the fuck of it to be honest, to see if I could. The sdr-rtl was the most expensive component of the build coming in around $70, however you could definetly get it cheaper since we are using such a narrow range. Mine is a bit overkill, able to pick up all sorts of other signals such as my local country music station. 
+	<br><br>Actually it's kind of spooky just scanning the frequencies late at night, picking up strange signals from something or other. Especially when you start getting out of the traditional AM/FM and down into the "meteorological/radionavigational/aeronautical" ranges</span></p>
+<p style="color:white">...static....crackle....static....ominous tone pulsing in the night, is anyone else listening??</p>
+<p><span>Though me being freaked out might also be contributed by the fact it was late at night and I was full of excillerating adrenaline of having my software finally working, paired with an overactive imagination, dreaming of hearing something top secret I was not meant to hear
+	from some government organization no ones ever heard of that shatters my world view lol
+</span></p>
+<p><span>Anyways the gas and the water were easy for me to identify, but I get a lot of other reads from devices I can only assume are the electricity ones. But strangely enough I cant seem to match any of these mystery devices to my GE electricity meter. None of the consumption data
 matches up so either its an issue when they get decoded from the binary thats pulled from the radio signals or perhaps General Electric meters encrypt their data? Either way I don't know if theres much I can do to solve this one which is a shame, 
 especially considering the elctricty is the one meter I don't have access to. If I could get my hands on a loose GE ert/amr I thought about taking it out into the middle of nowhere where theres no other radio signals around just to see how that specific meters data compares to what I pull out of its signal.
 As it stands now though its impossible to match up which signal comes from which amr, meaning unscrambling/decrypting it is next to impossible for me. As far as a house/vacation monitor electricity isn't as important as gas and water anyways. Still frusterating to be picking up the data though and just not being able to use it in any meaningful way.</p>
 <p><span>As a final note, as part of my job I do the meter reading for my small municipality and a bit ago we were looking into upgrading our official Neptune brand water meter reader. I can't recall the price we were quoted but I do remember it was ridiculously expensive. So as an alternative I reached out to Itron because we had recently purchased a new 
 gas meter reader. But unfortunatley they told me that no, the itron radio reciever cannot pick up the neptune erts. I find that funny how these devices they sell us for top dollar won't but a $30 usb sdr can pick them up + more just fine lol. And the signals not even encrypted!!! I could understand if neptune encrypted the signals but it's literally broadcast for anyone
 to listen in to.</p>
+	<br>
+	<strong>Future Plans:</strong><br><br>
+I have no interest in reading anyones meter data but my own so I doubt I will keep this radio attatched to my ZENITH as its kind of clunky in an already
+clunky device. What I may do in the future is set it up to monitor my home when I go on vacations in the winter. It would be quite simple to set it up to monitor usage and send me a text alert if there is water consumption when I am away. [leak notification]
+or in the winter if there is no gas usage [furnace has gone out]. Pair direct meter reading along with some other cheap sensors like a DHT22 ($10) and you've got a pretty robust system. I wonder if theres a way I can tell when the main power goes out. Using my UPS battery pack the pi computer has no idea if it's connected to mains or getting fed by backup until it eventually dies. Unless I hook something onto the pins where the UPS connects to the pi? 
+<br> Something to ponder anyways. Would be nice for a text alert that the powers out ergo you wont be getting any further alerts once the battery dies. Mind you it should reboot fine once utility power is restored. <br>Also it would be pretty easy to have it log the data and graph it or something, why not.</p>
+
 <p><a href="ZENITH.html" style="color:red">Return</a></p>
  
  </body>
