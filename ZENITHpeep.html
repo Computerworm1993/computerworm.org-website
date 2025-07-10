@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content=".*✩⚬° utility peep °⚬✩*." />
+	<meta property="og:image" content="https://www.computerworm.org/Art/Home/linkcover2.jpg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>ZENITH</title>
 	<style>
 	body{
@@ -46,11 +49,14 @@
 <p><span><strong>Utility Peeper</strong></p>
 <p><span></p>
 <p><img src="Art/Zenith/peeper.gif" style="width:60%" />
-<p><span> This is a utlitiy meter reading program I'm working on. It works by utilizing an rtl-sdr dongle to scan the 900 MHz range where Canadas radio broadcasting Commision have
-banished utility meters to broadcast at. It then uses an rtlamr decoding program I scooped off of github <a href="https://github.com/bemasher/rtlamr" style="color:pink">github repo</a>
+<p><span> This is a utlitiy meter reading program I've built. It works by utilizing an rtl-sdr dongle to scan the 900 MHz range where Canadas radio broadcasting Commision have
+banished utility meters to broadcast at. It then uses an rtlamr signal decoding program I scooped off of github <a href="https://github.com/bemasher/rtlamr" style="color:pink">github repo</a>
  and then sends that data to a text file I have set up. I messed around a lot trying to pipe the stdout data
-directly from running the rtlamr program as a subprocess but couldn't for the life of me get it to work properly. So this was my solution.</p> 
+directly from running the rtlamr program as a subprocess [in python] but couldn't for the life of me get it to work properly. So this was my solution, which as usual when it comes to my code, is akin to how I imagine an orc would program. Dirty, inefficient, brute strength. Kinda like
+a monkey smashing on the keyboard until something finally works.
+But it definetly gets the job done.</p> 
 <p><img src="Art/Zenith/reads.png" style="width:100%" /></p>
+<br><br>
 <p>Specifically, the meters I am interested in reading are the ones in my home which are as follow:</p>
 <div class="blogcolumn">
 		<div>
@@ -59,7 +65,7 @@ directly from running the rtlamr program as a subprocess but couldn't for the li
 					<th>Utility</th>
 					<th>ert</th>
 					<th>model</th>
-					<th>frequency</th>
+					<th>freq.</th>
 					<th>period</th>
 				</tr>
 				<tr>
@@ -96,31 +102,30 @@ Anyways heres a blank screen that I use as a backdrop to print the read results 
 <p><span>ERT endpoint identification is pretty straight forward. Each ert/amr has a barcode and corrosponding endpoint id # located right on the radio itself. Here you can see it on both the Neptune water and the Itron gas radios.</span></p>
 <p><img src="Art/Zenith/waterERT.jpg" style="width:45%;border: 3px solid #ffffff" /><img src="Art/Zenith/gasERT.jpg" style="width:45%;border: 3px solid #ffffff" /></p>
 <p><span>Additionally I can also just run the decoder right on my laptop which is a lot smoother/cleaner but lets be honest it's way cooler running it on a tv remote and also on the laptop theres no beautiful User Interface lol. Also here in this screenshot
-	is another one of these mystery signals. One is a gas meter and the other must be a GE electric. These signals were captured at my Dads acreage were there really shouldn't be any other signals asides from a gas and an electric. Strangely enough though I captured 2 mystery ones along with the gas, and neither of them match up to the GE ert. It's a real puzzler</span></p>
+	is one of what I've been calling "mystery signals". One is a gas meter and logically the other must be a GE electric, since this data was captured at my Dads acreage far away from any other meters. Strangely enough though I captured 2 distinct mystery ones along with the gas, and neither of them match up to the GE ert. Not to the erts ID or to the erts read. It's a real puzzler. What I think might be happening
+is that the GE meter is encrypting the data, randomizing it in someway and my signal decoder obviously doesn't know this. It takes the random string of values and formats it like it always does so what I get is a scrambled up reading.</span></p>
 	<img src="Art/Zenith/dadsHouse.png" style="width:100%" />
 </span></p>
 
 <p><span><strong>Conclusion + Final Ramblings:</p></strong>
-<p><span>This project was mostly for the fuck of it to be honest, to see if I could. The sdr-rtl was the most expensive component of the build coming in around $70, however you could definetly get it cheaper since we are using such a narrow range. Mine is a bit overkill, able to pick up all sorts of other signals such as my local country music station. 
+<p><span>This project was mostly for the fuck of it to be honest, to see if I could. The rtl-sdr was the most expensive component of the build coming in around $70, however you could definetly get it cheaper since we are using such a narrow range. Mine is a bit overkill, able to pick up all sorts of other signals such as my local country music station. 
 	<br><br>Actually it's kind of spooky just scanning the frequencies late at night, picking up strange signals from something or other. Especially when you start getting out of the traditional AM/FM and down into the "meteorological/radionavigational/aeronautical" ranges</span></p>
 <p style="color:white">...static....crackle....static....ominous tone pulsing in the night, is anyone else listening??</p>
 <p><span>Though me being freaked out might also be contributed by the fact it was late at night and I was full of exhilarating adrenaline of having my software finally working, paired with an overactive imagination, dreaming of hearing something top secret I was not meant to hear
-	from some government organization no ones ever heard of that shatters my world view lol
+	from some shadowy government organization no ones ever heard of 
 </span></p>
-<p><span>Anyways the gas and the water were easy for me to identify, but I get a lot of other reads from devices I can only assume are the electricity ones. But strangely enough I cant seem to match any of these mystery devices to my GE electricity meter. None of the consumption data
-matches up so either its an issue when they get decoded from the binary thats pulled from the radio signals or perhaps General Electric meters encrypt their data? Either way I don't know if theres much I can do to solve this one which is a shame, 
-especially considering the elctricty is the one meter I don't have access to. If I could get my hands on a loose GE ert/amr I thought about taking it out into the middle of nowhere where theres no other radio signals around just to see how that specific meters data compares to what I pull out of its signal.
-As it stands now though its impossible to match up which signal comes from which amr, meaning unscrambling/decrypting it is next to impossible for me. As far as a house/vacation monitor electricity isn't as important as gas and water anyways. Still frusterating to be picking up the data though and just not being able to use it in any meaningful way.</p>
 <p><span>As a final note, as part of my job I do the meter reading for my small municipality and a bit ago we were looking into upgrading our official Neptune brand water meter reader. I can't recall the price we were quoted but I do remember it was ridiculously expensive. So as an alternative I reached out to Itron because we had recently purchased a new 
-gas meter reader. But unfortunatley they told me that no, the itron radio reciever cannot pick up the neptune erts. I find that funny how these devices they sell us for top dollar won't but a $30 usb sdr can pick them up + more just fine lol. And the signals not even encrypted!!! I could understand if neptune encrypted the signals but it's literally broadcast for anyone
-to listen in to.</p>
+gas meter reader. But unfortunatley they told me that no, the itron radio reciever cannot pick up the neptune erts. I find that funny how these devices they sell us for top dollar won't but a cheap usb sdr can pick them up + more just fine lol. And the signals not even encrypted!!! I could understand if neptune encrypted the signals but it's literally broadcast for anyone
+to listen in to.<br>Though I suppose the radio is only a portion of the product we buy from them, It's also the software to handle the reads.</p>
 	<br>
-	<strong>Future Plans:</strong><br><br>
-I have no interest in reading anyones meter data but my own so I doubt I will keep this radio attatched to my ZENITH as its kind of clunky in an already
-clunky device. What I may do in the future is set it up to monitor my home when I go on vacations in the winter. It would be quite simple to set it up to monitor usage and send me a text alert if there is water consumption when I am away. [leak notification]
-or in the winter if there is no gas usage [furnace has gone out]. Pair direct meter reading along with some other cheap sensors like a DHT22 ($10) and you've got a pretty robust system. I wonder if theres a way I can tell when the main power goes out. Using my UPS battery pack the pi computer has no idea if it's connected to mains or getting fed by backup until it eventually dies. Unless I hook something onto the pins where the UPS connects to the pi? 
-<br> Something to ponder anyways. Would be nice for a text alert that the powers out ergo you wont be getting any further alerts once the battery dies. Mind you it should reboot fine once utility power is restored. <br>Also it would be pretty easy to have it log the data and graph it or something, why not.</p>
-
+	<strong>Making Something moderately Useful [for once lol]:</strong><br><br>
+	<p><span>I've built a simple "winter watchman" into the reader in order to keep an eye on my utility consumption over winter while I'm away for holidays. It monitors gas - alerting if there is no change in 1 hour of reads [furnace had gone out]. As well as monitors water - alerting if there IS change [leak/burst pipe?]</span></p>
+<p><span>Unfortunetly the sdr was acting sporadic with the 02w, I think perhaps the pi cannot provide enough power to the usb but I'm not convinced that thats the issue. I've had other issues with other devices ive tried on the usb as well. I ended up temporarily wiring the zenith to the pi 4 of my VHS gaming rig for testing purposes. Anyways I got a simple text alert system built for detecting changes in read values as you can see here.</span></p>
+<img src="Art/Zenith/peepalert.jpg" style="width:100%" />
+<p><span>I also set button 1 as a toggle for the alert system to turn it off/deactivate it.</span></p>
+<p><span>It would be easy enough to add in a cheap >$10 DHT22 sensor and program the alert system to monitor temperature and humidity as well as utility reads. Would make for a pretty robust system, but idk if I care enough to add it in. I basically have the code written already for my vivarium project but it'd be a matter of combining the two and to be honest I'm getting a bit burnt out on this project and find myself more interested in other things as of late.
+	Perhaps when the summer winds down I'll come back to this and improve upon it, but as for now I'm happy with what I have functioning here :].</span></p>
+</span></p>
 <p><a href="ZENITH.html" style="color:red">Return</a></p>
  
  </body>
