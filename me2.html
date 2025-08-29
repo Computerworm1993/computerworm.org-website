@@ -45,12 +45,11 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 0 2px;
 }
 
 /* Create two equal columns that sits next to each other */
 .column img {
-  margin-top: 8px;
   vertical-align: middle;
 }
         table {
@@ -109,6 +108,18 @@ img {
   border-radius: 12px;
 }
 	</style>
+
+<script>
+	function pauseAudio() {
+		document.getElementById('myAudio').pause();
+		}
+	function playAudio() {
+		document.getElementById('myAudio').play();
+		}
+</script>
+<audio id="myAudio" src="Art/me/Emptiness.mp3" autoplay>
+Srry bb no audio, its ur web browsers fault not my websites
+</audio>
 </head>
   <body><h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
 <p><a href="index.html">Return Home</a></p>
@@ -161,9 +172,13 @@ img {
     </div>
     <div class="column">
         <div class="round3">
-            <p>~music player~</p>
+            <p>~music player.mp3~</p>
             <img src="Art/me/emptyness.jpg" style="width:100%; border: 3px solid black;" >
-            <p>play</p>
+                <div id="controllz">
+	                <p style="text-align: center">
+	                    <input type="button" onclick="pauseAudio()" value="°.- M U T E -.°" />
+	                    <input type="button" onclick="playAudio()" value="°.- P L A Y -.°" /></p>
+                </div>
         </div>
         <div class="round3">
             <img src="Art/me/compconnect.gif" style="width:100%" >
@@ -240,6 +255,58 @@ img {
 </div>
 </body>
 <p><a href="index.html">Return Home</a></p>
- 
- </body>
+<div class="snowflakes">  
+    <div class="snowflake">
+   🤍
+  </div>
+  <div class="snowflake">
+  🤍
+  </div>
+  <div class="snowflake">
+  🤍
+  </div>
+  <div class="snowflake">
+  🤍
+  </div>
+  <div class="snowflake">
+  🤍
+  </div>
+  <div class="snowflake">
+  🤍
+  </div>
+  <div class="snowflake">
+    🤍
+  </div>
+  <div class="snowflake">
+    🤍
+  </div>
+  <div class="snowflake">
+    🤍
+  </div>
+  <div class="snowflake">
+    🤍
+  </div>
+  <div class="snowflake">
+    🤍
+  </div>
+  <div class="snowflake">
+    🤍
+  </div>
+</div>
+
+
+<style>
+.snowflake {
+  color: white;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 5px lightsteelblue;
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}
+@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}
+@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}
+@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+</style> 
+</body>
 </html>
