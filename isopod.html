@@ -58,35 +58,40 @@
 <p style="text-align: center"><small>September 1, 2025</small></p>
 <br>
 <div class="round3">
-    <p>This is a cute little CLI I made mostly to help with my monthly reports of Drinking Water Quality to the government. It's a rebuild of my original reporter script [which was the first programming I had ever done], and honestly it's a huge upgrade. About a years worth of programming under my belt now since my original so incidentaly my new code here is much cleaner and I'm pretty proud of it actually. I managed to shorten the lines of code from 2995 to 141 lol. [My original script I didn't know how to use "for loops" or any sort of nuance]. Additionally
+    <p>This is a cute little Command Line Interface I've made; mostly to help with my monthly reports of Drinking Water Quality to the government. It's a rebuild of my original reporter script [which was the first programming I had ever done], and honestly it's a huge upgrade. About a years worth of programming under my belt now since my original so incidentaly my new code here is much cleaner and I'm pretty proud of it actually. I managed to shorten the lines of code from 2995 to 141 lol. [My original script I didn't know how to use "for loops" or any sort of nuance]. Additionally
         my new program uses "explicit waits" vs "time.sleep()" in the webdriver making it much much cleaner + efficient.
     </p>
 </div>
 <div class="round3">
-    <img src="Art/isopod/main.png" style="width:100%" />
+    <img src="Art/isopod/mainmenu.png" style="width:100%" />
 </div>
 <div class="round3">
-    <p>Above ^ : Here is the main menu. I built a few functions such as a webscraper which scrapes data from 3 seperate websites.</p>
+    <p>Above ^ : Here is the main menu. I built a few functions such as a webscraper [called Private Eyeball]; which scrapes data from 3 seperate websites.</p>
     <br><p>1. Latest News: My municipalities website<br>2. Upcoming Events: My county website<br>3. Latest post: My friends blog</p>
 </div>
 <div class="round3">
 	<img src="Art/isopod/scrapedKnee.png" style="width:100%" />
 </div>
-
-<div class="row">
-	<div class="column">
-		<div class="round3">
-    		<p>version 1 of my webscraper was called ScrapedKnees.py, and along with webscraping it also sent me a text if the data changes/updated since the last scrape. But I only really cared about my friends blog updates. So that portion of code I snuck into my terrarium controller since it will be on 24/7 anyways it's easy enough for it to do a quick webscrape now and again while it monitors the terrarium</p>>
-		</div>
-	</div>
-	<div class="column">
-		<div class="round3">
-			<img src="Art/isopod/scrape.jpg" style="width:100%" />
-		</div>
-	</div>
+<div class="round3">
+    <p>version 1 of my webscraper was called ScrapedKnees.py, and along with webscraping it also sent me a text if the data changes/updated since the last scrape. But I only really cared about my friends blog updates. So that portion of code I snuck into my terrarium controller since it will be on 24/7 anyways it's easy enough for it to do a quick webscrape now and again while it monitors the terrarium</p>
 </div>
 <div class="round3">
-	<p>The meat and potatoes of this program is the auto-reporter. It uses the selenium library to webdrive an instance of firefox. It prompts you to enter you credentials for the government website. Select the date range of the report. And finally select the excel file to be reported.<br><br>Finally it pulls the data from the excel document and enters it into the appropriate field on the webform.<br>This is a massive time saver for me, as there are about 25 values per day to report. Meaning 750 entries every month, with some having to be reformated from liters/day to cubic meters etc etc.</p>
+	<img src="Art/isopod/scrape.jpg" style="width:100%" />
+</div>
+<div class="round3">
+    <p>I also have a command that displays the current moon phase + some information as well as a cool ascii art image of the current moon phase</p>
+</div>
+<div class="round3">
+	<img src="Art/isopod/moonPhase.png" style="width:100%" />
+</div>
+<div class="round3">
+    <p>Similar deal as the moon phase, here I display a 2 day weather forcast for my town, as well as current weather information</p>
+</div>
+<div class="round3">
+	<img src="Art/isopod/wttr.png" style="width:100%" />
+</div>
+<div class="round3">
+	<p>The meat and potatoes of this program is the auto-reporter. It uses the selenium library to webdrive an instance of firefox. It prompts you to enter your credentials for the government website. Select the date range of the report. And finally select the excel file to be reported.<br><br>Finally it pulls the data from the excel document and enters it into the appropriate field on the webform.<br>This is a massive time saver for me, as there are about 25 values per day to report. Meaning 750 entries every month, with some having to be reformated from liters/day to cubic meters etc etc.</p>
 </div>
 <div class="round3">
 	<img src="Art/isopod/reporter1.png" style="width:100%" />
@@ -98,10 +103,7 @@
 	<img src="Art/isopod/reporter2.png" style="width:100%" />
 </div>
 <div class="round3">
-	<p>I write my programs on linux, so I had to rewrite portions of this to port it to windows 10 since thats what my work PC is running. Seeing as win10 is just about at its end of support/life I am sooo tempted to wipe it off and install linux there as well. Sure beats installing windows 11 spyware/bloatware</p>
-</div>
-<div class="round3">
-	Might add in more features to my main menu; but that'll just be for fun/practice. What I have here is perfect for helping me at work. Some other features I wouldn't mind adding is automating some of my other reports, like perhaps my well/raw water usage reports.<br><br>Webdriving and webscraping is a lot of fun, I wouldn't mind exploring it some more as well in the future.
+	<p>I write my programs on linux, so I had to rewrite portions of this to port it to windows 10 since thats what my work PC is running. Seeing as win10 is just about at its end of support/life I am sooo tempted to wipe it off and install linux there as well. Sure beats installing windows 11 spyware/bloatware<br><br>Anyways thanks for reading</p>
 </div>
 <div class="round3">
 	<p style="text-align: center"><br><br> --END OF TRANSMISSION--<br><br><br></p>
