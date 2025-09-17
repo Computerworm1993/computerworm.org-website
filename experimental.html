@@ -53,15 +53,21 @@
 <p><a href="index.html">Return Home</a></p>
 
 <div class="round3">
-    <p style="text-align: center"><strong>Experimental v1.0</strong></p>
+    <p style="text-align: center"><strong>Experimental v1.5</strong></p>
 </div>
 <p style="text-align: center"><small>September 15, 2025</small></p>
 <br>
 <div class="round3">
-    <p>Experiment to try to auto-update my website using a bash script to edit my .html file appending in a formatted chunk of html with a random word it curls from the web as well as the date/time the script ran. I placed this script in /etc/cron.daily which scheduels them to run automatically once per day</p><p>&lt;div class=&quot;round3&quot;&gt;<br>&lt;p&gt; \ ${timestamp}&lt;/p&gt;<br>&lt;p&gt;random word: \ ${word}&lt;/p&gt;<br>&lt;/div&gt;</p>
+    <p>Experiment to try to auto-update my website using a bash script to edit my .html file, first by appending in a formatted chunk of html with a random word it curls from the web as well as the date/time the script ran.</p><p>the formatted html is as follows</p><p>&lt;div class=&quot;round3&quot;&gt;<br>&lt;p&gt; \ ${timestamp}&lt;/p&gt;<br>&lt;p&gt;random word: \ ${word}&lt;/p&gt;<br>&lt;/div&gt;</p><p>And then finally my script will git add/commit/push the new file to my websites repo</p>
 </div>
 <div class="round3">
     <img src="Art/bashExperiment.png" style="width:100%" />
+</div>
+<div class="round3">
+	<p>It took some fiddling to properly automate this. I originally tried placing the .sh script in /etc/cron.daily dir. But it would try and git commit/push from root, which would give the error of unknown author. <br><br>Next I tried adding it directly to /etc/crontab but similarly I was getting permission errors, even when I specified to run the script as my user.name. <br><br>Finally, the solution was to place it in "crontab -e" which is my usernames personal crontab file. <br><br> It would have been better in cron.daily because if my computer isn't on at the set schedueled time, then the script simply won't run. /etc/cron.daily jobs however will be remembered until the system wakes up. Maybe theres a way to get cron.daily to recognize authors but I couldn't seem to find a way and not a lot of information online about it either</p>
+</div>
+<div class="round3">
+    <img src="Art/crontab.png" style="width:100%" />
 </div>
 <br>
 <div class="round3">
