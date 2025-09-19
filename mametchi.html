@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>jssss</title>
+	<style>
+	body{
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 640px;
+		background: teal;
+		}
+	a {
+		color: red;
+		}
+		p span{
+		position:relative;
+		display:inline-block;
+		color: white;
+		font-family: "Courier New", Times, serif;
+		}
+	
+	</style>
+
+
+</head>
+<body onload="startGame()"><h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
+<p><a href="index.html">Return Home</a></p>
+
+<p><span><strong>mametchi</strong></p>
+<p><small><span>sept 19,2025</small></p>
+<div>
+<p>move mametchi with WASD on the keyboard<br>or with the buttons</p>
+<input type="button" onclick="up()" value="^" id="buttonUP" style="background-color: #f09ae4;"/>
+<input type="button" onclick="down()" value="v" id="buttonDOWN" style="background-color: #3CBC8D;"/>
+<input type="button" onclick="left()" value="&lt;" id="buttonLEFT" style="background-color: #b3c1ef;"/>
+<input type="button" onclick="right()" value="&gt;" id="buttonRight" style="background-color: #d9c18c;"/>
+</div>
+<img id="item" style="width:50%; cursor:pointer; position:relative; left:50px; top:20px;" src="mame.png" alt="">
+<script>
+function up() {
+    var currentPositionX = parseInt(item.style.left);
+    var currentPositionY = parseInt(item.style.top);
+    item.style.top = currentPositionY - 15 + "px";
+}
+function down() {
+    var currentPositionX = parseInt(item.style.left);
+    var currentPositionY = parseInt(item.style.top);
+	item.style.top = currentPositionY + 15 + "px";
+}
+function left() {
+    var currentPositionX = parseInt(item.style.left);
+    var currentPositionY = parseInt(item.style.top);
+	item.src="mame.png"
+	item.style.left = currentPositionX - 15 + "px";
+}
+function right() {
+    var currentPositionX = parseInt(item.style.left);
+    var currentPositionY = parseInt(item.style.top);
+	item.src="mameRight.png"
+	item.style.left = currentPositionX + 15 + "px";
+}
+(function(){
+
+        item = document.getElementById("item");
+
+        function move(x){
+            var currentPositionX = parseInt(item.style.left);
+            var currentPositionY = parseInt(item.style.top);
+            console.log(currentPositionY);
+            switch(x){
+                    case "left":
+					item.src="mame.png"
+                    item.style.left = currentPositionX - 15 + "px";
+                    break;
+                    case "right":
+					item.src="mameRight.png"
+                    item.style.left = currentPositionX + 15 + "px";
+                    break;
+                    case "up":
+                    item.style.top = currentPositionY - 15 + "px";
+                    break;
+                    case "down":
+                    item.style.top = currentPositionY + 15 + "px";
+                    break;
+            }
+
+        }
+
+
+        window.addEventListener("keydown", key, false);
+        function key(e){
+            switch(e.keyCode){
+                case 65:
+                //LEFT
+                move('left');
+                break;
+                case 68:
+                //RIGHT
+                move('right');
+                break;
+                case 87:
+                //UP
+                move('up');
+                break;
+                case 83:
+                //DOWN
+                move('down');
+                break;
+            }
+        }
+
+		//butktons here?
+    })();
+
+
+</script>
+ </body>
+
+</html>
