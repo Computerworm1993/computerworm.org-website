@@ -3,7 +3,9 @@
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>jssss</title>
+    <meta name="description" content=".*✩⚬° CLICK HERE FOR MALWARE°⚬✩*." />
+	<meta property="og:image" content="https://www.computerworm.org/Art/mametchi/mame.png" />
+	<title>Hypr-chi Mame-land</title>
 	<style>
 	body{
 		padding: 1rem;
@@ -14,31 +16,38 @@
 	a {
 		color: red;
 		}
-		p span{
+	p span{
 		position:relative;
 		display:inline-block;
 		color: white;
 		font-family: "Courier New", Times, serif;
 		}
-	
+	.round3 {
+        border: 3px solid #95acca;
+        border-radius: 12px;
+        padding: 5px;
+        background: #e0e3ec;}
+    img {
+        border-radius: 12px;}
 	</style>
 
 
 </head>
-<body onload="startGame()"><h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
+<body><h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
 <p><a href="index.html">Return Home</a></p>
 
-<p><span><strong>mametchi</strong></p>
-<p><small><span>sept 19,2025</small></p>
-<div>
+<p><span><strong>mametchi + hyprland .configs</strong></p>
+<p><small><span>sept 20,2025</small></p>
+<div class="round3">
 <p>move mametchi with WASD on the keyboard<br>or with the buttons</p>
 <input type="button" onclick="up()" value="^" id="buttonUP" style="background-color: #f09ae4;"/>
 <input type="button" onclick="down()" value="v" id="buttonDOWN" style="background-color: #3CBC8D;"/>
 <input type="button" onclick="left()" value="&lt;" id="buttonLEFT" style="background-color: #b3c1ef;"/>
 <input type="button" onclick="right()" value="&gt;" id="buttonRight" style="background-color: #d9c18c;"/>
 </div>
-<img id="item" style="width:50%; cursor:pointer; position:relative; left:50px; top:20px;" src="mame.png" alt="">
+<img id="item" style="width:50%; cursor:pointer; position:relative; left:50px; top:20px;" src="Art/mametchi/mame.png" alt="">
 <script>
+//move mametchi when buttons are clicked
 function up() {
     var currentPositionX = parseInt(item.style.left);
     var currentPositionY = parseInt(item.style.top);
@@ -52,15 +61,16 @@ function down() {
 function left() {
     var currentPositionX = parseInt(item.style.left);
     var currentPositionY = parseInt(item.style.top);
-	item.src="mame.png"
+	item.src="Art/mametchi/mame.png"
 	item.style.left = currentPositionX - 15 + "px";
 }
 function right() {
     var currentPositionX = parseInt(item.style.left);
     var currentPositionY = parseInt(item.style.top);
-	item.src="mameRight.png"
+	item.src="Art/mametchi/mameRight.png"
 	item.style.left = currentPositionX + 15 + "px";
 }
+//move mametchi when wasd keyboard input
 (function(){
 
         item = document.getElementById("item");
@@ -71,11 +81,11 @@ function right() {
             console.log(currentPositionY);
             switch(x){
                     case "left":
-					item.src="mame.png"
+					item.src="Art/mametchi/mame.png"
                     item.style.left = currentPositionX - 15 + "px";
                     break;
                     case "right":
-					item.src="mameRight.png"
+					item.src="Art/mametchi/mameRight.png"
                     item.style.left = currentPositionX + 15 + "px";
                     break;
                     case "up":
@@ -110,12 +120,63 @@ function right() {
                 break;
             }
         }
-
-		//butktons here?
     })();
 
 
 </script>
+<div class="round3">
+    <p><i>--mametchi is just a javascript experiment I tried for fun--<br>--real post starts below--</i></p>
+    <p>I finally got around to playing about with some .config files for hyprland. It's fairly straight forward, and basically the same as designing websites using CSS. It's pretty fun. I love linux for how insanely customizable and free it is. Can do anything you dream of</p>
+</div>
+<div class ="round3">
+    <p> <img src="Art/mametchi/waybarWinamp.png" style="width:100%; border: 3px solid black;" ></p>
+</div>
+<div class="round3">
+    <p>Here I made a little worm button right on my waybar that executes my music.sh bash script I wrote a while ago that launches winamp through wine. It's not the most exiting but it's not hard to imagine some really cool possibilities this opens up.</p>
+</div>
+<div class="round3">
+    <p>I also did some other minor edits on the waybar but I really like the .config I got already. All I did was increase font to make it easier to read and I made the battery % change color depending on % charge left, to make it more obvious I have to plug it in, because I ended up running it out of power a few times being absent minded lol. <br><br>I also deleted a few things and made it super minimal as well. And of course added my custom worm-music button. Pretty cool all the things you can customize. Hyprland is amazing, It's insane to me that it's just the project of some college kid</p>
+</div>
+<br>
+<div class ="round3">
+    <p> <img src="Art/mametchi/rofi1.png" style="width:100%; border: 3px solid black;" ></p>
+</div>
+<div class ="round3">
+    <p>I also played around with the .config files for rofi application launcher. I think it turned out not bad. Just some small edits for now, my design skills aren't good enough to make something from scratch I'd be OK with having to look at regularly lol... (below) is what I based mine off of</p>
+</div>
+<div class ="round3">
+    <p> <img src="Art/mametchi/rofi2.png" style="width:100%; border: 3px solid black;" ></p>
+</div>
+<div class="round3">
+    <p>I also found the spot in hyprland .config that dictates window spacing so I made it a little wider for the aesthetics, though I know it is completely useless and actually makes you waste some screen space -- but I like it. I think it looks really nice. If I had a bigger monitor I'd make it even wider lol. And those rounded corners on all the windows are so pretty too</p>
+</div>
+<div class ="round3">
+    <p> <img src="Art/mametchi/hypBorder.png" style="width:100%; border: 3px solid black;" ></p>
+</div>
+<br><br>
+<div class="round3">
+    <p># # # # # # # # # </p>
+    <p>Unrelated to hyprland, but I also wrote a cool bash script that is actually pretty useful to me. With zshell I have a plug-in that will remember past commands and you can auto-complete commands in the terminal. It's super duper handy and I love it, but sometimes it's annoying seeing it try to suggest a random old command I don't use much. (see below)...also below is some fastfetch customization for new terminal sessions</p>
+</div>
+<div class ="round3">
+    <p> <img src="Art/mametchi/ZHistory2.png" style="width:100%; border: 3px solid black;" ></p>
+</div>
+<div class="round3">
+    <p>How it does this, is it stores the command as a line in a text file. So I made a bash script to "grep" the file, count the # of lines, as well as accept user command to delete all lines with the word in it. I've actually ended up using it quite a bit.</p>
+</div>
+<div class ="round3">
+    <p> <img src="Art/mametchi/removeGrep.png" style="width:100%; border: 3px solid black;" ></p>
+</div>
+<div class="round3">
+    <p>fairly simple script but quite useful.</p>
+</div>
+<div class ="round3">
+    <p> <img src="Art/mametchi/ZHistoryBash.png" style="width:100%; border: 3px solid black;" ></p>
+</div>
+<br><br><br>
+<div class="round3">
+    <p>Did you make mametchi go all the way down here? lol</p>
+</div>
  </body>
 
 </html>
