@@ -3,8 +3,8 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta property="og:image" content="Art/isopod/sword.png" />
-	<meta name="description" content=".*✩⚬° scraped knees + more °⚬✩*." />
-	<title>*auto-git exp 1.2*</title>
+	<meta name="description" content=".*✩⚬° auto - git °⚬✩*." />
+	<title>*auto-git exp 2.1*</title>
 	<style>
 	body{
 		padding: 1rem;
@@ -104,11 +104,14 @@
     <img src="Art/bashExp/wormsiteShell.png" style="width:100%" />
 </div>
 <div class="round3">
-	<p>It took some fiddling to properly automate this. I originally tried placing the .sh script in /etc/cron.daily dir. But it would try and git commit/push from root, which would give the error of unknown author. <br><br>Next I tried adding it directly to /etc/crontab but similarly I was getting permission errors, even when I specified to run the script as my user.name. <br><br>Finally, the solution was to place it in "crontab -e" which is my usernames personal crontab file. <br><br> It would have been better in cron.daily because if my computer isn't on at the set schedueled time, then the script simply won't run. /etc/cron.daily jobs however will be remembered until the system wakes up. Maybe theres a way to get cron.daily to recognize authors but I couldn't seem to find a way and not a lot of information online about it either</p>
+	<p>This took some fiddling to properly automate. Trying to run from cron.daily would try running it as root, so I'd get git permission errors. The solution was to make a new anacron dir in my home folder and then set it to run from crontab -e with <br><br>"@hourly /usr/sbin/anacron -s -t $HOME/.anacron/etc/anacrontab -S $HOME/.anacron/spool"<br><br>
+	<strong>breaking this down. </strong><br>
+@hourly tells it to check once an hour if the job has been ran<br>
+-s tells it to serialize the jobs [wait till one is finished before starting the next]<br>
+-t tells it to use a specified crontab [my home one] vs the standard one in /etc/<br>
+-S likewise specifies where to store spool directory storing timestamps</p><br><br>
 </div>
-<div class="round3">
-    <img src="Art/bashExp/crontab.png" style="width:100%" />
-</div>
+
 
 <p><a href="index.html">Return Home</a></p>
  </body>
