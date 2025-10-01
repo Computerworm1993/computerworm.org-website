@@ -88,6 +88,38 @@
 
 	</style>
 </head>
+<script>
+/* ----- START OF PAGE TITLE ANIMATION SCRIPT ----- */
+
+function recursiveAnimateTitle(string, delay, currentIndex = 0) {
+    if (currentIndex >= string.length) return;
+    
+    let title = document.querySelector('title');
+    title.innerHTML = string.substring(0, currentIndex + 1);
+    
+    setTimeout(function () {
+        recursiveAnimateTitle(string, delay, currentIndex + 1);
+    }, delay);
+}
+
+function animateTitle(string, initialDelay, restartDelay) {
+    document.querySelector('title').innerHTML = "";
+    setTimeout(function() {
+        recursiveAnimateTitle(string, initialDelay);
+    }, 100);
+    setTimeout(function () {
+        animateTitle(string, initialDelay, restartDelay);
+    }, initialDelay * string.length + restartDelay);
+}
+
+// Only start the animation in the top-level window
+if (window === window.top) {
+    animateTitle('666 worm heaven 666', 100, 1000);
+}
+
+/* ----- END OF PAGE TITLE ANIMATION SCRIPT ----- */
+
+</script>
   <body><h1>
 
         <img src="Art/Home/comp worm.gif" style="width:100%" >
