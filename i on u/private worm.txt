@@ -1,61 +1,73 @@
-██╗    ██╗ ██████╗ ██████╗ ███╗   ███╗     █████╗ ██╗  ████████╗███████╗
-██║    ██║██╔═══██╗██╔══██╗████╗ ████║    ██╔══██╗██║  ╚══██╔══╝██╔════╝
-██║ █╗ ██║██║   ██║██████╔╝██╔████╔██║    ███████║██║     ██║   ███████╗
-██║███╗██║██║   ██║██╔══██╗██║╚██╔╝██║    ██╔══██║██║     ██║   ╚════██║
-╚███╔███╔╝╚██████╔╝██║  ██║██║ ╚═╝ ██║    ██║  ██║███████╗██║   ███████║
- ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝    ╚═╝  ╚═╝╚══════╝╚═╝   ╚══════╝
-                my favourite alternatives to common products/services
+██╗    ██╗ ██████╗ ██████╗ ███╗   ███╗
+██║    ██║██╔═══██╗██╔══██╗████╗ ████║
+██║ █╗ ██║██║   ██║██████╔╝██╔████╔██║
+██║███╗██║██║   ██║██╔══██╗██║╚██╔╝██║
+╚███╔███╔╝╚██████╔╝██║  ██║██║ ╚═╝ ██║
+ ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
+                
+	my favourite alternatives 
+	to common products/services
           
           
------------------------------------------------------------------------          
-Easy changes to make are choosing Free Open Source Software, instead of 
-corporate owned. “free” services like those offered by google make YOU 
-and your data the product. Just by simply degoogling your life you can 
-make a tremendous difference. 
------------------------------------------------------------------------
+-------------------------------------------         
+Easy changes to make are choosing Free Open 
+Source Software, instead of corporate owned
+“free” services like those offered by google
+make YOU and your data the product. Just by
+simply degoogling your life you can make a
+tremendous difference. 
+-------------------------------------------
 
------computer---------------------------------------------------------
-1. Use an open source OS such as a linux/unix distribution
-		[Fedora, Debian, freeBSD]
+-----computer------------------------------
+1. Use an open source OS such as a linux/unix
+distribution
+	[Fedora, Debian, freeBSD]
 2. Open source bootloader [loads the OS]
-		[such as libreBoot]
-		[intel/AMD were made to include backdoors for the NSA, 
-		called the Intel Managment Engine. It allows remote 
-		access to your machine, and it cannot be disabled. I 
-		have no doubt chips made in China have similar features
-		but for the Chinese government instead of America.
+	[such as libreBoot]
+	[intel/AMD were made to include back-
+	doors for the NSA, called the Intel 
+	Management Engine. It allows remote 
+	access to your machine, and it can't
+	be disabled. I have no doubt chips 
+	made in China have similar features
+	but for the Chinese government 
+	instead of America.
 3. End to End, encrypted email.
-		Previously Proton seemed to be good, but they have 
-		faced some recent criticisms.
+	Proton seemed to be good, but they 
+	have faced some recent criticisms.
 4.a Privacy oriented browser.
-		Brave, librewolf
-	4.b browser extensions
-		privacy badger, uBlock origin, canvas blocker for 
-		anti-fingerprinting/tracking
-	4.c search engine
-		duckduckgo instead of google.com
+	Brave, librewolf
+4.b browser extensions
+	privacy badger, uBlock origin, canvas
+	blocker for anti-fingerprinting/tracking
+4.c search engine
+	duckduckgo instead of google.com
 5.a VPN – Virtual Private Network
-		Mullvad
-	5.b Secure DNS – Domain Name System
-		Mullvad - base (ad/tracker/malware blocking): 
-				IPv4: 194.242.2.4
-				IPv6: 2a07:e340: :4
-				DNS over TLS: base.dns.mullvad.net
-				DNS over HTTPS: https://base.dns.mullvad
-					.net/dns-query
+	Mullvad
+5.b Secure DNS – Domain Name System
+	Mullvad - base (ad/tracker/virus blocking): 
+	IPv4: 194.242.2.4
+	IPv6: 2a07:e340: :4
+	DNS over TLS: base.dns.mullvad.net
+	DNS over HTTPS: https://base.dns.mullvad
+		.net/dns-query
 				
 
------phone-----------------------------------------------------------------
+-----phone---------------------------------
 1. Open source OS such as GrapheneOS
-2. Browser, same as computer. Choose privacy oriented 
-3. End-to-End encryption messaging apps like Signal. And not the 
-	default Google text messaging
+2. Browser, same as computer. Choose privacy 
+	oriented 
+3. End-to-End encryption messaging apps like 
+	Signal. And not the default Google 
+	text messaging app
 
------public wifi-----------------------------------------------------------
+-----public wifi----------------------------
 Notoriously unsecure. Do not browse without a VPN
 
 
------paid Personal Info Removal services-----------------------------------
-Subscription based services that scrub and take legal action on your behalf
-to remove/request/delete data that has been harvested off of you
+-----paid Personal Info Removal services---
+Subscription based services that scrub and
+take legal action on your behalf to 
+remove/request/delete data that has been 
+harvested off of you
 
