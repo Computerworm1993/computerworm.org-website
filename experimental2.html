@@ -92,25 +92,29 @@
 </div>
 
 <br>
-<!-- wormSite.sh in /usr/local/bin/ depends on lines above not changing [line 65 add new text/line 90-93 delete old] -->
+<!-- wormSite.sh in /etc/cron.daily depends on lines above not changing [line 65 add new text/line 90-93 delete old] -->
+<div class="round3">
+	<p style="text-align: center;">this script has ran</p>
+	<p style="text-align: center; color: rgb(220, 92, 197);"><strong>
+14
+	</strong></p>
+	<p style="text-align: center;">times since it started on 28/09/25</p>
+</div>
+<!-- wormSite.sh  depends on lines above not changing [line 99 counter go up each time] -->
+<br>
 <div class="round3">
 	<p style="text-align: center"><br><br> --END OF TRANSMISSION--<br><br><br></p>
 </div>
 <br>
 <div class="round3">
     <p><strong>ABOUT: </strong></p>
-    <p>This experiment was to try to auto-update my website using a bash script to edit my .html file<br><br>first the shell script attempts to curl a random word from the internet as well as stores the time in a variable.<br><br>Next it appends these variables into my .html file with properly formatted html, as well as deletes the last chunk so it's only ever 7 days long.<br><br>The formated html is as follows</p><p>&lt;div class=&quot;round3&quot;&gt;<br>&lt;p&gt; \ ${timestamp}&lt;/p&gt;<br>&lt;p&gt;random word: \ ${word}&lt;/p&gt;<br>&lt;/div&gt;</p><p>And then finally my script will git add/commit/push the new file to my websites repo</p>
+    <p>This experiment was to try to auto-update my website using a bash script to edit my .html file<br><br>first the shell script attempts to curl a random word from the internet as well as stores the time in a variable.<br><br>Next it appends these variables into my .html file with properly formatted html, as well as deletes the last chunk so it's only ever 7 days long.<br><br>The formated html is as follows</p><p>&lt;div class=&quot;round3&quot;&gt;<br>&lt;p&gt; \ ${timestamp}&lt;/p&gt;<br>&lt;p&gt;random word: \ ${word}&lt;/p&gt;<br>&lt;/div&gt;</p><p>Then it pulls line 99 of the html file and +1 to increase the counter, deletes the old line 99 and inserts the new variable</p><p>Finally my script will git add/commit/push the new file to my websites repo</p>
 </div>
 <div class="round3">
     <img src="Art/bashExp/wormsiteShell.png" style="width:100%" />
 </div>
 <div class="round3">
-	<p>This took some fiddling to properly automate. Trying to run from cron.daily would try running it as root, so I'd get git permission errors. The solution was to make a new anacron dir in my home folder and then set it to run from crontab -e with <br><br>"@hourly /usr/sbin/anacron -s -t $HOME/.anacron/etc/anacrontab -S $HOME/.anacron/spool"<br><br>
-	<strong>breaking this down. </strong><br>
-@hourly tells it to check once an hour if the job has been ran<br>
--s tells it to serialize the jobs [wait till one is finished before starting the next]<br>
--t tells it to use a specified crontab [my home one] vs the standard one in /etc/<br>
--S likewise specifies where to store spool directory storing timestamps</p><br><br>
+	<p>This took some fiddling to properly automate. Trying to run from cron.daily would try running it as root, so I'd get git permission errors when trying to git push. The solution was to specify at the start of the bash script to run the following commands as my username instead of root. ezpz
 </div>
 
 
