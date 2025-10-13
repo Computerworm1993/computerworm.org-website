@@ -86,7 +86,7 @@
 </div>
 <div class="round3">
 <p>placeholder:scraped date</p>
-<p>--------------------------------------------------------</p>
+<p>----------------------------------------------------------</p>
 <p>CODE:placeholder</p>
 <p>ISSUED:placeholder</p>
 <p>ALERT: placeholder</p>
@@ -131,13 +131,19 @@
 <br>
 <div class="round3">
     <p><strong>ABOUT: </strong></p>
-    <p>This experiment was to try to auto-update my website using a bash script to edit my .html file<br><br>First the script curls and parses the json from this <a href="https://www.swpc.noaa.gov/products/alerts-watches-and-warnings">NOAA site</a> that has public alerts/warnings on space weather conditions. Then it filters for only the first message/alert. And stores some of the info i wanted as variables<br><br>Next it appends these variables into my .html file with properly formatted html, as well as deletes the last chunk so it's only ever 7 days long</p><p>Then it pulls line 99 of the html file and +1 to increase the counter, deletes the old line 99 and inserts the new variable</p><p>Finally my script will git add/commit/push the new file to my websites repo</p>
+    <p>This experiment was to try to auto-update my website using a bash script to edit my .html file<br><br>First the script curls and parses the json from this <a href="https://www.swpc.noaa.gov/products/alerts-watches-and-warnings">NOAA site</a> that has public alerts/warnings on space weather conditions. Then it filters for only the first message/alert.</p>
+</div>
+<div class="round3">
+	<img src="Art/bashExp/spacejson.png" style="width:100%" />
+</div>
+<div class="round3">	
+	<p>Then it chops up the message and stores some of the info i wanted as variables<br><br>Next it appends these variables into my .html file with properly formatted html, as well as deletes the last chunk so it's only ever 7 days long</p><p>Then it pulls line 99 of the html file and +1 to increase the counter, deletes the old line 99 and inserts the new variable</p><p>Finally my script will git add/commit/push the new file to my websites repo</p>
 </div>
 <div class="round3">
     <img src="Art/bashExp/wormsiteShell.png" style="width:100%" />
 </div>
 <div class="round3">
-	<p>This took some fiddling to properly automate. Trying to run from cron.daily would try running it as root, so I'd get git permission errors when trying to git push. The solution was to specify at the start of the bash script to run the following commands as my username instead of root. ezpz
+	<p>This took some fiddling to properly automate. Trying to run from cron.daily would try running it as root, so I'd get git permission errors when trying to git push. The solution was to specify at the start of the bash script to check if its running as root. If true (which it always will be) then run the command to switch to my username. Since it will always be the case you dont need any "else" function. ezpz
 </div>
 
 
