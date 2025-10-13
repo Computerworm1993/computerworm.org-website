@@ -54,7 +54,7 @@
 
 <div class="round3">
     <p style="text-align: center"><strong>Experimental v3.1</strong></p>
-<p style="text-align: center"><small>September 28, 2025</small></p>
+<p style="text-align: center"><small>October 13, 2025</small></p>
 </div>
 <br>
 
@@ -64,53 +64,53 @@
 <br>
 <div class="round3"><p><strong>SPACE WEATHER MESSAGES</strong><br>ALERTS/WATCHES/WARNINGS</p></div>
 <div class="round3">
-<p>Mon Oct 13 03:46:46 AM MDT 2025</p>
+<p>Mon Oct 13 12:37:13 PM MDT 2025</p>
 <p>--------------------</p>
-<p>CODE:ALTK05</p>
-<p>ISSUED:2025 Oct 13 0530 UTC</p>
-<p>ALERT: Geomagnetic K-index of 5</p>
+<p>CODE:WARK04</p>
+<p>ISSUED:2025 Oct 13 1754 UTC</p>
+<p>EXTENDED WARNING: Geomagnetic K-index of 4 expected</p>
 </div>
 <div class="round3">
-<p>Mon Oct 13 03:46:43 AM MDT 2025</p>
+<p>placeholder:scraped date</p>
 <p>--------------------</p>
-<p>CODE:ALTK05</p>
-<p>ISSUED:2025 Oct 13 0530 UTC</p>
-<p>ALERT: Geomagnetic K-index of 5</p>
+<p>CODE:placeholder</p>
+<p>ISSUED:placeholder</p>
+<p>ALERT: placeholder</p>
 </div>
 <div class="round3">
-<p>Mon Oct 13 03:46:04 AM MDT 2025</p>
+<p>placeholder:scraped date</p>
 <p>--------------------</p>
-<p>CODE:ALTK05</p>
-<p>ISSUED:2025 Oct 13 0530 UTC</p>
-<p>ALERT: Geomagnetic K-index of 5</p>
+<p>CODE:placeholder</p>
+<p>ISSUED:placeholder</p>
+<p>ALERT: placeholder</p>
 </div>
 <div class="round3">
-<p>Mon Oct 13 03:44:19 AM MDT 2025</p>
+<p>placeholder:scraped date</p>
 <p>--------------------</p>
-<p>CODE:ALTK05</p>
-<p>ISSUED:2025 Oct 13 0530 UTC</p>
-<p>ALERT: Geomagnetic K-index of 5</p>
+<p>CODE:placeholder</p>
+<p>ISSUED:placeholder</p>
+<p>ALERT: placeholder</p>
 </div>
 <div class="round3">
-<p>Mon Oct 13 03:41:39 AM MDT 2025</p>
+<p>placeholder:scraped date</p>
 <p>--------------------</p>
-<p>CODE:ALTK05</p>
-<p>ISSUED:2025 Oct 13 0530 UTC</p>
-<p>ALERT: Geomagnetic K-index of 5</p>
+<p>CODE:placeholder</p>
+<p>ISSUED:placeholder</p>
+<p>ALERT: placeholder</p>
 </div>
 <div class="round3">
-<p>1 Mon Oct 13 03:37:20 AM MDT 2025</p>
+<p>placeholder:scraped date</p>
 <p>--------------------</p>
-<p>CODE:ALTK05</p>
-<p>ISSUED:2025 Oct 13 0530 UTC</p>
-<p>ALERT: Geomagnetic K-index of 5</p>
+<p>CODE:placeholder</p>
+<p>ISSUED:placeholder</p>
+<p>ALERT: placeholder</p>
 </div>
 <div class="round3">
-<p>2 Mon Oct 13 03:37:19 AM MDT 2025</p>
+<p>placeholder:scraped date</p>
 <p>--------------------</p>
-<p>CODE:ALTK05</p>
-<p>ISSUED:2025 Oct 13 0530 UTC</p>
-<p>ALERT: Geomagnetic K-index of 5</p>
+<p>CODE:placeholder</p>
+<p>ISSUED:placeholder</p>
+<p>ALERT: placeholder</p>
 </div>
 
 
@@ -119,9 +119,9 @@
 <div class="round3">
 	<p style="text-align: center;">this script has ran</p>
 	<p style="text-align: center; color: rgb(220, 92, 197);"><strong>
-14
+1
 	</strong></p>
-	<p style="text-align: center;">times since it started on 28/09/25</p>
+	<p style="text-align: center;">times since it started on 13/10/25</p>
 </div>
 <!-- wormSite.sh  depends on lines above not changing [line 99 counter go up each time] -->
 <br>
@@ -131,7 +131,7 @@
 <br>
 <div class="round3">
     <p><strong>ABOUT: </strong></p>
-    <p>This experiment was to try to auto-update my website using a bash script to edit my .html file<br><br>first the shell script attempts to curl a random word from the internet as well as stores the time in a variable.<br><br>Next it appends these variables into my .html file with properly formatted html, as well as deletes the last chunk so it's only ever 7 days long.<br><br>The formated html is as follows</p><p>&lt;div class=&quot;round3&quot;&gt;<br>&lt;p&gt; \ ${timestamp}&lt;/p&gt;<br>&lt;p&gt;random word: \ ${word}&lt;/p&gt;<br>&lt;/div&gt;</p><p>Then it pulls line 99 of the html file and +1 to increase the counter, deletes the old line 99 and inserts the new variable</p><p>Finally my script will git add/commit/push the new file to my websites repo</p>
+    <p>This experiment was to try to auto-update my website using a bash script to edit my .html file<br><br>First the script curls and parses the json from this <a href="https://www.swpc.noaa.gov/products/alerts-watches-and-warnings">NOAA site</a> that has public alerts/warnings on space weather conditions. Then it filters for only the first message/alert. And stores some of the info i wanted as variables<br><br>Next it appends these variables into my .html file with properly formatted html, as well as deletes the last chunk so it's only ever 7 days long</p><p>Then it pulls line 99 of the html file and +1 to increase the counter, deletes the old line 99 and inserts the new variable</p><p>Finally my script will git add/commit/push the new file to my websites repo</p>
 </div>
 <div class="round3">
     <img src="Art/bashExp/wormsiteShell.png" style="width:100%" />
