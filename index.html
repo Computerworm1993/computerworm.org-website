@@ -93,8 +93,12 @@
 }
 
 	</style>
+<script src="https://iframe.chat/scripts/main.min.js"></script>
 </head>
 <script>
+	chattable.initialize({
+    stylesheet: "chattable.css",
+  });
 /* ----- START OF PAGE TITLE ANIMATION SCRIPT ----- */
 
 function recursiveAnimateTitle(string, delay, currentIndex = 0) {
@@ -124,6 +128,7 @@ if (window === window.top) {
 }
 
 /* ----- END OF PAGE TITLE ANIMATION SCRIPT ----- */
+
 
 </script>
   <body><h1>
@@ -204,5 +209,8 @@ if (window === window.top) {
 
  <p style="text-align: center"><span><small>
 ...downloading Self-replicating malware directly into your brainstem...</small></p>
- </body>
+<div style="background-color: pink;">
+<iframe src="https://iframe.chat/embed?chat=WormChat" id="chattable"></iframe>
+</div>
+</body>
 </html>
