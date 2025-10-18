@@ -4,11 +4,9 @@
   --main-bg-color: #FFFFFF;
   --text-color: #000;
   --shadow-color: #300;
-  --bannertitle: "Wyrm Chat"
+  --bannertitle: "worm chat";
 }
-@font-face {
-  src: url(https://www.computerworm.org/Art/wormChat/WhiteRabbit-47pD.ttf);
-}
+
 body {
   font-family: "Courier New"
   font-smooth: never;
