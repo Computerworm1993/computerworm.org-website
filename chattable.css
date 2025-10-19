@@ -152,7 +152,7 @@ position: fixed;
 right: 35px;
 bottom: 0;
 width: 50vw;
-color: #000;
+color: pink;
 z-index: 100000;
 }
 #is_typing > span {
