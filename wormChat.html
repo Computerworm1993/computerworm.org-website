@@ -30,6 +30,15 @@
         font-size: medium;
         
         }
+        input {
+        border: 3px solid #ffffff;
+        border-radius: 30px;
+        padding: 10px 20px 10px 20px;
+        background: #8ccb98;
+		color: rgb(0, 0, 0);
+        font-family: "Courier New", Times, serif;
+        font-size: medium;
+        }
     .round3 {
         border: 3px solid #315686;
         border-radius: 12px;
@@ -45,9 +54,9 @@
     justify-content: center;
     flex-wrap: nowrap;
     width: 100%;
-    background: #919ec2;
-    border: 3px solid #315686;
-    border-radius: 12px;
+    background: #95ddd2;
+    border: 3px solid #562d64;
+    border-radius: 45px;
     margin: 0px auto;
     position: relative;
     text-align:center;
@@ -65,20 +74,48 @@
   	function notice() {
 		alert("pls b nice; no hate mail lol");
 		}
+let x = 0;
+	function cntrlmp3() {
+		if (x == 0){
+			document.getElementById('myAudio').pause();
+			document.getElementById('butt1').value="°.- P L A Y -.°";
+			x = 1;
+			} else {
+			document.getElementById('myAudio').play();
+			document.getElementById('butt1').value="°.- M U T E -.°";
+			x = 0;
+			}
+		}
+
 </script>
+<audio id="myAudio" src="Art/wormChat/wiv-I_Love_U.mp3" autoplay loop>
+Srry bb no audio, its ur web browsers fault not my websites
+</audio>
 <body>
 
     <h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
-
+<div class="round3"><p style="text-align: center;"><strong>-- Worms Chat Room --</strong></p></div>
 <div class="container">
+        <div class="block">
+        <p>|</p>
+    </div>
     <div class="block">
         <a href="index.html" style="display: inline-block;">Home</a>
     </div>
-    <div class="block">
-        <p style="text-align: center; display: inline-block;"><strong>-- Welcome to Worm Chat Room --</strong></p>
+        <div class="block">
+        <p>|</p>
     </div>
     <div class="block">
-        <button onclick="notice()">♥ !</button>
+        <input type="button" onclick="cntrlmp3()" value="°.- M U T E -.°" id="butt1" />
+    </div>
+        <div class="block">
+        <p>|</p>
+    </div>
+    <div class="block">
+        <button onclick="notice()">!</button>
+    </div>
+    <div class="block">
+        <p>|</p>
     </div>
 </div>
 <iframe src="https://iframe.chat/embed?chat=WormChat" id="chattable" style="height: 600px; width:100%; text-align: center;";></iframe>
