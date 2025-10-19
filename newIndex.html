@@ -91,7 +91,22 @@
   background: #9ec1a8;
 
 }
-
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    background: #95ddd2;
+    border: 3px solid #562d64;
+    border-radius: 45px;
+    margin: 0px auto;
+    position: relative;
+    text-align:center;
+}
+.block {
+    background-color: blue;
+    margin: 10px;
+}
 	</style>
 </head>
 <script>
@@ -140,24 +155,51 @@ if (window === window.top) {
 </marquee>
 </p>
 
-
-
-
 <div class="projectsRow">
 	<div class="leftcolumn">
 	</div>
 	<div class="projectscolumn">
-		<div>
-			<img src="Art/Home/projects.png" class="project" >
-		<a href="me.html">.. who_is? ..</a></p>
-		<a href="wormChat.html">Worm-Chat</a></p>
-		<a href="mametchi.html">Hypr-Chi</a></p>
-		<a href="isopod.html">isopod.exe</a></p>
-		<a href="VHS.html">VHS Game Rig</a></p>
-		<a href="ZENITH.html">Z E N I T H</a></p>
-		<a href="ArtEtc.html">҉ &nbsp;&nbsp; Art etc. &nbsp;&nbsp; ҉</a></p>
-		<a href="experimental.html">ASTRO-alert</a></p>
-		<a href="newIndex.html">temp index rebuild</a></p>
+		<div class="container">
+            <div class="block">
+		        <a href="me.html"><img src="Art/about/croweating.gif" alt="Clickable Image"><br>WHO?</a></p>
+            </div>
+            <div class="block">
+		        <a href="wormChat.html"><img src="Art/about/croweating.gif" alt="Clickable Image"><br>CHAT</a></p>
+            </div>
+        </div>
+		<div class="container">
+            <div class="block">
+		        <a href="experimental.html"><img src="Art/about/croweating.gif" alt="Clickable Image"><br>ASTRO</a></p>
+            </div>
+            <div class="block">
+		        <a href=" "><img src="Art/about/croweating.gif" alt="Clickable Image"><br>SCRIPTS</a></p>
+            </div>
+        </div>
+		<div class="container">
+            <div class="block">
+		        <a href="isopod.html"><img src="Art/about/croweating.gif" alt="Clickable Image"><br>ISOPOD</a></p>
+            </div>
+            <div class="block">
+		        <a href="VHS.html"><img src="Art/about/croweating.gif" alt="Clickable Image"><br>VHS</a></p>
+            </div>
+        </div>
+		<div class="container">
+            <div class="block">
+		        <a href="ZENITH.html"><img src="Art/about/croweating.gif" alt="Clickable Image"><br>ZENITH</a></p>
+            </div>
+            <div class="block">
+		        <a href="ArtEtc.html"><img src="Art/about/croweating.gif" alt="Clickable Image"><br>ART</a></p>
+            </div>
+        </div>
+		<div class="container">
+            <div class="block">
+		        <a href="mametchi.html"><img src="Art/about/croweating.gif" alt="Clickable Image"><br>HYPR</a></p>
+            </div>
+            <div class="block">
+		        <a href=" "><img src="Art/about/croweating.gif" alt="Clickable Image"><br>NOTHING</a></p>
+            </div>
+        </div>
+
 <br><br>
 		<img src="Art/Home/blog.png" class="project" >
 		<div class="blogcolumn">
@@ -194,7 +236,6 @@ if (window === window.top) {
 		<br>
 		<br>
 	</div>
-</div>
 	<div class="rightcolumn">
 	</div>
 </div>
