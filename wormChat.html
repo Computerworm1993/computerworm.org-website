@@ -13,8 +13,23 @@
 		background: teal;
         font-family: "Courier New", Times, serif;}
 	a {
-		color: red;}
-
+        border: 3px solid #ffffff;
+        border-radius: 30px;
+        padding: 10px 20px 10px 20px;
+        background: #8ccb98;
+		color: rgb(0, 0, 0);
+        font-size: medium;
+    }
+        button {
+        border: 3px solid #ffffff;
+        border-radius: 30px;
+        padding: 10px 20px 10px 20px;
+        background: #8ccb98;
+		color: rgb(0, 0, 0);
+        font-family: "Courier New", Times, serif;
+        font-size: medium;
+        
+        }
     .round3 {
         border: 3px solid #315686;
         border-radius: 12px;
@@ -25,7 +40,21 @@
         border-radius: 12px;
         padding: 5px;
         background: #e0e3ec;}
-
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background: #919ec2;
+    border: 3px solid #315686;
+    border-radius: 12px;
+    margin: 0px auto;
+    position: relative;
+    text-align:center;
+}
+.block {
+    margin: 10px;
+}
 	</style>
     <script src="https://iframe.chat/scripts/main.min.js"></script>
 </head>
@@ -33,14 +62,25 @@
 	chattable.initialize({
     stylesheet: "chattable.css",
   });
+  	function notice() {
+		alert("pls b nice; no hate mail lol");
+		}
 </script>
 <body>
 
     <h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
-<p><a href="index.html">Return Home</a></p>
-<p><strong>-- Welcome to Worm Chat Room --</strong></p>
-<iframe src="https://iframe.chat/embed?chat=WormChat" id="chattable" style="height: 600px; width:100%; text-align: center;";></iframe>
 
-<p><a href="index.html">Return Home</a></p>
+<div class="container">
+    <div class="block">
+        <a href="index.html" style="display: inline-block;">Home</a>
+    </div>
+    <div class="block">
+        <p style="text-align: center; display: inline-block;"><strong>-- Welcome to Worm Chat Room --</strong></p>
+    </div>
+    <div class="block">
+        <button onclick="notice()">♥ !</button>
+    </div>
+</div>
+<iframe src="https://iframe.chat/embed?chat=WormChat" id="chattable" style="height: 600px; width:100%; text-align: center;";></iframe>
  </body>
 </html>
