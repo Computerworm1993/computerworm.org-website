@@ -13,6 +13,9 @@
 		border-spacing: 5px;
 		height: 75dvh;
 		}
+	iframe {
+		height: 60dvh;
+	}
 	.row {
 		height: 50%;
 	}
@@ -114,7 +117,7 @@
 }
     .scrollable{
         min-height: 0;
-        max-height: 50dvh;
+        max-height: 60dvh;
         display: flex;
         position: relative;
         flex-direction: column;
@@ -147,6 +150,19 @@ function animateTitle(string, initialDelay, restartDelay) {
     setTimeout(function () {
         animateTitle(string, initialDelay, restartDelay);
     }, initialDelay * string.length + restartDelay);
+}
+/* navigation scripts below--- */
+function displayProjects(){
+	document.getElementById('myIframe').src = 'projects.html';
+
+}
+function displayBlogs(){
+	document.getElementById('myIframe').src = 'blog.html';
+
+}
+function displayScripts(){
+	document.getElementById('myIframe').src = 'scripts.html';
+
 }
 
 // Only start the animation in the top-level window
@@ -197,71 +213,12 @@ if (window === window.top) {
 <div class="row">
     <div class="navigation"  style="margin: 5px; border: 3px solid white;">
         <div style="margin-bottom: 5px; border-top: 1px solid #fff; border-bottom: 3px solid #fff;">
-			<div style="margin: 8px; display:flex; flex-wrap: nowrap; justify-content: space-between;"><button style="margin-right: 8px; margin-left: 8px;">PROJECTS</button ><button style="margin-right: 8px; margin-left: 8px;">SCRIPTS</button><button style="margin-right: 8px; margin-left: 8px;">BLOG</button></div></div>
-        <div class="projects">
-			<div style="background-color: white"><img style="width:60%" src="Art/scripts/scripts.png"></div>
-            <div class="scrollable">
-                <table>
-					<tr><th>title</th><th> info </th></tr>
-			<tr>
-			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
-			    <td>random pixel art everytime I open my terminal</td>
-			</tr>
-			<tr>
-			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
-			    <td>random pixel art everytime I open my terminal</td>
-			</tr>
-			<tr>
-			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
-			    <td>random pixel art everytime I open my terminal</td>
-			</tr>
-			<tr>
-			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
-			    <td>random pixel art everytime I open my terminal</td>
-			</tr>
-			<tr>
-			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
-			    <td>random pixel art everytime I open my terminal</td>
-			</tr>
-			<tr>
-			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
-			    <td>random pixel art everytime I open my terminal</td>
-			</tr>
-			<tr>
-			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
-			    <td>random pixel art everytime I open my terminal</td>
-			</tr>
-			<tr>
-			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
-			    <td>random pixel art everytime I open my terminal</td>
-			</tr>
-			<tr>
-			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
-			    <td>random pixel art everytime I open my terminal</td>
-			</tr>
-						<tr>
-			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
-			    <td>random pixel art everytime I open my terminal</td>
-			</tr>
-						<tr>
-			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
-			    <td>random pixel art everytime I open my terminal</td>
-			</tr>
-						<tr>
-			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
-			    <td>random pixel art everytime I open my terminal</td>
-			</tr>
-						<tr>
-			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
-			    <td>random pixel art everytime I open my terminal</td>
-			</tr>
-						<tr>
-			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
-			    <td>random pixel art everytime I open my terminal</td>
-			</tr>
-				</table>
-            </div>
-        </div>
+			<div style="margin: 8px; display:flex; flex-wrap: nowrap; justify-content: space-between;">
+				<input type="button" onclick="displayProjects()" value="projects"  style="margin-right: 8px; margin-left: 8px;">
+				<input type="button" onclick="displayScripts()" value="scripts"  style="margin-right: 8px; margin-left: 8px;">
+				<input type="button" onclick="displayBlogs()" value="blog"  style="margin-right: 8px; margin-left: 8px;">
+				</div></div>
+<iframe id="myIframe" style="width: 100%;" src="blog.html"></iframe>
     </div>
 </div>
 <!--end of table-->

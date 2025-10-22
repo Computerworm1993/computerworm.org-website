@@ -1,0 +1,55 @@
+<style>
+
+    .scrollable{
+        min-height: 0;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        overflow-y: scroll;
+        margin: 5px;
+        border-top: 1px solid #fff;
+		a { color: blue;}
+    }
+	    table {
+  padding: 5px;
+  margin: 5px;
+  color: white;
+	}
+    td {
+        border-top: 1px solid #fff;
+        padding-top: 6px;
+		background-color: rgb(147, 121, 121);
+		font: x-small;
+    }
+    th {
+        padding-top: 6px;
+        border: 1px solid #fff;
+
+    }
+</style>
+<script>
+    function nav2Privacy() {
+    window.parent.location.href = "I.On.U.html";
+}
+    function nav2Winamp() {
+    window.parent.location.href = "CL0003.html";
+}
+</script>
+<div class="projects">
+			<div style="background-color: white"><img style="width:60%; text-align: center;" src="Art/scripts/blog.png"></div>
+            <div class="scrollable">
+                <table>
+					<tr><th>title</th><th> date </th></tr>
+			<tr>
+			    <td style="text-wrap: nowrap;"><input type="button" onclick="nav2Privacy()" value="digital privacy" /></td>
+			    <td>Oct 11, 2025</td>
+			</tr>
+			<tr>
+			    <td style="text-wrap: nowrap;"><input type="button" onclick="nav2Winamp()" value="winamp.exe" /></td>
+			    <td>Aug 09, 2025</td>
+			</tr>
+
+				</table>
+            </div>
+        </div>
+    </div>
