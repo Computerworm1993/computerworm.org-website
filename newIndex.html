@@ -7,26 +7,32 @@
 	<title>666 Worm Heaven 666</title>
 	<style>
 	.projectsRow {
+		background-color: red;
 		display: table;
 		width: 100%;
 		table-layout: fixed;
 		border-spacing: 5px;
+		height: 50vh;
 		}
+	.row {
+		background-color: blueviolet;
+		height: 50%;
+	}
 	.leftcolumn {
 		display: table-cell;
-		width: 25%;
+		width: 10%;
 		background-image: url("Art/Home/hands.png");
 		background-repeat: repeat-y;
 		background-size: contain;
 		}
 	.rightcolumn {
 		display: table-cell;
-		width: 25%;
+		width: 10%;
 		background-image: url("Art/Home/handsright.png");
 		background-repeat: repeat-y;
 		background-size: contain;
 		}
-	.projectscolumn {
+	.middlecolumn {
 		display: table-cell;
 		vertical-align: top;
 		text-align: center;
@@ -68,22 +74,21 @@
 		color:white;
 		font-size: 10px;
 		}
-
-	table, th, td {
-  		border: 2px outset gray;
+    table {
+  padding: 5px;
+  margin: 5px;
+  color: white;
 	}
-        th {
-            
-		color:white;
-		font-size:18px;
-        }
-	td {
-		font-size:10px;
-		padding:8px;
-		color:yellow;
-		text-align:center;
+    td {
+        border-top: 1px solid #fff;
+        padding-top: 6px;
+    }
+    th {
+        padding-top: 6px;
+        border: 1px solid #fff;
 
-	}
+    }
+    
 .round2 {
   border: 3px solid #31b8ca;
   border-radius: 12px;
@@ -91,18 +96,34 @@
   background: #9ec1a8;
 
 }
-.container {
+.showcase {
+	margin: 5px auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: nowrap;
-    width: 100%;
-    margin: 0px auto;
-    position: relative;
+	height: 40%;
+	width: 96%;
     text-align:center;
+    border: 3px solid white;
+}
+.topChunk {
+	height: 30vh;
 }
 .block {
     margin: 10px;
+	width: 24%;
 }
+    .scrollable{
+        min-height: 0;
+        max-height: 50vh;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        overflow-y: scroll;
+        margin: 5px;
+        border-top: 1px solid #fff;
+		a { color: blue;}
+    }
 	</style>
 </head>
 <script>
@@ -138,73 +159,101 @@ if (window === window.top) {
 
 
 </script>
-  <body><h1>
-
-        <img src="Art/Home/comp worm.gif" style="width:100%" >
-</h1>
-<p style="text-align: center"><span>
- ⋆⚬°☆⭒ Welcome to my small corner here on the wired ⭒☆°⚬⋆ </p>
-<p style="text-align: center; background:pink; text-align: center;">
+  <body>
+<div class="topChunk">
+<img src="Art/Home/comp worm.gif" style="width:100%" >
+<p style="text-align: center; background:pink; text-align: center; padding: 1px; border: 3px solid white;">
 	last git push -- OCT 20,2025 -- cornmeal  (=ФェФ=) 
 	<marquee scrollamount="10vw" style="display: inline-block;">
 	I'm looking forward to Halloween -- Are you? ....... I wanna write more bash scripts, theyre so much fun. But idk what to make
 </marquee>
 </p>
+<div class="showcase">
 
+    <div class="block">
+        <a href=><img src="Art/Home/CDs/wormChat.gif" style="height: 80%;"><br>CHAT</a>
+    </div>
+
+    <div class="block">
+        <a href=><img src="Art/Home/CDs/gengar.gif" style="height: 80%;"><br>WHO?</a>
+    </div>
+
+    <div class="block">
+        <a href=><img src="Art/Home/CDs/moon.gif" style="height: 80%;"><br>ASTRO</a>
+    </div>
+    <div class="block">
+        <a href=><img src="Art/Home/CDs/coffee.gif" style="height: 80%;"><br>ART</a>
+    </div>
+
+
+
+</div>
+</div>
+<!--start of left/middle/right colums with hands art-->
+<br><br><br>
 <div class="projectsRow">
+	
 	<div class="leftcolumn">
 	</div>
-	<div class="projectscolumn">
-		<div class="container">
-            <div class="block" style="width: 30%;">
-		        <a href="me.html"><img src="Art/Home/CDs/flop.gif" style="width: 100%;" alt="Clickable Image"><br>WHO?</a></p>
-            </div>
-            <div class="block" style="width: 30%;">
-		        <a href="wormChat.html"><img src="Art/Home/CDs/cd.gif" style="width: 100%;"  alt="Clickable Image"><br>CHAT</a></p>
-            </div>
-        </div>
-		<div class="container">
-            <div class="block" style="width: 30%;">
-		        <a href="experimental.html"><img src="Art/Home/CDs/moon.gif" alt="Clickable Image" style="width: 100%;"><br>ASTRO</a></p>
-            </div>
-            <div class="block" style="width: 30%">
-		        <a href="scripts.html"><img src="Art/Home/CDs/linux.gif" alt="Clickable Image" style="width: 100%;"><br>SCRIPTS</a></p>
-            </div>
-        </div>
-		<div class="container">
-            <div class="block" style="width: 30%;">
-		        <a href="isopod.html"><img src="Art/Home/CDs/orange.gif" style="width: 100%;" alt="Clickable Image"><br>ISOPOD</a></p>
-            </div>
-            <div class="block" style="width: 30%;">
-		        <a href="VHS.html"><img src="Art/Home/CDs/ghost.gif" style="width: 100%;"  alt="Clickable Image"><br>VHS</a></p>
-            </div>
-        </div>
-		<div class="container">
-            <div class="block" style="width: 30%;">
-		        <a href="ZENITH.html"><img src="Art/Home/CDs/eyes.gif" style="width: 100%;" alt="Clickable Image"><br>ZENITH</a></p>
-            </div>
-            <div class="block" style="width: 30%;">
-		        <a href="ArtEtc.html"><img src="Art/Home/CDs/fish.gif" style="width: 100%;" alt="Clickable Image"><br>ART</a></p>
-            </div>
-        </div>
-		<div class="container">
-            <div class="block" style="width: 30%;">
-		        <a href="mametchi.html"><img src="Art/Home/CDs/gengar.gif" style="width: 100%;" alt="Clickable Image"><br>HYPR</a></p>
-            </div>
-            <div class="block" style="width: 30%;">
-		        <a href="blogIndex.html"><img src="Art/Home/CDs/coffee.gif" style="width: 100%;" alt="Clickable Image"><br>BLOG POSTS</a></p>
-            </div>
-        </div>
-		<div class="blogcolumn">
-			<div>
+	
+	<div class="middlecolumn">
 
-			</div>
-		</div>
-		<br>
-		<br>
+<!--scrollible projects table-->
+<div class="row">
+    <div class="navigation"  style="margin: 5px; border: 3px solid white;">
+        <div style="margin-bottom: 5px; border-top: 1px solid #fff; border-bottom: 3px solid #fff;"><div style="color: white; margin: 8px; background-color: grey;">//Navigation</div><div style="margin: 8px;"><button style="margin-right: 8px; margin-left: 8px;">PROJECTS</button ><button style="margin-right: 8px; margin-left: 8px;">SCRIPTS</button><button style="margin-right: 8px; margin-left: 8px;">BLOG</button></div></div>
+        <div class="projects">
+			<div><p style="background-color: green;">.. ANSI TITLE ..<br><br></p></div>
+            <div class="scrollable">
+                <table>
+					<tr><th>title</th><th> info </th></tr>
+			<tr>
+			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
+			    <td>random pixel art everytime I open my terminal</td>
+			</tr>
+			<tr>
+			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
+			    <td>random pixel art everytime I open my terminal</td>
+			</tr>
+			<tr>
+			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
+			    <td>random pixel art everytime I open my terminal</td>
+			</tr>
+			<tr>
+			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
+			    <td>random pixel art everytime I open my terminal</td>
+			</tr>
+			<tr>
+			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
+			    <td>random pixel art everytime I open my terminal</td>
+			</tr>
+			<tr>
+			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
+			    <td>random pixel art everytime I open my terminal</td>
+			</tr>
+			<tr>
+			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
+			    <td>random pixel art everytime I open my terminal</td>
+			</tr>
+			<tr>
+			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
+			    <td>random pixel art everytime I open my terminal</td>
+			</tr>
+			<tr>
+			    <td style="text-wrap: nowrap;"><a href="I.On.U.html">terminal pixel art</a></td>
+			    <td>random pixel art everytime I open my terminal</td>
+			</tr>
+				</table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end of table-->
 	</div>
+
 	<div class="rightcolumn">
 	</div>
 </div>
+
 </body>
 </html>
