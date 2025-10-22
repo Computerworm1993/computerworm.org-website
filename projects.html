@@ -6,26 +6,27 @@
         position: relative;
         flex-direction: column;
         overflow-y: scroll;
-        margin: 5px;
         border-top: 1px solid #fff;
 		a { color: blue;}
     }
 	    table {
-  padding: 5px;
-  margin: 5px;
   color: white;
 	}
     td {
         border-top: 1px solid #fff;
-        padding-top: 6px;
 		background-color: rgb(147, 121, 121);
-		font: x-small;
     }
     th {
         padding-top: 6px;
         border: 1px solid #fff;
 
     }
+    td:nth-child(2) { 
+        font-size: small;
+     }
+    td:nth-child(1) { 
+        padding: 5px;
+     }
 </style>
 <script>
     function nav2Isopod() {
@@ -48,7 +49,7 @@
 					<tr><th>title</th><th> info </th></tr>
 			<tr>
 			    <td style="text-wrap: nowrap;"><input type="button" onclick="nav2Isopod()" value="ISOPOD.exe" /></td>
-			    <td>Automated quality report</td>
+			    <td>Automated drinking water quality reporting</td>
 			</tr>
 			<tr>
 			    <td style="text-wrap: nowrap;"><input type="button" onclick="nav2VHS()" value="VHS.rom" /></td>
