@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:image" content="Art/isopod/sword.png" />
+	<meta name="description" content=".*✩⚬° i on u °⚬✩*." />
+	<title>//_i_on_u_//</title>
+	<style>
+	body{
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 640px;
+		background: teal;
+        font-family: "Courier New", Times, serif;}
+	a {
+		color: red;}
+	p span{
+		position:relative;
+		display:inline-block;
+		text-align: center;}
+    .round3 {
+        border: 3px solid #95acca;
+        border-radius: 12px;
+        padding: 5px;
+        background: #e0e3ec;}
+	.row {
+  		display: flex;
+  		flex-wrap: wrap;
+  		padding: 0 2px;}
+
+/* Create two equal columns that sits next to each other */
+	.column img {
+  		vertical-align: middle;}
+    table {
+        text-align: center;}
+* {
+  box-sizing: border-box;}
+
+	.column{
+		float: left;
+    	text-align: center;
+		width: 50%;
+		padding: 1px;}
+	.row::after {
+  		content: "";
+  		clear: both;
+  		display: table;}
+	</style>
+</head>
+
+<body>
+<p><a href="scripts.html">Back</a></p>
+
+<div class="round3">
+    <p style="text-align: center"><strong>worm-chat room alert system</strong></p>
+</div>
+<div class="round3">
+	<p>This is a script i made that webscrapes this websites worm chat page. Takes the last message and writes it to a text file.<br><br>next it compares the message to the last message written into the file. If they are different, it send me a text message through email [sms gateway] to let me know theres a new message</p>
+</div>
+<div class="round3">
+    <p>last message in text file:</p>
+    <img src="Art/scripts/script_wormchatLogFile.png" style="width: 100%;">
+</div>
+<div class="round3">
+    <p>text message sent to myself:</p>
+    <img src="Art/scripts/script_wormalertText.jpg" style="width: 100%;">
+</div>
+<div class="round3">
+    <p>Right now i have the script run once a day at the same time my astro scrape happens. But I plan on making it an .exe file and porting it to windows 10 to have it run once every hour on my work pc. <br><br>The reason being is that when it runs it opens an instance of firefox using selenium webdriver, in order to get the last message. And this 
+    is kind of annoying for when I'm in the middle of something. <br><br> 
+    For my work pc ill program a pop up with a timer that will give me the opprotunity to cancel the scrape for that hour if I'm busy, and then if no button is pressed on the pop up it will continue with the scrape. I probably will barely notice it anyways since I'm not on the computer too much. And even so the script takes like 3 seconds to execute so it's not that big of an inconvinience.</p>
+</div>
+<p><a href="scripts.html">Back</a></p>
+ </body>
+</html>

@@ -100,38 +100,8 @@
 
 <!-- wormSite.sh in /etc/cron.daily depends on lines above not changing [line 65 add new text/line 90-93 delete old] -->
 <div style="border: 6px solid #95acca; border-radius: 12px; padding: 4px; background: #2a50c3;"><p style="text-align: center; color:rgb(239, 220, 53)"><strong>--END OF TRANSMISSION--</strong></p></div>
-<br><br>
-<div class="round4">
-    <p><strong>ABOUT: </strong></p>
-    <p>This experiment was to try to auto-update my website using a bash script to edit my .html file<br><br>First the script curls and parses the json from this <a href="https://www.swpc.noaa.gov/products/alerts-watches-and-warnings">NOAA site</a> that has public alerts/warnings on space weather conditions. Then it filters for only the first message/alert.</p>
-</div>
-<div class="round4">
-	<img src="Art/bashExp/spacejson.png" style="width:100%" />
-</div>
-<div class="round4">
-	<p>This is a big chunk of data, so first step is making it usable and pulling out the peices I want. I do this by first replacing the ansi escape sequence codes "\r\n" with a single character "%". This allows me to use IFS (Internal Field Sperator) command to turn every string between two % into an an index in an array.</p>
-</div>
-<div class="round4">
-	<img src="Art/bashExp/wormSiteArray.png" style="width:100%" />
-</div>
-<div class="round4">
-	<p>Now I can pull the code/issue date/and alert message cleanly out, since these strings are always on the same index.<br><br>Some messages however, come with either a "Potential Impact:" or a "Description:" depending on the type of alert. So next I have a while loop that goes through the array and if the first word starts with "potential" or "description" it will store that index into a variable</p>
-</div>
-<div class="round4">
-	<p>That was the hard part. Next is simply insterting these variables into a chunk of formatted html, appending them to my.html file and deleting the last chunk, so as to only have 7 days worth of data.<br><br>
-	the formatted html looks something like this<br><br>&lt;div&gt;<br>&lt;p&gt;${script-time/code/issue-time/alert/}&lt;/p&gt;<br>&lt;p&gt;${potential-impacts}&lt;/p&gt;<br>&lt;p&gt;${description}&lt;/p&gt;<br>&lt;/div&gt;</p>
-	<p>If my potential-impact/description variables have no value then it leaves it blank between &lt;p&gt;&lt;/p&gt; which works perfectly as it doesn't affect how the html is rendered by web browsers. Importantly the number of html lines remains the same weather there was a value or not. Meaning the html chunks will always be 5 lines, regardless of the data. So it won't get messed around when the script deletes the last chunk</p>
-</div>
-<div class="round4">
-	<p>Next is pulling the line of html of the counter for the number of times the script has ran. My script takes the number, adds 1, then replaces it in the .html document.<br><br>Finally my script changes directories to my websites repo, and then git add/commit/pushes the new file to the remote. Done like dinner</p>
-</div>
-<div class="round4">
-    <img src="Art/bashExp/spacegit.png" style="width:100%" />
-</div>
-<div class="round4">
-	<p>This took some fiddling to properly automate. Trying to run from cron.daily would try running it as root, so I'd get git permission errors when trying to git push. The solution was to specify at the start of the bash script to check if its running as root. If true (which it always will be) then run the command to switch to my username. Since it will always be the case you dont need any "else" function. ezpz
-</div>
-
+<br><div class="round4"><p>For more information on this project see: <br>
+scripts -> Astro Scraper</p></div>
 
 <p><a href="index.html">Return Home</a></p>
  </body>

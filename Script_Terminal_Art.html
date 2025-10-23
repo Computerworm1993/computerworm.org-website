@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:image" content="Art/isopod/sword.png" />
+	<meta name="description" content=".*✩⚬° scraped knees + more °⚬✩*." />
+	<title>random terminal art</title>
+	<style>
+	body{
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 640px;
+		background: teal;
+        font-family: "Courier New", Times, serif;}
+	a {
+		color: red;}
+	p span{
+		position:relative;
+		display:inline-block;
+		text-align: center;}
+    .round3 {
+        border: 3px solid #95acca;
+        border-radius: 12px;
+        padding: 5px;
+        background: #e0e3ec;}
+	.row {
+  		display: flex;
+  		flex-wrap: wrap;
+  		padding: 0 2px;}
+
+/* Create two equal columns that sits next to each other */
+	.column img {
+  		vertical-align: middle;}
+    table {
+        text-align: center;}
+* {
+  box-sizing: border-box;}
+
+	.column{
+		float: left;
+    	text-align: center;
+		width: 50%;
+		padding: 1px;}
+	.row::after {
+  		content: "";
+  		clear: both;
+  		display: table;}
+	</style>
+</head>
+
+<body>
+<p><a href="scripts.html">Back</a></p>
+
+<div class="round3">
+    <p style="text-align: center"><strong>random terminal art</strong></p>
+</div>
+<p style="text-align: center"><small>September 8, 2025</small></p>
+<br>
+<div class="round3">
+    <img src="Art/cl/ansi/example.png" style="width:100%" />
+</div>
+<br>
+<div class="round3">
+    <p>Transforming images into pixel art, and then into ansi escape sequence codes</p>
+</div>
+<div class="round3">
+    <p>This project was to make little pixel sprites of characters from my favourite shows, and other images I like, display randomly whenever I open up my terminal.<br><br>It was inspired by <a href="https://github.com/gricardo87/pokemon-colorscripts?tab=readme-ov-file">this python script</a> that prints a random pokemon. I'm not a huge pokemon fan, but I love the idea behind it so here I have made my own art files and my own version of a much simpler bash script to suit my needs.
+<br><br>First things first is resizing your images. I've found a good height for me is 50 pixels. It's important to utilize a Bicubic Nearest Neighbour algorithm when resizing, as this prevents the blur/semi-transparency you get with normal resizing.</p>
+</div>
+<div class="round3">
+	<p>See here the blurred pixels</p>
+	<img src="Art/cl/ansi/blur.png" style="width:100%" />
+</div>
+<div class="round3">
+	<p>Left: Normal resizing<br>Center: Bicubic Nearest Neighbour<br>Right:Original</p>
+</div>
+<div class="round3">
+    <img src="Art/cl/ansi/bicubic.png" style="width:100%" />
+</div>
+<div class="round3">
+	<p>
+Interestingly I discovered that krita has a built in python interpreter. I was able to utilize this to write a short script that does the resizing, and 'save as', automatically. This was a big time saver, as the idea here is to have a huge catalog of pixel characters.
+	</p>
+</div>
+<div class="round3">
+	<img src="Art/cl/ansi/resizePy.png" style="width:100%" />
+</div>
+
+<div class="round3">
+	<p>next I use <a href="https://github.com/Nellousan/px2ansi">this python script</a> I found online that converts the image into ansi escape sequence codes and then writes it to a file, Now it is ready to be printed to my terminal by the main script</p>
+</div>
+<div class="round3">
+    <img src="Art/cl/ansi/ansicode.png" style="width:100%" />
+</div>
+<div class ="round3">
+	<p>The bash script is super simple. It chooses a random file within the directory, displays it with 'cat', and then takes the files path and cuts off the first characters to leave only franchise/character_name to be displayed underneath. </p>
+</div>
+<div class="round3">
+    <img src="Art/cl/ansi/bashScript.png" style="width:100%" />
+</div>
+<div class="round3">
+	<p>With my script to automate the process of resizing, I can create these relatively quickly. I like to double check them before converting to ANSI escape codes though. Usually theyre fine but sometimes they can be improved on a little bit</p>
+</div>
+<div class="round3">
+	<p style="text-align: center"><br><br> --END OF TRANSMISSION--<br><br><br></p>
+</div>
+<p><a href="scripts.html">Back</a></p>
+ </body>
+</html>
