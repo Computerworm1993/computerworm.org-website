@@ -54,15 +54,19 @@
     justify-content: center;
     flex-wrap: nowrap;
     width: 100%;
-    background: #95ddd2;
-    border: 3px solid #562d64;
-    border-radius: 45px;
     margin: 0px auto;
     position: relative;
     text-align:center;
 }
 .block {
     margin: 5px;
+}
+.window {
+    background-color: #562d64;
+    border: solid 3px black;
+    text-align: center;
+    padding-top: 20px;
+
 }
 	</style>
     <script src="https://iframe.chat/scripts/main.min.js"></script>
@@ -93,9 +97,10 @@ Srry bb no audio, its ur web browsers fault not my websites
 </audio>
 <body>
 
-<div class="round3"><p style="text-align: center;"><strong>-- Worms Chat Room --</strong></p></div>
 
-<iframe src="https://iframe.chat/embed?chat=WormChat" id="chattable" style="height: 72dvh; width:100%; text-align: center; border: 4px solid rgb(126, 99, 153);border-radius: 12px";></iframe>
+<div class="window">
+    <img src="Art/wormChat/chatBanner.png" style="width: 95%;">
+<iframe src="https://iframe.chat/embed?chat=WormChat" id="chattable" style="height: 72dvh; width:95%; text-align: center;"></iframe>
 <div class="container">
 
     <div class="block">
@@ -111,5 +116,7 @@ Srry bb no audio, its ur web browsers fault not my websites
     </div>
 
 </div>
+</div>
+
  </body>
 </html>
