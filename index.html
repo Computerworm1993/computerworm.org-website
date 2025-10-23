@@ -11,36 +11,34 @@
 		width: 100%;
 		table-layout: fixed;
 		border-spacing: 5px;
+		height: 75dvh;
 		}
+	iframe {
+		height: 60dvh;
+	}
+	.row {
+		height: 50%;
+	}
 	.leftcolumn {
 		display: table-cell;
-		width: 30%;
+		width: 10%;
 		background-image: url("Art/Home/hands.png");
 		background-repeat: repeat-y;
 		background-size: contain;
 		}
 	.rightcolumn {
 		display: table-cell;
-		width: 30%;
+		width: 10%;
 		background-image: url("Art/Home/handsright.png");
 		background-repeat: repeat-y;
 		background-size: contain;
 		}
-	.projectscolumn {
+	.middlecolumn {
 		display: table-cell;
 		vertical-align: top;
 		text-align: center;
 		width: 60%;
-		border: 3px solid gray;
 
-		}
-	.blogcolumn {
-		display: table-cell;
-		vertical-align: top;
-			margin-left: auto;
-			margin-right: auto;
-		text-align: center;
-		width: 40%;
 
 		}
 
@@ -49,14 +47,6 @@
 		max-width: 700px;
 		background-image: url("Art/Home/spacebg.gif");
 		}
-
-	.project {
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-			width: 100%;
-		}
-		
 	a {
 		color: red;
 		font-size: 14px;
@@ -68,30 +58,26 @@
 		color:white;
 		font-size: 10px;
 		}
-
-	table, th, td {
-  		border: 2px outset gray;
-	}
-        th {
-            
-		color:white;
-		font-size:18px;
-        }
-	td {
-		font-size:10px;
-		padding:8px;
-		color:yellow;
-		text-align:center;
-
-	}
-.round2 {
-  border: 3px solid #31b8ca;
-  border-radius: 12px;
-  padding: 5px;
-  background: #9ec1a8;
-
+.showcase {
+	margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+	height: 39%;
+	width: 96%;
+    text-align:center;
 }
-
+.topChunk {
+	height: 25dvh;
+	text-align: center;
+}
+.block {
+	width: 24%;
+}
+.navButtons {
+	background-color: aqua;
+	margin-bottom: 5px
+}
 	</style>
 </head>
 <script>
@@ -117,6 +103,19 @@ function animateTitle(string, initialDelay, restartDelay) {
         animateTitle(string, initialDelay, restartDelay);
     }, initialDelay * string.length + restartDelay);
 }
+/* navigation scripts below--- */
+function displayProjects(){
+	document.getElementById('myIframe').src = 'projects.html';
+
+}
+function displayBlogs(){
+	document.getElementById('myIframe').src = 'blog.html';
+
+}
+function displayScripts(){
+	document.getElementById('myIframe').src = 'scripts.html';
+
+}
 
 // Only start the animation in the top-level window
 if (window === window.top) {
@@ -127,86 +126,59 @@ if (window === window.top) {
 
 
 </script>
-  <body><h1>
-
-        <img src="Art/Home/comp worm.gif" style="width:100%" >
-</h1>
-<p style="text-align: center"><span>
- ⋆⚬°☆⭒ Welcome to my small corner here on the wired ⭒☆°⚬⋆ </p>
-<p style="text-align: center; background:pink; text-align: center;">
-	last git push -- OCT 18,2025 -- cornmeal  (=ФェФ=) 
+  <body>
+<div class="topChunk">
+<img src="Art/Home/comp worm.gif" style="height:30%; width: 100%;" >
+<div style="text-align: center; background:pink; text-align: center; padding: 1px; border: 3px solid white;">
 	<marquee scrollamount="10vw" style="display: inline-block;">
-	I'm looking forward to Halloween -- Are you? ....... I wanna write more bash scripts, theyre so much fun. But idk what to make
+	last git push -- OCT 21,2025 -- cornmeal  (=ФェФ=) -- 
+	<div style="color: blue; display: inline;">STATUS:</div> I'm looking forward to Halloween -- Are you? ....... I wanna write more bash scripts, theyre so much fun. But idk what to make
 </marquee>
-</p>
+</div>
+<div class="showcase">
 
+    <div class="block">
+        <a href="wormChat.html"><img src="Art/Home/CDs/wormChat.gif" style="height: 70%;"></a>
+    </div>
 
+    <div class="block">
+        <a href="me.html"><img src="Art/Home/CDs/who.gif" style="height: 70%;"></a>
+    </div>
 
-
+    <div class="block">
+        <a href="ArtEtc.html"><img src="Art/Home/CDs/art.gif" style="height: 70%;"></a>
+    </div>
+    <div class="block">
+        <a href="experimental.html"><img src="Art/Home/CDs/astro.gif" style="height: 70%;"></a>
+    </div>
+</div>
+</div>
+<!--start of left/middle/right colums with hands art-->
 <div class="projectsRow">
+	
 	<div class="leftcolumn">
 	</div>
-	<div class="projectscolumn">
-		<div>
-			<img src="Art/Home/projects.png" class="project" >
-		<a href="me.html">.. who_is? ..</a></p>
-		<a href="wormChat.html">Worm-Chat</a></p>
-		<a href="mametchi.html">Hypr-Chi</a></p>
-		<a href="isopod.html">isopod.exe</a></p>
-		<a href="VHS.html">VHS Game Rig</a></p>
-		<a href="ZENITH.html">Z E N I T H</a></p>
-		<a href="ArtEtc.html">҉ &nbsp;&nbsp; Art etc. &nbsp;&nbsp; ҉</a></p>
-		<a href="experimental.html">ASTRO-alert</a></p>
-		<a href="newIndex.html">test index rebuild</a></p>
-<br><br>
-		<img src="Art/Home/blog.png" class="project" >
-		<div class="blogcolumn">
-			<div>
-				<table>
-				<tr>
-				<th>Captains Log</th>
-				<th> Date </th>
-				</tr>
-				<tr>
-				<td><a href="I.On.U.html">0005 - digi-priv</a></td>
-				<td>October 11/2025</td>
-				</tr>
-				<tr>
-				<td><a href="CL0004.html">0004 - terminal art</a></td>
-				<td>September 8/2025</td>
-				</tr>
-				<tr>
-				<td><a href="CL0003.html">0003 - winamp + bash</a></td>
-				<td>August 9/2025</td>
-				</tr>
-				<tr>
-				<td><a href="CL0002.html">0002 - swch tmp</a></td>
-				<td>April 5/2025</td>
-				</tr>
-				<tr>
-				<td><a href="CL0001.html">0001 - krita</a></td>
-				<td>April 1/2025</td>
-				</tr>
+	
+	<div class="middlecolumn">
 
-				</table>
-			</div>
-		</div>
-		<br>
-		<br>
-	</div>
+<!--scrollible projects table-->
+<div class="row">
+    <div class="navigation">
+        <div style="margin-bottom: 5px">
+			<div style="margin: 8px; display:flex; flex-wrap: nowrap; justify-content: space-between;">
+				<input type="button" onclick="displayProjects()" value="projects"  style="margin-right: 8px; margin-left: 8px; background-color: rgb(149, 232, 232);">
+				<input type="button" onclick="displayScripts()" value="scripts"  style="margin-right: 8px; margin-left: 8px; background-color: rgb(149, 232, 232);">
+				<input type="button" onclick="displayBlogs()" value="blog"  style="margin-right: 8px; margin-left: 8px; background-color: rgb(149, 232, 232);">
+				</div></div>
+<iframe id="myIframe" style="width: 100%; border: 2px solid white" src="welcome.html"></iframe>
+    </div>
 </div>
+<!--end of table-->
+	</div>
+
 	<div class="rightcolumn">
 	</div>
 </div>
-<p style="text-align: center"><span>lets enjoy our time on the ɪɴᴛᴇʀɴᴇᴛ</span></p>
-<img src="Art/Home/linkcover2.jpg" class="project" style="width: 50%">
-
-
-
-
-
- <p style="text-align: center"><span><small>
-...downloading Self-replicating malware directly into your brainstem...</small></p>
 
 </body>
 </html>
