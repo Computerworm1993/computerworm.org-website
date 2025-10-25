@@ -116,6 +116,10 @@ function displayScripts(){
 	document.getElementById('myIframe').src = 'scripts.html';
 
 }
+function displayEtc(){
+	document.getElementById('myIframe').src = 'Etc.html';
+
+}
 
 // Only start the animation in the top-level window
 if (window === window.top) {
@@ -171,6 +175,7 @@ if (window === window.top) {
 				<input type="button" onclick="displayProjects()" value="projects"  style="margin-right: 8px; margin-left: 8px; background-color: rgb(149, 232, 232);">
 				<input type="button" onclick="displayScripts()" value="scripts"  style="margin-right: 8px; margin-left: 8px; background-color: rgb(149, 232, 232);">
 				<input type="button" onclick="displayBlogs()" value="blog"  style="margin-right: 8px; margin-left: 8px; background-color: rgb(149, 232, 232);">
+				<input type="button" onclick="displayEtc()" value=" etc "  style="margin-right: 8px; margin-left: 8px; background-color: rgb(149, 232, 232);">
 				</div></div>
 <iframe id="myIframe" style="width: 100%; border: 2px solid white" src="welcome.html"></iframe>
     </div>
