@@ -24,10 +24,19 @@
 		font-family: "Courier New", Times, serif;
 		}
 	.round3 {
-        border: 3px solid #95acca;
+        color: black;
+        margin-left: 20px;
+        border: 3px solid #000000;
         border-radius: 12px;
         padding: 5px;
         background: #e0e3ec;}
+	.round4 {
+        text-align: center;
+        color: #5c3f00;
+        border: 4px solid #000000;
+        border-radius: 12px;
+        padding: 5px;
+        background: #c8d3f4;}
     img {
         border-radius: 12px;}
 	    table {
@@ -56,7 +65,7 @@
 <body><h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
 <p><a href="index.html">Return Home</a></p>
 
-<p><span><strong>Linux//hyprland Config</strong><br><small>+ mametchi</small></p>
+<p><span><strong>Linux//hyprland<br>Configs//Customizations</strong><br><small>+ mametchi</small></p>
 <p><small><span>sept 24,2025</small></p>
 <div class="round3">
 <p>move mametchi with WASD on the keyboard<br>or with the buttons</p>
@@ -166,6 +175,25 @@ function right() {
     </table>
 </div>
 <br><br>
+<!--#########################################################-->
+<div class="round4">
+    <p><strong>TERMINAL</strong></p>
+<div class="round3">
+    <p>I had been using my bash script to cat a random ansi pixel character beside fastfetch every time I open terminal, but I discovered recently that the terminal I use "kitty" is able to display actual images as well so I tried experimenting with that. As it stands now I'm not sure which I like more. I think I'll make a button to go on my waybar that will change which set up to use. pixel on the left or image on top. They both look really nice to me.</p>
+    <img src="Art/cl/ansi/example.png" style="width: 100%;">
+    <p><small>for more info about my pixel art here, see "Scripts -> worm colour script" from my main page</small></p><br>
+    <img src="Art/cl/ansi/icat.png" style="width: 100%;">
+    <br><p>I love the name kitty for a terminal. Since terminal emulators are "tty" emulators (short for teletypewriter). Even more fun instead of using the 'cat' command (short for 'concatenate'), kitty utilizes the command 'icat' (image cat)<br><br>
+    So in kitty your command ends up being 'kitten icat file_name.jpg'. idk I just think thats really fun/cute word play</p>
+    <br>
+    <p>I've also considered keeping the pixel art for new terminal sessions and then use kitty's icat function for showing images as a sort of banner for all of my bash scripts I make. Kind of like this.</p>
+    <img src="Art/mametchi/BashArt.png" style="width: 100%;">
+</div>
+</div>
+<br>
+<!--#########################################################-->
+<div class="round4" style="background-color: #3CBC8D;">
+    <p><strong>WAYBAR</strong></p>
     <div class="round3">
     <p>I finally got around to playing about with some .config files for hyprland. It's fairly straight forward, and basically the same as designing websites using CSS. It's pretty fun. I love linux for how insanely customizable and free it is. Can do anything you dream of</p>
 </div>
@@ -190,10 +218,13 @@ function right() {
 </div>
 <br>
 <div class="round3">
-    <p>I also did some customizing of the waybar but I really like the .config I got going already. All I did was some minor edits like increase font to make it easier to read and I made the battery % change color depending on % charge left, to make it more obvious I have to plug it in, because I ended up running it out of power a few times being absent minded lol. <br><br>I also deleted a few things and made it super minimal as well. And of course added my custom worm-script button. Pretty cool all the things you can customize. Hyprland is so pretty and so much fun</p>
+    <p>Some other customizing I did on the waybar was increase font to make it easier to read and I made the battery % change color depending on % charge left, to make it more obvious I have to plug it in, because I ended up running it out of power a few times being absent minded lol. <br><br>I also deleted a few things and made it super minimal as well.</p>
+</div>
 </div>
 <br>
-
+<!--#########################################################-->
+<div class="round4" style="background-color: #d093db;">
+    <p><strong>ROFI - Application Launcher</strong></p>
 <div class ="round3">
     <p> <img src="Art/mametchi/rofi1.png" style="width:100%; border: 3px solid black;" ></p>
 </div>
@@ -203,14 +234,27 @@ function right() {
 <div class ="round3">
     <p> <img src="Art/mametchi/rofi2.png" style="width:100%; border: 3px solid black;" ></p>
 </div>
+</div>
+<br>
+<!--#########################################################-->
+<div class="round4" style="background-color: #def7a4;">
+    <p><strong>HYPRLAND</strong></p>
 <div class="round3">
     <p>I also found the spot in hyprland .config that dictates window spacing so I made it a little wider for the aesthetics, though I know it is completely useless and actually makes you waste some screen space -- but I like it. I think it looks really nice. If I had a bigger monitor I'd make it even wider lol. And those rounded corners on all the windows are so pretty too</p>
 </div>
 <div class ="round3">
     <p> <img src="Art/mametchi/hypBorder.png" style="width:100%; border: 3px solid black;" ></p>
 </div>
+</div>
+<br>
+<div class="round4">
+    <p><strong>SUMMARY</strong></p>
 <div class="round3">
-    <p>Thats the jist of my main config setup. I'm really happy with it but I am continueing to tweak things here and there every once and a while to suite my needs. Mostly feel too busy with other things I am working on. I have a few other config setups/rices that are pretty unique but I don't like them as a daily driver as much.</p>
+    <p>Thats the main jist of my customization I've done. I'm really happy with it but I am continueing to tweak things here and there every once and a while to suite my needs. Mostly feel too busy with other things I am working on. I have a few other config setups/rices that are pretty unique but I don't like them as a daily driver as much.</p>
+    <p>I've really enjoyed using a tiling window manager like hyprland. It's my first time using one and it just feels so good to use once you get the hang of it. I can see why some people wouldn't like them though
+        theres a bit of a learning curve especially if you are used to using a stacking wm like the one Microsoft Windows OS's use.
+        Doublly so if you have only used windows products for decades like I had lol
+    </p>
 </div>
 <br>
 
@@ -218,6 +262,7 @@ function right() {
 <br><br><br>
 <div class="round3">
     <p>Did you make mametchi go all the way down here? lol</p>
+</div>
 </div>
 <p><a href="index.html">Return Home</a></p>
  </body>
