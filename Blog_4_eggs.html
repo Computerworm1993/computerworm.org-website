@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:image" content="Art/isopod/sword.png" />
+	<meta name="description" content=".*✩⚬° i on u °⚬✩*." />
+	<title>//_eggs in 2 bskts_//</title>
+	<style>
+	body{
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 640px;
+		background: teal;
+        font-family: "Courier New", Times, serif;}
+	a {
+		color: red;}
+	p span{
+		position:relative;
+		display:inline-block;
+		text-align: center;}
+    .round3 {
+        border: 3px solid #95acca;
+        border-radius: 12px;
+        padding: 5px;
+        background: #e0e3ec;}
+	.row {
+  		display: flex;
+  		flex-wrap: wrap;
+  		padding: 0 2px;}
+
+/* Create two equal columns that sits next to each other */
+	.column img {
+  		vertical-align: middle;}
+    table {
+        text-align: center;}
+* {
+  box-sizing: border-box;}
+
+	.column{
+		float: left;
+    	text-align: center;
+		width: 50%;
+		padding: 1px;}
+	.row::after {
+  		content: "";
+  		clear: both;
+  		display: table;}
+	</style>
+</head>
+
+<body>
+    <h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
+<p><a href="index.html">Return Home</a></p>
+
+<div class="round3">
+    <p style="text-align: center"><strong>//_eggs in 2 bskts_//</strong><br><small>rsync + bash aliases</small></p>
+</div>
+<p style="text-align: center"><small>October 28, 2025</small></p>
+<br>
+<div class="round3">
+    <p>I decided to check out the rsync utility for backing up data. Its pretty cool. I have a fairly large usb, 256 GB. Honestly about the same size as my actual internal disk on my thinkpad lol. So I decided to give it a try and backed up my entire /home/ directory.<br><br> [I initially excluded all dotfiles, and just did my own files]. But I think I will make a list where I have all my special config files I have made for hyprland, waybar, my customized zshell file, etc. etc. as well. It'd be a shame to lose those if I end up experimenting a little too hard and fubar this pc <p style="text-align: center;">¯\_ (ᵕ-ᴗ-)_/¯</p>
+</div>
+<div class="round3">
+    <p>Setting this up was fun and it gave me the opprotunity to learn a bit about different formatting, like fat32, exfat, and ext4. both the fats are compatible with windows as well as linux, but ext4 is more specific to linux. Windows can still interact with it by using various tools/programs or "Windows Subsytem for Linux". though. Kinda neat.</p>
+</div>
+<br>
+<div class="round3">
+    <p>Anyways rsync is super interesting actually. I have never done real backups like this before, only dragging and dropping files onto a usb. But what makes rsync so amazing is that it will only backup anything thats new or changed, making it wayyyy quicker and more efficient.<br><br> How does it know? Well by default, rsync will take a peek at the existing backup files and then what is going to be sent. If the file has a different "last modified" date or if the file size has changed, then it knows that that specific file has changed and needs to be updated/replaced in the backup. If however both of those match up, then the file has not been changed so theres no need to send it to the usb (since the same thing is there already).
+        <br><br>The command I like to use is:<br><strong> rsync -av --delete --exclude='.*' '/home/worm/' '/run/media/usb_name' </strong><br>
+    <br>breaking this down -av means "archive mode" and "verbose"<br>
+--delete means if the file has been deleted off my main disk, then delete it off the backup as well.<br>
+--exclude='.*' tells it to not include any file begining with a . (.cache etc etc, any dotfiles)
+<br><br>Another interesting rsync argument you could add if you wanted is -z, which is for compressing the data. Since I'm not really backing up large files and my usb is as large as my disk anyways I personally didnt bother to compress.
+</p>
+</div>
+<br>
+<div class="round3">
+    <p>Anyways, I also discovered about the use of aliases with bash shell interpreters. I use ZSH so by opening up my .zshrc file (where I have my fastfetch configs and random art scripts as well) I can add aliases for different commands.<br><br>
+    An alias is exactly how it sounds, instead of typing in the entire command for rsync to perform the backup I plan to do once a month, I set it to a much easier to remember alias. </p>
+</div>
+<div class="round3">
+    <img src="Art/i on u/rsync_alias.png" style="width: 100%;">
+    <br>
+    <p>Here are a few I have set up. Easier and quicker changing of directories [not my idea, but it is too good not to share. I love these aliases] and then instead of typing out the long rsync command I want i just need to type out "backup-worm" :) how freaking awesome is that.</p>
+</div>
+<div class="round3">
+    <p>This also let me delete a couple of the bash scripts I had like for curling weather and QR code since they are single commands I can just set up an alias here and make them even simpler to call</p>
+</div>
+<br>
+<div class="round3">
+    <p>Since I'm backing up files on my laptop, using this rsync alias suites my needs perfectly. But if this were a desktop pc that I could keep external storage attatched 24/7, then I would probably add this rsync command to a cron job to automate the backup. You could make it auto backup every night at midnight for example. Now that would be cool. For my current use though, it's not too hard to plug in the usb when i want to and just type "backup-worm"</p>
+</div>
+<div class="round3">
+    <p>I also did some light research looking into how I could to do this for my work pc (windows 10), and it seems like you can use Windows Subsystem for Linux to run rsync. <br><br>
+        Would be very good to get set up as those are some files I really do not want to lose. As a rule, I typically drag/drop to backup every 6 months or so. But if I could get it set up to auto every day at 4:30 pm (quittin time) or something that would be way better. </p>
+</div>
+<div class="round3">
+    <p>It also got me thinking about backups for my Moms photos. She has quite a collection spanning decades that would be a shame to lose, and if you know me I am not too fond of cloud services like oneDrive or giving you pictures to google to train there AI facial recognition etc on. Someday I would love to have a home server and just have my own cloud backup but I'm not quite there yet.<br><br>
+    Anyways it got me looking into ways you can automate it so when you plug the usb into the computer it will automatically run the program to backup the specified directories. This would be fantastic as shes not the most computer savvy and would make it simple and automatic.<br><br>
+It feels a bit shady learning how to do this though because this is essentially a 'usb Rubber Ducky" that hackers use to deliver malicious content. It's pretty neat, it makes the computer think you plugged in a keyboard and then it will deliver 'keystrokes' to input some commands super quickly. Like delete system 32 or something idk lol</p>
+</div>
+<p><a href="index.html">Return Home</a></p>
+ </body>
+</html>
