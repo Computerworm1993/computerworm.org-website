@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Worm-Blog</title>
+	<style>
+	body{
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 640px;
+		background: teal;
+		}
+	a {
+		color: red;
+		}
+		p span{
+		text-align: center;
+		color: white;
+		font-family: "Courier New", Times, serif;
+		}
+        p {
+		font-family: "Courier New", Times, serif;
+        }
+		.round3 {
+        border: 3px solid #95acca;
+        border-radius: 12px;
+        padding: 5px;
+        background: #e0e3ec;}
+	
+	</style>
+</head>
+  <body><h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
+<p><a href="index.html">Return Home</a></p>
+
+<p><span><strong>c u r l y</strong></p>
+<p><small><span>November 12, 2025</small></p>
+<p><strong>Submiting forms with curl POST command</strong></p>
+
+<div class="round3">
+	<p>Potential Use Case: signing in/accepting "terms of service" on public wifi networks without using a browser. </p>
+</div>
+<br>
+<div class="round3">
+	<p>Step 1 :<br>
+	find the elements on the webpage you need to interact with. Either with curl "https://example.com" and looking through the html<br><br>
+OR - (easier)<br>
+open webpage in a browser and right click on element (text box, etc. ) -> "inspect"<br>
+<br>What we are looking for is the "name" of these input fields. (see image below)
+<img src="Art/cl/inspectElement.png" style="width: 100%;"></p>
+</div>
+<div class="round3">
+	<p>Now we can start building our curl command. The basic parts we will use are: <br><br>
+	-X POST -> tells curl to use POST method <br>
+-H "Content-Type: application/json"<br>
+-d -> stands for 'data'<br><br>------------------------------------------------<br>
+The basics of json will be matching up the "name" we found earlier. i.e. "login", with what we want to enter into that field. i.e my username "Organism"</p>
+</div>
+<div class="round3">
+	<p>This is a useful example website to make sure your sending the correct data. It simply echos back a JSON response to what you send it. <br>
+		<a href="https://httpbin.org/post">https://httpbin.org/post</a><br><br><img src="Art/cl/curlPost.png" style="width: 100%;"></p>
+</div>
+<div class="round3">
+	<p>Conclusion: <br><br>
+		this is my first time posting with curl, ive only ever webscraped with it. <br>I'm excited to play around with this some more. curl has many more features to play with, even being able to set --cookie and tell it a text file to write to.<br><br>
+	but sadly its approaching midnight and I have a big day at work tomorrow so thats all for now. :)</p>
+</div>
+<p><a href="index.html">Return Home</a></p>
+ 
+ </body>
+</html>
