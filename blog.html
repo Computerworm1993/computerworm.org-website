@@ -36,6 +36,9 @@
      }
 </style>
 <script>
+    function nav2Curl() {
+    window.parent.location.href = "Blog_6_curly.html";
+}
     function nav2Rust() {
     window.parent.location.href = "Blog_5_Rust.html";
 }
@@ -57,6 +60,10 @@
             <div class="scrollable">
                 <table>
 					<tr><th>title</th><th> date </th></tr>
+			<tr>
+			    <td style="text-wrap: nowrap;"><input type="button" onclick="nav2Curl()" value="- c u r l y -" /></td>
+			    <td>Nov 12, 2025</td>
+			</tr>
 			<tr>
 			    <td style="text-wrap: nowrap;"><input type="button" onclick="nav2Rust()" value="- r u s t y -" /></td>
 			    <td>Nov 08, 2025</td>
