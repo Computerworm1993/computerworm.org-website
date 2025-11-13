@@ -56,12 +56,17 @@ open webpage in a browser and right click on element (text box, etc. ) -> "inspe
 The basics of json will be matching up the "name" we found earlier. i.e. "login", with what we want to enter into that field. i.e my username "Organism"</p>
 </div>
 <div class="round3">
-	<p>This is a useful example website to make sure your sending the correct data. It simply echos back a JSON response to what you send it. <br>
-		<a href="https://httpbin.org/post">https://httpbin.org/post</a><br><br><img src="Art/cl/curlPost.png" style="width: 100%;"></p>
+	<p>
+		<a href="https://httpbin.org/post">https://httpbin.org/post</a><br><br>This is a useful example website to make sure your sending the correct data. It simply echos back a JSON response to what you send it. <br>
+		<br>
+		testing out our command:<br><br>
+		curl -X POST https://httpbin.org/post -H "Content-Type: application/json" -d '{"login": "Organism", "password": "CryptOrchid", "accept_terms": true}'<br>
+		<br><br><img src="Art/cl/curlPost.png" style="width: 100%;"><br>
+	as you can see within the "json" { } brackets, the testing website echos it back correctly.</p>
 </div>
 <div class="round3">
 	<p>Conclusion: <br><br>
-		this is my first time posting with curl, ive only ever webscraped with it. <br>I'm excited to play around with this some more. curl has many more features to play with, even being able to set --cookie and tell it a text file to write to.<br><br>
+		this is my first time posting with curl, ive only ever webscraped with it. <br><br>Curl has many more features to play with, even being able to set --cookie and tell it a text file to write to. and then you can store a token inside that file to post back to the website youre logging into. Will be fun to play around with more<br><br>
 	but sadly its approaching midnight and I have a big day at work tomorrow so thats all for now. :)</p>
 </div>
 <p><a href="index.html">Return Home</a></p>
