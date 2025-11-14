@@ -15,7 +15,7 @@
 		}
 		p span{
 		text-align: center;
-		color: rgb(14, 225, 28);
+		color: rgb(28, 162, 37);
 		font-family: "Courier New", Times, serif;
 		}
         p {
@@ -51,9 +51,11 @@
   <body><h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
 <p><a href="index.html">Return Home</a></p>
 
-<p><span><strong>c u r l y</strong></p>
-<p><small><span>November 13, 2025</small></p>
-<p><strong>Submiting forms with curl POST command</strong></p>
+<div class="round3" style="text-align: center;">
+<p><strong>c u r l y</strong></p>
+<p><strong><small>Submiting forms with curl POST command</small></strong></p>
+</div>
+<p style="text-align: center;"><small>November 13, 2025</small></p>
 
 <div class="round3">
 	<p>Potential Use Case: signing in/accepting "terms of service" on public wifi networks without using a browser. </p>
@@ -65,7 +67,10 @@
 OR - (easier)<br>
 open webpage in a browser and right click on element (text box, etc. ) -> "inspect"<br>
 <br>What we are looking for is the "name" of these input fields. (see image below)
-<img src="Art/cl/inspectElement.png" style="width: 100%;"></p>
+<img src="Art/cl/inspectElement.png" style="width: 100%;">
+<br>We will use this name and pair it with what we want to input in that field, into our JSON. Which follows the format <br>
+{"key1": "value1", "key2": "value2"}
+</p>
 </div>
 <div class="round3">
 	<p>Now we can start building our curl command. The basic parts we will use are: </p>
@@ -96,11 +101,24 @@ open webpage in a browser and right click on element (text box, etc. ) -> "inspe
 		<br><br><img src="Art/cl/curlPost.png" style="width: 100%;"><br>
 	as you can see within the "json" { } brackets, the testing website echos it back correctly.</p>
 </div>
-
 <div class="round3">
-	<p>Conclusion: <br><br>
-		this is my first time posting with curl, ive only ever webscraped with it. <br><br>Curl has many more features to play with, even being able to set --cookie and tell it a text file to write to. and then you can store a token inside that file to post back to the website youre logging into. Will be fun to play around with more in the future. <br><br>
+	<p>
+		-------------in progress-----------------<br>
+		<p>You may get a server response of "csrf-Token missing". To get past this you will need to get the token from the curl response previously and then send it with your data.<br>
+		<br>
+	<p>I am testing on the Fedora linux account login website</p>
+	<p>First I create a variable called TOKEN, curl the website and then pipe it into a grep command which searches for the hidden input field of the token. I then use the cut command and a few reverses to trim off the leading and trailing quotes so only the token itself goes into my variable "TOKEN"</p>
+	<p><span>TOKEN=$(curl https://accounts.fedoraproject.org/ | grep -oP 'name="login-csrf_token" type="hidden" value="\K.*' | rev| cut -c 3- | rev)</span></p>
+	<p>next step is to send the data with the token</p>
+	<p><span>
+		curl --data "login-username=my_username&login-password=my_password&login-csrf_token=$TOKEN" "https://accounts.fedoraproject.org/"
+	</span></p>
 	</p>
+</div>
+<div class="round3">
+
+	<br>
+	<p style="color: red;"> This is semi-working, in the sense the token is getting properly sent to the server. But, it returns an error code "token mismatch". The reason being I think is that when I curl to send the data it starts a new "session" and there for generates a brand new token. I'm not certain how a person can either combine these two commands to be 1 session or what?? </p>
 </div>
 <p><a href="index.html">Return Home</a></p>
  
