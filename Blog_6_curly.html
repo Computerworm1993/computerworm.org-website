@@ -64,9 +64,12 @@
 <div class="round3">
 	<p>Potential Use Case: signing in/accepting "terms of service" on public wifi networks without using a browser. </p>
 </div>
+<div class="round3">
+	<p>I kind of fell down this rabbit hole after someone in a discord server I'm in was saying they have been playing around on an ancient laptop with windows xp on it. And he'd like to connect to the wifi at his university. Bur unfortunetly the browser he has is so old that it doesnt redirect him to the neteworks login page. So I thought I'd give it a try with curl</p>
+</div>
 <br>
 <div class="round3">
-	<p>Step 1 :<br>
+	<p><strong>Test 1 :</strong><br><br>
 	find the elements on the webpage you need to interact with. Either with curl "https://example.com" and looking through the html directly<br><br>
 OR - (easier)<br>
 open webpage in a browser and right click on element (text box, etc. ) -> "inspect"<br>
@@ -107,22 +110,46 @@ open webpage in a browser and right click on element (text box, etc. ) -> "inspe
 </div>
 <div class="round3">
 	<p>
-		-------------in progress-----------------<br>
-		<p>You may get a server response of "csrf-Token missing". To get past this you will need to get the token from the curl response previously and then send it with your data.<br>
+		<strong>Test 2:</strong> <br>
+		<p>You may get a server response of "csrf-Token missing". To get past this you will need to get the token from the curl response previously and then send it with your data. OR the token may be included in a cookie, you can save to a text file to extract it<br>
 		<br>
-	<p>I am testing on the Fedora linux account login website</p>
+	<p>I am testing on the Fedora linux account login website, and here the token is inside a hidden input field.</p>
 	<p>First I create a variable called TOKEN, curl the website and then pipe it into a grep command which searches for the hidden input field of the token. I then use the cut command and a few reverses to trim off the leading and trailing quotes so only the token itself goes into my variable "TOKEN"</p>
 	<p><span>TOKEN=$(curl https://accounts.fedoraproject.org/ | grep -oP 'name="login-csrf_token" type="hidden" value="\K.*' | rev| cut -c 3- | rev)</span></p>
 	<p>next step is to send the data with the token</p>
 	<p><span>
 		curl --data "login-username=my_username&login-password=my_password&login-csrf_token=$TOKEN" "https://accounts.fedoraproject.org/"
-	</span></p>
+	</span><br>
+-------------------------------------------------------</p>
+	<br>
+	<p>we're getting closer</p>
+	<img src="Art/cl/csrfError.png" style="width: 100%;">
+	<p style="color: red;">the token is getting recieved...but its not the right one. I believe the reason being is that we are using 2 seperate, distinct curl commands. So when we try to post the data/token it's generating a new one as well.</p>
+</div>
+<br>
+<div class="round3">
+	<p>
+		<strong>Test 3:</strong><br>
+		<p>Lets ensure we are using the name session by first saving a cookie with -c to a text file we will call "cookies.txt". And then in our second curl we send that cookie with -b.<br>I also had to include an '-H "referer: "' argument as the server gave an error that there wasn't one.</p>
+		<p><span>TOKEN=$(curl -c cookies.txt https://accounts.fedoraproject.org/ | grep -oP 'name="login-csrf_token" type="hidden" value="\K.*' | rev| cut -c 3- | rev)</span></p>
+		<p><span>curl -H "Referer: https://accounts.fedoraproject.org/" -b cookies.txt --data "login-username=my_username&login-password=my_password&login-csrf_token=$TOKEN" "https://accounts.fedoraproject.org/"</span></p>
+		<p>This seems to work, however the html that is returned is the same as the login page, however going through it it does appear our inputs have been filled out. We just need to figure out how to script the "submit" button being pressed</p>
 	</p>
 </div>
+<br>
 <div class="round3">
-
+	<p><strong>Test 4:</strong><br></p>
+	<p>I found a very useful plug-in for firefox called "live Https headers" that prints off all the requests made when you interact with a webpage. I then was able to see that when I press the "log in" button, it was changing the value of the button to 1. So all I had to do was add this in to my second command when I post the username/password/token.<br><br>
+	And finally it is also required to add a "-L" to tell curl to accept redirects. As by default curl will not. </p>
 	<br>
-	<p style="color: red;"> This is semi-working, in the sense the token is getting properly sent to the server. But, it returns an error code "token mismatch". The reason being I think is that when I curl to send the data it starts a new "session" and there for generates a brand new token. I'm not certain how a person can either combine these two commands to be 1 session or what?? </p>
+	<p><strong>Conclusion:</strong></p>
+	<br>
+	<p>My final commands are :</p>
+	<p> 1 : <span>TOKEN=$(curl -c cookies.txt https://accounts.fedoraproject.org/ | grep -oP 'name="login-csrf_token" type="hidden" value="\K.*' | rev| cut -c 3- | rev)</span></p>
+	<p> 2 : <span>curl -H "Referer: https://accounts.fedoraproject.org/" -b cookies.txt --data "login-username=my_email&login-password=my_password&login-csrf_token=$TOKEN&login-otp=&login-submit=1" "https://accounts.fedoraproject.org/" -L</span></p>
+<p>------------------------------</p>
+<p>command 1 :<br> 1.1 curls webpage<br>1.2 saves cookie<br>1.3 stores csrf_token into variable</p>
+<p>command 2 :<br>2.1 curls webpage sending cookie and referal address<br>2.2 submits username/password/csrf_token/button_input<br>2.3 allows redirection with -L</p>
 </div>
 <p><a href="index.html">Return Home</a></p>
  
