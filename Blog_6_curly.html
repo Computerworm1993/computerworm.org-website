@@ -111,7 +111,9 @@ open webpage in a browser and right click on element (text box, etc. ) -> "inspe
 <div class="round3">
 	<p>
 		<strong>Test 2:</strong> <br>
-		<p>You may get a server response of "csrf-Token missing". To get past this you will need to get the token from the curl response previously and then send it with your data. OR the token may be included in a cookie, you can save to a text file to extract it<br>
+		<p>You may get a server response of "csrf-Token missing". <br>
+			<img src="Art/cl/csrfError.png" style="width: 100%;">
+			To get past this you will need to get the token from the curl response previously and then send it with your data. OR the token may be included in a cookie, you can save to a text file to extract it<br>
 		<br>
 	<p>I am testing on the Fedora linux account login website, and here the token is inside a hidden input field.</p>
 	<p>First I create a variable called TOKEN, curl the website and then pipe it into a grep command which searches for the hidden input field of the token. I then use the cut command and a few reverses to trim off the leading and trailing quotes so only the token itself goes into my variable "TOKEN"</p>
@@ -123,7 +125,7 @@ open webpage in a browser and right click on element (text box, etc. ) -> "inspe
 -------------------------------------------------------</p>
 	<br>
 	<p>we're getting closer</p>
-	<img src="Art/cl/csrfError.png" style="width: 100%;">
+	<img src="Art/cl/missingCsrfToken.png" style="width: 100%;">
 	<p style="color: red;">the token is getting recieved...but its not the right one. I believe the reason being is that we are using 2 seperate, distinct curl commands. So when we try to post the data/token it's generating a new one as well.</p>
 </div>
 <br>
@@ -139,7 +141,7 @@ open webpage in a browser and right click on element (text box, etc. ) -> "inspe
 <br>
 <div class="round3">
 	<p><strong>Test 4:</strong><br></p>
-	<p>I found a very useful plug-in for firefox called "live Https headers" that prints off all the requests made when you interact with a webpage. I then was able to see that when I press the "log in" button, it was changing the value of the button to 1. So all I had to do was add this in to my second command when I post the username/password/token.<br><br>
+	<p>I found a very useful plug-in for firefox called "live Https headers" that prints off all the requests made when you interact with a webpage. I then was able to see that when I press the "log in" button, it was changing the value of the button to 1. So all I had to do was add this in to my second command when I post the username/password/token to simulate the button being pressed<br><br>
 	And finally it is also required to add a "-L" to tell curl to accept redirects. As by default curl will not. </p>
 	<br>
 	<p><strong>Conclusion:</strong></p>
