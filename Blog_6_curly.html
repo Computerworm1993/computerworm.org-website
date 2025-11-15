@@ -65,7 +65,9 @@
 	<p>Potential Use Case: signing in/accepting "terms of service" on public wifi networks without using a browser. </p>
 </div>
 <div class="round3">
-	<p>I kind of fell down this rabbit hole after a mutual of mine in a discord server I'm in was saying they have been playing around on an ancient laptop with windows xp on it. And he'd like to connect to the wifi at his university. But unfortunetly the browser he has is so old that it doesnt redirect him to the networks login page. So I thought I'd give it a try with curl</p>
+	<p>I kind of fell down this rabbit hole after a mutual of mine in a discord server I'm in was saying they have been playing around on an ancient laptop with windows xp on it. Unfortunely since it is so old the web browser doesn't work properly, and he cannot download another browser because he needs to accept the terms of service of his universities wifi network before using the internet.<br><br>So I thought I'd give it a try with curl. 
+		<br>The idea is a person can use curl to sign into the network, and then use wget to download another web browser that is designed to work with outdated operating systems like Serpent or supermium.
+	</p>
 </div>
 <br>
 <div class="round3">
@@ -132,7 +134,7 @@ open webpage in a browser and right click on element (text box, etc. ) -> "inspe
 <div class="round3">
 	<p>
 		<strong>Test 3:</strong><br>
-		<p>Lets ensure we are using the name session by first saving a cookie with -c to a text file we will call "cookies.txt". And then in our second curl we send that cookie with -b.<br>I also had to include an '-H "referer: "' argument as the server gave an error that there wasn't one.</p>
+		<p>Lets ensure we are using the same session by first saving a cookie with -c to a text file we will call "cookies.txt". And then in our second curl we send that cookie with -b.<br>I also had to include an '-H "referer: "' argument as the server gave an error that there wasn't one.</p>
 		<p><span>TOKEN=$(curl -c cookies.txt https://accounts.fedoraproject.org/ | grep -oP 'name="login-csrf_token" type="hidden" value="\K.*' | rev| cut -c 3- | rev)</span></p>
 		<p><span>curl -H "Referer: https://accounts.fedoraproject.org/" -b cookies.txt --data "login-username=my_username&login-password=my_password&login-csrf_token=$TOKEN" "https://accounts.fedoraproject.org/"</span></p>
 		<p>This seems to work, however the html that is returned is the same as the login page, however going through it it does appear our inputs have been filled out. We just need to figure out how to script the "submit" button being pressed</p>
