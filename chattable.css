@@ -5,9 +5,12 @@
   --text-color: #000;
   --shadow-color: #300;
 }
-
+@font-face {
+  font-family: worm95;
+  src: url(w95fa.woff2);
+}
 body {
-  font-family: "Courier New";
+  font-family: "worm95";
   font-smooth: never;
 }
 #background, #settingsMenu {
