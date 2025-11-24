@@ -1,0 +1,12 @@
+body {
+  font-family: worm95;
+  src: url(w95fa.woff2);
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 640px;
+}
+.round3 {
+  border: 3px solid #95acca;
+  border-radius: 12px;
+  padding: 5px;
+  background: #e0e3ec;}
