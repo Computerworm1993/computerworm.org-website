@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Worm-Server</title>
+	<style>
+	body{
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 640px;
+		background: teal;
+		}
+	a {
+		color: red;
+		}
+		p span{
+		text-align: center;
+		color: rgb(28, 162, 37);
+		font-family: "Courier New", Times, serif;
+		}
+        p {
+		font-family: "Courier New", Times, serif;
+        }
+		.round3 {
+        border: 3px solid #95acca;
+        border-radius: 12px;
+        padding: 5px;
+        background: #e0e3ec;}
+	th {
+		background-color: rgb(147, 121, 121);
+		color: #fff;
+	}
+		
+    td {
+        border-top: 1px solid #fff;
+		background-color: rgb(147, 121, 121);
+    }
+    th {
+        padding-top: 6px;
+        border: 1px solid #fff;
+
+    }
+    td:nth-child(2) { 
+        color: aqua;
+     }
+    td:nth-child(1) { 
+        padding: 5px;
+     }
+	</style>
+</head>
+  <body><h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
+<p><a href="index.html">Return Home</a></p>
+
+<div class="round3" style="text-align: center;">
+<p><strong>self hosted websites</strong></p>
+<p><strong><small>apache server</small></strong></p>
+</div>
+<br>
+<div class="round3">
+    <p>This was my first server experiment. I chose fedora 43 server edition since I am used to using fedora workstation as my personal computers daily driver. <br><br>
+    As far as operating systems go, it's pretty bare bones. Doesn't ship with a desktop environment, which is nice that it's quite minimal bloat. Just what youd want for a server that would potentially be running near 24/7. <br><br>
+I thought it was kind of interesting that I had to install nano text editor myself though, that seems like a basic requirement, but anyways, after installing fedora I installed Apache Http Server.</p>
+<div class="round3">
+    <img src="Art/server/apacheWebHost.jpg" style="width: 100%;">
+</div>
+<div class="round3">
+    <p>It's fairly straight forward to use. By default it listens to port 80, and will serve your .html files from /var/www/html/ directory. This is all customizable through various .conf files as well. And you can serve multiple websites off of different ports too. Pretty neat stuff. <br><br>
+    In order to be accessible from the internet I had to go into my routers settings and port forward TCP port 80. Then, since I didn't have a DNS set up, in a web browser I had my friends type in my ip address and it served them up my files perfectly. <br><br>Really cool too about self hosting is being able to see the logs in real time. Whenever someone visited my site I am able to see their ip address as well as their operating system/browser. Interestingly enough I got a hit from India which I assume must have just been some automated webscraper? but it made me a little nervous since I'm certain having a big open door port to the internet is a bit like an invitation for trouble. <br>
+<br>
+I know there are ways to safely do it but I was just testing stuff out and closed it back up afterwards.</p>
+</div>
+<br>
+<div class="round3">
+    <img src="Art/server/logFile.png" style="width: 100%;">
+    <br>
+    <p>here you can see my log file that updates in real time. The last ip that I served my files to was the one that when I did a reverse ip lookup it showed India. The rest is my friends iphone [Mac OS X]<br><br>
+    Something kind of cool that probably wouldn't be too hard to make is you could send data to a small pi 0 or other micro controller to turn on a light or chime or send you a text whenever you got a web page hit. Nice for a 
+small hobbyist site like my own here but it would for sure be annoying if you were more popular lol. Kinda dumb too but in a cool way I guess. I think maybe it'd be more fun to build something like that than it is to have it finished and working if that makes sense</p>
+<br><br>
+Anyways after I closed down my ports again I did some fiddling with the configs without reading the documentation and now it won't serve files at all; even locally LOL. Which is fine, it takes me nothing to reinstall everything as this was purely experimental for me to learn and play with. I guess thats why they call them Homelabs
+</div>
+</div>
+<p><a href="index.html">Return Home</a></p>
+ 
+ </body>
+</html>
