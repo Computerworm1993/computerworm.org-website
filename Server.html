@@ -32,6 +32,9 @@
      }
 </style>
 <script>
+    function nav2Wormhole() {
+    window.parent.location.href = "Server_2_Wormhole.html";
+    }
     function nav2WebHosting() {
     window.parent.location.href = "Server_1_WebHosting.html";
     }
@@ -44,6 +47,10 @@
 			<tr>
 			    <td style="text-wrap: nowrap;"><input type="button" onclick="nav2WebHosting()" value="webhosting" /></td>
 			    <td>hosting websites with apache httpd</td>
+			</tr>
+			<tr>
+			    <td style="text-wrap: nowrap;"><input type="button" onclick="nav2Wormhole()" value="wormhole" /></td>
+			    <td>movie streaming service with jellyfin</td>
 			</tr>
 				</table>
             </div>

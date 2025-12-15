@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Worm-Server</title>
+	<style>
+	body{
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 640px;
+		background: teal;
+		}
+	a {
+		color: red;
+		}
+		p span{
+		text-align: center;
+		color: rgb(28, 162, 37);
+		font-family: "Courier New", Times, serif;
+		}
+        p {
+		font-family: "Courier New", Times, serif;
+        }
+		.round3 {
+        border: 3px solid #95acca;
+        border-radius: 12px;
+        padding: 5px;
+        background: #e0e3ec;}
+	th {
+		background-color: rgb(147, 121, 121);
+		color: #fff;
+	}
+		
+    td {
+        border-top: 1px solid #fff;
+		background-color: rgb(147, 121, 121);
+    }
+    th {
+        padding-top: 6px;
+        border: 1px solid #fff;
+
+    }
+    td:nth-child(2) { 
+        color: aqua;
+     }
+    td:nth-child(1) { 
+        padding: 5px;
+     }
+	</style>
+</head>
+  <body><h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
+<p><a href="index.html">Return Home</a></p>
+
+<div class="round3" style="text-align: center;">
+<p><strong>the wormhole</strong></p>
+<p><strong><small>self hosted streaming</small></strong></p>
+</div>
+
+<br>
+<div class="round3">
+    <p>My second server experiment was testing out and playing with jellyfin media server software. It's essentially just like netflix or prime but just with your own files. <br><p style="text-align: center;">🏴‍☠️ All 100% legally obtained obviosly 🏴‍☠️</p>
+</p>
+</div>
+<br>
+<div class="round3">
+    <p>Whats cool about jellyfin is that you can customize it completly with basic CSS. Actually the whole thing is FOSS so you could customize the html/ui it serves even further if you wanted. Something that would be awesome to write in is a page for movie requests from users. My users are my mom and dad though so they can just text me. But I might make it for the fun of it.<br><br>
+    <br>here you can see my log in screen<br>
+        <img src="server/wormholeLogin.jpg" style="width: 100%;"></p>
+        <p>the background image is a semi-ugly but kinda cool desktop wallpaper I had made a bit ago.</p>
+</div>
+<br>
+<div class="round3"><p>By default you will only be able to access the server while on the same LAN network. There are various methods for accessing it over the internet. I didn't want to just have my ports wide open because of people who run port scanning bots, like I discovered with random traffic from India when I opened up my apache server in my first experiment. Essentially it is like a program going up to all of your doors and windows and jiggling the handle. If it's unlocked then it can report back for further probing, if not then it goes to the next port. Freaks me out.<br><br>
+The method I settled on that seemed to be the safest and relatively simple is to utilize Tailscale vpn. Free accounts allow 20 devices to be on a virtual network, and to be honest 20 is probably more than I am willing to allow to suck down my home internets bandwidth. Tailscale works good for allowing me to share this with my mom and dad and maybe a few others depending on how big of a drain on my network this turns out to be.<br><br>
+I am curious about certain routers being capable of filtering for specific ip addresses. So I could open ports to known ip's only, but my router I got stock from my internet provider does not have this functionality. I'm not sure how well it would work for dynamic ip's anyways I would have to be constantly editing it every time ip's were renewed which would be a pain. Could write scripts to automate it I suppose but Tailscale is a whole lot easier</p>
+<p>Additionally with Tailscale, everyone is able to simply type in wormhole:8096 into their web browser such as chrome, edge, firefox etc. to access it. [with 8096 being the port # for my server] so it makes it really easy for people rather than having to type in my whole ip address. </p>
+</div>
+<br>
+<div class="round3">
+    <p>jellyfin utilizes SQLite databases so I tried my hand at querying them. This is super cool to me and relatively useful too for monitoring traffic to my server. <br><br>
+    This shell script I wrote is called wormholeLog.sh</p>
+    <br>
+    <img src="Art/server/wormLogExample.png" style="width: 100%;">
+    <br><br>
+    you can read more about it <a href="Script_wormhole_log.html">here</a> but the jist of it is that it prints out current activity to my terminal, color coded by user.
+</div>
+<br>
+    <div class="round3">
+        <br><p>Some other customization I did was some artwork for all of my media folders (Anime, TV, Movies, Cartoons)</p><br>
+        <img src="Art/server/folderart1.png" style="width: 100%;">
+        <img src="Art/server/folderart2.png" style="width: 100%;">
+        <br><br>
+        <p>Jellyfin has been a blast to get up and running. And it's been a great learning opprotunity as well. 
+    <p>Some day I wouldn't mind figuring out how reverse proxys work to get this up online without the need for a vpn. There is so much to learn with homelabs and servers but it has been very rewarding</p>
+    <p>Also might consider adding music libraries or photos and documents as well to make like a private self-hosted cloud storage service. Just knowing google and microsoft train ai off your google photos/one drive for facial recognition etc makes me want nothing to do with them</p>
+</div>
+<p><a href="index.html">Return Home</a></p>
+ 
+ </body>
+</html>

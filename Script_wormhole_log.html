@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:image" content="Art/isopod/sword.png" />
+	<meta name="description" content=".*✩⚬° wormholeLog °⚬✩*." />
+	<title>//wormholeLog//</title>
+	<style>
+	body{
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 640px;
+		background: teal;
+        font-family: "Courier New", Times, serif;}
+	a {
+		color: red;}
+	p span{
+		position:relative;
+		display:inline-block;
+		text-align: center;}
+    .round3 {
+        border: 3px solid #95acca;
+        border-radius: 12px;
+        padding: 5px;
+        background: #e0e3ec;}
+	.row {
+  		display: flex;
+  		flex-wrap: wrap;
+  		padding: 0 2px;}
+
+/* Create two equal columns that sits next to each other */
+	.column img {
+  		vertical-align: middle;}
+    table {
+        text-align: center;}
+* {
+  box-sizing: border-box;}
+
+	.column{
+		float: left;
+    	text-align: center;
+		width: 50%;
+		padding: 1px;}
+	.row::after {
+  		content: "";
+  		clear: both;
+  		display: table;}
+	</style>
+</head>
+
+<body>
+
+<p><a href="scripts.html">Back</a></p>
+
+<div class="round3">
+    <p style="text-align: center"><strong>wormholeLog.sh</strong></p>
+</div>
+<div class="round3">
+    <p>This is a script I wrote for monitoring traffic to my "netflix-esque" jellyfin server</p>
+    <img src="Art/server/wormLogExample.png" style="width: 100%;">
+    <br>
+    <p>It works by querying the SQLite database file for the most recent 10 entries.</p>
+    <p>It then pipes the output of this query into a text file.</p>
+    <p>Then within a while loop I have repeat every 5 seconds, it performs a second query of the same database. This time piping output into an array. A few if;elsif;else functions are then used to determine if the value of the most recent entry has changed since the last query</p>
+    <p>If the value has changed. Then I search for usernames within the index of the changed array.<br>If user=mom then print index in cyan.<br> If user=dad then print index in green.<br>If user=worm then print index in yellow<br>etc. etc.<br>else print index in white</p>
+    <br><br>
+    <p>makes me feel like a peeping tom spying on people lol, but it is useful to see quickly at a glance for troubleshooting and if my network feels like it's being bogged down etc.</p>
+</div>
+<div class="round3">
+    <img src="Art/server/wormholeLogScript.png" style="width: 100%;">
+    <br><br>
+    <img src="Art/server/wormholeLogPicture.jpg" style="width: 100%;">
+    <p><br>super cool</p>
+</div>
+<p><a href="scripts.html">Back</a></p>
+ </body>
+</html>
