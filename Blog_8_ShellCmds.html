@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:image" content="Art/isopod/sword.png" />
+	<meta name="description" content=".*✩⚬° shell cmds °⚬✩*." />
+	<title>sea floor; sea shells</title>
+	<style>
+	body{
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 640px;
+		background: teal;
+        font-family: "Courier New", Times, serif;}
+	a {
+		color: red;}
+	p span{
+		position:relative;
+		display:inline-block;
+		text-align: center;}
+    .round3 {
+        border: 3px solid #95acca;
+        border-radius: 12px;
+        padding: 5px;
+        background: #e0e3ec;}
+	.row {
+  		display: flex;
+  		flex-wrap: wrap;
+  		padding: 0 2px;}
+
+/* Create two equal columns that sits next to each other */
+	.column img {
+  		vertical-align: middle;}
+    table {
+        text-align: center;}
+* {
+  box-sizing: border-box;}
+
+	.column{
+		float: left;
+    	text-align: center;
+		width: 50%;
+		padding: 1px;}
+	.row::after {
+  		content: "";
+  		clear: both;
+  		display: table;}
+	</style>
+</head>
+
+<body>
+    <h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
+<p><a href="index.html">Return Home</a></p>
+
+<div class="round3">
+    <p style="text-align: center"><strong>Essential Shell Commands</strong><br><small>some of my favourites</small></p>
+</div>
+<p style="text-align: center"><small>December 19, 2025</small></p>
+<br>
+<div class="round3">
+	<p><strong>netcat:</strong> transfering large files over networks using TCP or UDP</p>
+	<p><small>on server, listen for file on specified port</small></p>
+	<p><small>on source device. Cmpress with tar and send it over ssh connection</small></p>
+</div>
+<div class="round3">
+	<p><strong>ls | grep:</strong>combined list and search</p>
+	<p><small>learning how to pipe into grep has been so insanely useful for finding files through the terminal</small></p>
+</div>
+<div class="round3">
+	<p><strong>df -h:</strong> read disk usage; in -h "human readable" format</p>
+	<p><small>This has been useful as I fill up my servers drives with media, movies and music</small></p>
+</div>
+<div class="round3">
+	<p><strong>systemctl commands: </strong>checking status, stopping, starting and enabling services</p>
+	<p><small>such as vpn, tailscaled, firewalld, jellyfin. Very useful as i frequently open and close ports for netcat, and switch between vpn services depending on what I'm doing</small></p>
+</div>
+<div class="round3">
+	<p><strong>locate</strong> a quicker 'find' command</p>
+	<p><small>quite useful for finding the path to files and directories. When I experiment a little too hard and need a fresh install. After uninstalling software I can locate it to see what files got left behind like config files or whatever to delete so I can start completely clean and try again, till I break it next anyways lol. Though 'dnf purge' usually gets them all, but I always forget to use it and use 'dnf remove' instead by force of habit lol</small></p>
+</div>
+<p><a href="index.html">Return Home</a></p>
+ </body>
+</html>
