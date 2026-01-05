@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Worm-Server</title>
+	<style>
+	body{
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 640px;
+		background: teal;
+		}
+	a {
+		color: red;
+		}
+		p span{
+		text-align: center;
+		color: rgb(28, 162, 37);
+		font-family: "Courier New", Times, serif;
+		}
+        p {
+		font-family: "Courier New", Times, serif;
+        }
+		.round3 {
+        border: 3px solid #95acca;
+        border-radius: 12px;
+        padding: 5px;
+        background: #e0e3ec;}
+	th {
+		background-color: rgb(147, 121, 121);
+		color: #fff;
+	}
+		
+    td {
+        border-top: 1px solid #fff;
+		background-color: rgb(147, 121, 121);
+    }
+    th {
+        padding-top: 6px;
+        border: 1px solid #fff;
+
+    }
+    td:nth-child(2) { 
+        color: aqua;
+     }
+    td:nth-child(1) { 
+        padding: 5px;
+     }
+	</style>
+</head>
+  <body><h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
+<p><a href="index.html">Return Home</a></p>
+
+<div class="round3" style="text-align: center;">
+<p><strong>wormholeThrottle.sh</strong></p>
+<p><strong><small>networking</small></strong></p>
+</div>
+
+<br>
+<div class="round3">
+    <p>This is a script I wrote to manage network speeds and connections to my server, it uses linux's tc (traffic control) utility that basically tells the linux kernel packet schedueler how it should be configured.<br><br>My heaviest files (1080p movies) average about 4 MB/s of data leaving my server in order for users to have no buffering, but it does spike up and down. Unfortuneatly with my current internet service I only get 20 mbps upload speeds. Normally I don't notice if 2 people are streaming at once but if I try to play certain games I definetly do experience minor lag. <br><br>
+    That was my reasoning for creating this script to easily throttle down my servers upload speed if it begins to interfere with what I am doing.</p>
+    </p>
+</div>
+<br>
+<div class="round3">
+    <img src="Art/server/wormholeThrottleScript.png" style="width: 100%;">
+</div>
+<br>
+<div class="round3">
+    <p>very handy and simple to use instead of remembering the specific tc command and configuration. I am still playing with the limit I have set. 8mbps seems to work well so far, I tried my more resource intensive activities like gaming and I didn't notice any lag.<br><br> Additionally you set the burst and latency, which to be honest I'm a bit unsure how it all affects it. But I can keep fiddling with it till I find the best balance</p>
+    <p>At the bottom half of the script you see it prompts me on whether or not I would like to notify my users on the servers status. (is it throttled/normal/offline/online). This is just the stmplib python library I use in my other projects for sending sms text through telecom companys email 'gateways' [@msg.telus.ca] etc.</p>
+    <p><img src="Art/server/throttleAlert.jpg" style="width: 100%;"></p>
+    <p>Works like a charm. Something I'm also considering is instead of a text alert for status's I will just change the css on my login page. Like have a little notification there when people try to log in. Or maybe do a combo of the login css and also a text for only users who are currently logged in. Feel like itd be less annoying for people that way than automated text spam lol</p>
+</div>
+<p><a href="index.html">Return Home</a></p>
+ 
+ </body>
+</html>
