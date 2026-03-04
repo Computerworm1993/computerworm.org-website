@@ -55,8 +55,23 @@
 <div class="round3">
     <p style="text-align: center"><strong>Essential Shell Commands</strong><br><small>some of my favourites</small></p>
 </div>
-<p style="text-align: center"><small>December 19, 2025</small></p>
+<p style="text-align: center"><small>February 01, 2026</small></p>
 <br>
+<div class="round3">
+	<p><strong>Chaining Commands</strong></p>
+	<p><small>Learning this has been soooo cool. It opens the door to so many fun applications. For example, I can transfer files to my server with netcat. Then once it is done, run a script to notify me via text message. Then start my vpn and open up qbittorrent to start downloading more files. All with 1 chain command. Very cool</small></p>
+	<p><small>I usually download over night and run this chain in the morning before I go to work. It's great because it can start a fresh batch of dowloads while I'm at work.</small></p>
+	<p style="color: brown;"><small>tar czvf - 'downloads' | nc server_ip port# ;notify ;torrent</small></p>
+	<p><small>(where "notify" and "torrent" are both bash scripts I made)</small></p>
+	<br>
+	<p><strong>Types:</strong></p>
+	<p><small>types of chains include:</small></p>
+	<p>";"<small>The semi-colon waits for the first command to finish before starting the next</small></p>
+	<p>"&&"<small>This operator only executes the next command if the first command is successful</small></p>
+	<p>"||"<small>Opposite to &&. Only executes if first command fails</small></p>
+	<br>
+	<p>Example:<small> SomeShellScript.sh || echo "Script has failed - boo hoo"</small></p>
+</div>
 <div class="round3">
 	<p><strong>netcat:</strong> transfering large files over networks using TCP or UDP</p>
 	<p><small>on server, listen for file on specified port</small></p>
@@ -72,7 +87,7 @@
 </div>
 <div class="round3">
 	<p><strong>systemctl commands: </strong>checking status, stopping, starting and enabling services</p>
-	<p><small>such as vpn, tailscaled, firewalld, jellyfin. Very useful as i frequently open and close ports for netcat, and switch between vpn services depending on what I'm doing</small></p>
+	<p><small>such as vpn, tailscaled, firewalld, jellyfin, sshd. Very useful as i frequently open and close ports for netcat, and switch between vpn services depending on what I'm doing</small></p>
 </div>
 <div class="round3">
 	<p><strong>locate</strong> a quicker 'find' command</p>
