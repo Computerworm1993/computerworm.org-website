@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:image" content="Art/isopod/sword.png" />
+	<meta name="description" content=".*✩⚬° docker °⚬✩*." />
+	<title>docker</title>
+	<style>
+	body{
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 640px;
+		background: teal;
+        font-family: "Courier New", Times, serif;}
+	a {
+		color: red;}
+	p span{
+		position:relative;
+		display:inline-block;
+		text-align: center;}
+    .round3 {
+        border: 3px solid #95acca;
+        border-radius: 12px;
+        padding: 5px;
+        background: #e0e3ec;}
+	.row {
+  		display: flex;
+  		flex-wrap: wrap;
+  		padding: 0 2px;}
+
+/* Create two equal columns that sits next to each other */
+	.column img {
+  		vertical-align: middle;}
+    table {
+        text-align: center;}
+* {
+  box-sizing: border-box;}
+
+	.column{
+		float: left;
+    	text-align: center;
+		width: 50%;
+		padding: 1px;}
+	.row::after {
+  		content: "";
+  		clear: both;
+  		display: table;}
+	</style>
+</head>
+
+<body>
+    <h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
+<p><a href="index.html">Return Home</a></p>
+
+<div class="round3">
+    <p style="text-align: center"><strong>Docker</strong><br><small>torrenting in containers</small></p>
+</div>
+
+<br>
+<div class="round3">
+    <p>Finally got around to learning how to use docker containers. The super simple gist of it is that they are virtual containers that have everything required to run software inside. <br><br>
+    My main reason for using this is that it allows me to run my torrent downloading client as well as a vpn all within a container, seperated from the rest of my server. I can't have my torrenting vpn system-wide on my server because I already use another vpn (tailscale) in order to 
+    ssh remotely when I am not home. So having only qbt-nox use this vpn is perfect
+<br><br>
+Up until now all my downloads have been done on my daily driver laptop, and then I will transfer the files through netcat over to my server. The obvious downsides of this being<br><br>
+1.) limited laptop storage, even though the files are only there temporarily<br>
+2.) slowish transfers over netcat, especially with 150+ GB at a time<br>
+3.) downloads require use of vpn, which means I cannot ssh to work on the server at the same time</p>
+</div>
+<br>
+<div class="round3">
+    <p>Docker was fairly simple to set up to be honest, originally I had made 2 containers. One holding qbittorrent-nox and the other gluetun for vpn. Each worked well individually but I struggled getting qbt-nox container to route through the gluetun one. So I ended up making them all 1 container. This worked well, but then
+        I had issues with connecting to the webui of qbt-nox. Super simple fix is to map the webui port in the gluetun compose.yaml file (i.e 8080:8080) and after doing that
+        everything works as it should. :)</p>
+</div>
+<br>
+<div class="round3">
+    <p>Really convient now for downloading very large files directly onto the hard drive where they will live permanently. Especially for the slow to download ones without many peers</p>
+</div>
+<br>
+<div class="round3">
+    <p>I believe you can also script it so that when a torrent has finished downloading, you can automatically move it to it's appropriate directory for jellyfin to see it (/movies, /television, /anime, etc. etc.)</p>
+    <br>
+    <br>
+    <p>I almost want to write a script that monitors my email for a code I will set, so I can email myself a torrent magnet link and my server will begin the download and transfer to the right dir all automatically. 
+        It would allow me to let some of my users add there own media. For example they could send an email like<br><br> subject: <br>"password/code" <br><br>body: <br>MAGNET="magnet link"<br>TYPE="/Movie"<br>NOTIFY="yes/no"<br>And my server will do the rest
+        <br>And then finally it can send a reply email when everything is done so they know it is ready to watch 
+    </p>
+</div>
+<p><a href="index.html">Return Home</a></p>
+ </body>
+</html>
