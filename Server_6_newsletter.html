@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="description" content=".*✩⚬° big update °⚬✩*." />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>.*✩⚬° April showers may flowers °⚬✩*.</title>
+	<style>
+	body{
+		margin: 0 auto;
+		max-width: 700px;
+		background-image: url("Art/Home/spacebg.gif ");
+		}
+	a {
+		color: red;
+		font-size: 14px;
+	}
+	p span{
+		position:relative;
+		display:inline-block;
+		background:navy;
+		color:white;
+		font-size: 10px;
+		}
+    .round {
+        border: 3px solid #95acca;
+        border-radius: 12px;
+        padding: 5px;
+        background: #e0e3ec;
+    }
+    .News {
+        background: #3450a2;
+        border: 3px solid #95acca;
+        border-radius: 12px;
+        padding: 5px;
+    }
+    .Info {
+        background: #25915b;
+        border: 3px solid #95acca;
+        border-radius: 12px;
+        padding: 5px;
+    }
+    td {
+        border-top: 1px solid #fff;
+		background-color: rgb(147, 121, 121);
+    }
+    th {
+        padding-top: 6px;
+        border: 1px solid #fff;
+
+    }
+    td:nth-child(2) { 
+        color: aqua;
+     }
+    td:nth-child(1) { 
+        padding: 5px;
+     }
+    </style>
+    </head>
+    <body>
+        <h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
+<p><a href="index.html">Return Home</a></p>
+        <br>
+        <div class="round" style="text-align: center;">
+        <h1>APRIL SHOWERS;MAY FLOWERS
+        </h1>
+        <p style="margin-top: -20px;">--- big changes to the server ---</p>
+</div>
+
+<br>
+
+<div class="News">
+    <!-- 57 - used to seperate news items on a day entry-->
+    <div style="text-align: center;"><p><strong></strong></p></div>
+<br>
+<div class="round">
+    <p style="color: chocolate;">17-04-26</p>
+        <p> potentially breaking changes for you 
+            <br>---------------------------------------------------------
+            <br> As some of you may know, the main bottleneck with my server currently is my upload speed I get with my internet service provider.
+            <br><br>I plan on moving the server to my aunts basement in edmonton where she has access to fiber optic.
+            <br><br>
+            What this means is many more users will be able to have access. Awesome. But the downside is that I will no longer be able to transcode for incompatible devices.
+            <br><br>
+            wtf is transcoding? <br>Transcoding means my server converts the files into one that your device (tv/xbox/etc), is able to read. It does this "on the fly" directly as you stream it. So far it's worked out fine/managable, but as you can see from image below. Having even just 3 people requiring transcoding at the same time eats up 100% of my cpu on all 4 cores lol.
+            <br>
+            <img src="Art/server/btop_3_transcodes.png" style="width: 100%;">
+            <br>
+            So regretfully, with potentially double the amount of new users, there is no way to sustain everybody with transcoding.
+            <br>---------------------------------------------------------
+            <br>When?
+            <br>Planning to make the move the first weekend in may; server will be down for maybe even a few days as I will need to resolve my DNS with a new ip address and everything else.
+        </p>
+</div>
+<br>
+<div class="round">
+    <p>Silver Lining</p>
+    <br>---------------------------------------------------------
+    <br>I have gone through the effort of permenently transcoding my movies collection into a format that will play on practically any device.
+    <br><br>
+    The format is as follows:
+    <br>
+    * container: .mp4
+    <br>* video codec: AVC (h.264) 8/10 bit SDR
+    <br>* audio codec: AAC and sometimes Dolby surround (optional)
+    <br>* subtitles: .srt or .ass or mov_text
+    <br>---------------------------------------------------------
+    <br>These are old well established codecs, with a ton of support. And should play on 
+    <br>** chrome/firefox/edge
+    <br>** xbox/playstation
+    <br>** android TV
+    <br>** Roku TV
+    <br>** amazon fire TV
+</div>
+<br>
+<div class="round">
+    <p>Non-Silver Lining... Coal Lining?</p>
+    <br>---------------------------------------------------------
+    <br>I have semi-standardized Television into the following format
+    <br><br>
+    * container: .mkv
+    <br>* video codec: HEVC (h.265) mostly 10 bit/some 8 bit SDR
+    <br>* audio codec: EAC3/AC3/and a few OPUS
+    <br>* Subtitles: .srt or .ass or mov_text
+    <br>---------------------------------------------------------
+    <br>This is a newer standard, much more efficient and higher quality vs file size. And it is also future proof, meaning this is what devices and streaming services are moving towards.
+    <br><br>With the obvious trade-off of it being less supported on older devices and hardware.
+    <br>---------------------------------------------------------
+    <br>To the best of my knowledge. This should play on most things, but here is a rough guide from what I can tell from online.
+    <br>
+    <div class="sysTitle" style="background-color: bisque; text-align: center;">----- COMPATIBILITY -----</div>
+    <table style="margin:0 auto">
+        <tr><td>xbox one series S: </td><td> Full compatibility (except for old anamorphic video, which i am converting slowly). Personally tested (what i use)</td></tr>
+        <tr><td>playstation 5:</td><td>i dont know, but im guessing same as xbox 1 s</td></tr>
+        <tr><td>chrome: </td><td>chromium 107 (when hardware is available)</td></tr>
+        <tr><td>firefox: </td><td> does not play mkv files or AC3 audio</td></tr>
+        <tr><td>edge: </td><td> requires hevc codec from microsoft store. then should work i think</td></tr>
+        <tr><td>safari</td><td>mkv with hevc = no good</td></tr>
+        <tr><td>android TV/amazon fire</td><td>yes; with android 5.0+ ; however early amazon fire may not, device dependant</td></tr>
+        <tr><td>swiftfin (iOS): </td><td> yes with iOS 14 and A8X chip or newer</td></tr>
+        <tr><td>roku: </td><td>hevc only supported on 4k devices</td></tr>
+        <tr><td>kodi with jellyfin plugin:</td><td>yes; full compatibility</td></tr>
+        <tr><td>jellyfin desktop client:</td><td>yes; full compatibility</td></tr>
+    </table>
+    <br>
+    <p>Asides from my xbox and google chrome, and an "amazon fire stick 4k select", I haven't tested the others.
+        <br>So I'd say look up the specifications for your particular device, or if you would like. You can watch 2-3 minutes of the following files and ask me.
+        <br>I will look in my servers log files wether it had to transcode for you or if they were compatible.
+        <br>
+        <br>12 Monkeys [S01E01] - mkv. HEVC 8 bit SDR. AC3 - 6 ch.
+        <br>3 Body Problem [S01E01] - mkv. HEVC 10 bit. EAC3 - 6 ch.
+    </p>
+</div>
+<br>
+<div class="round">
+    <p>As a final note, there is a possibility where I can turn on server side transcoding again sometime in the future, but It may not be for a while if I ever do.
+        <br>It would involve hardware acceleration and have a gpu do the work instead of my cpu but I'm not entirely sure how it works and I'm lowkey scared to try it. It would require me installing a completely different OS and a full server rebuild from backed up files. So realistically I think if I ever upgrade the host machine then I will start fresh with that route in mind, and get something with a dedicated gpu I can use.
+        As far as future upgrades go a new host system is near the bottom of my list, so needless to say, don't hold your breathe for transcodes to come back permanently.<br>
+        <br><br>Additionally, if I ever do decide to upgrade the movie files to be 4k resolution, then they will mosre than likely be in the same format and codecs of the tv shows (HEVC/EAC3) as it just makes way more sense from a technical viewpoint as well as it's already becoming the new standard.<br>
+    <br>If you end up wanting to watch something that is incompatible with your device, I'm open to temporarily allowing transcodes depending on current server load if its feasable. <br><br>Anyways thanks for reading, I know it was a bit wordy and I'm probably the only one interested in the juicy details but it seems relevant to everyone <br><br>-- Connor
+    </p>
+</div>
+</div>
+<p><a href="index.html">Return Home</a></p>
+</div>
+<br><br><br>
+    </body>
