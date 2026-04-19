@@ -73,7 +73,7 @@
     <div style="text-align: center;"><p><strong></strong></p></div>
 <br>
 <div class="round">
-    <p style="color: chocolate;">17-04-26</p>
+    <p style="color: chocolate;">18-04-26</p>
         <p> potentially breaking changes for you 
             <br>---------------------------------------------------------
             <br> As some of you may know, the main bottleneck with my server currently is my upload speed I get with my internet service provider.
@@ -104,7 +104,7 @@
     <br>* audio codec: AAC and sometimes Dolby surround (optional)
     <br>* subtitles: .srt or .ass or mov_text
     <br>---------------------------------------------------------
-    <br>These are old well established codecs, with a ton of support. And should play on 
+    <br>These are old well established codecs, with a ton of support. And should play on .... honestly anything I can think of.
     <br>** chrome/firefox/edge
     <br>** xbox/playstation
     <br>** android TV
@@ -116,7 +116,7 @@
     <p>Non-Silver Lining... Coal Lining?</p>
     <br>---------------------------------------------------------
     <img src="Art/server/cryBunnyGirl.png" style="width: 100%;">
-    <br>I have semi-standardized Television into the following format
+    <br>I have semi-standardized Television into the following format (still a work in progress)
     <br><br>
     * container: .mkv
     <br>* video codec: HEVC (h.265) mostly 10 bit/some 8 bit SDR
@@ -126,24 +126,26 @@
     <br>This is a newer standard, much more efficient and higher quality vs file size. And it is also future proof, meaning this is what devices and streaming services are moving towards.
     <br><br>With the obvious trade-off of it being less supported on older devices and hardware.
     <br>---------------------------------------------------------
-    <br>To the best of my knowledge. This should play on most things, but here is a rough guide from what I can tell from online.
+    <br>Support for these codecs can be a bit hit and miss. Here is a rough guide from what I can tell from online as well as some I have tested myself.
     <br>
     <div class="sysTitle" style="background-color: bisque; text-align: center;">----- COMPATIBILITY -----</div>
     <table style="margin:0 auto">
-        <tr><td>xbox one series S: </td><td> Full compatibility (except for old anamorphic video, which i am converting slowly). Personally tested (what i use)</td></tr>
-        <tr><td>playstation 5:</td><td>i dont know, but im guessing same as xbox 1 s</td></tr>
-        <tr><td>chrome: </td><td>chromium 107 (when hardware is available)</td></tr>
-        <tr><td>firefox: </td><td> does not play mkv files or AC3 audio</td></tr>
-        <tr><td>edge: </td><td> requires hevc codec from microsoft store. then should work i think</td></tr>
-        <tr><td>safari</td><td>mkv with hevc = no good</td></tr>
-        <tr><td>android TV/amazon fire</td><td>yes; with android 5.0+ ; however early amazon fire may not, device dependant</td></tr>
-        <tr><td>swiftfin (iOS): </td><td> yes with iOS 14 and A8X chip or newer</td></tr>
-        <tr><td>roku: </td><td>hevc only supported on 4k devices</td></tr>
-        <tr><td>kodi with jellyfin plugin:</td><td>yes; full compatibility</td></tr>
-        <tr><td>jellyfin desktop client:</td><td>yes; full compatibility</td></tr>
+        <tr><td>jellyfin desktop client:</td><td style="background-color: #25915b;">yes; full compatibility; recommended for computers/laptops</td></tr>
+        <tr><td>xbox one series S: </td><td style="background-color: #25915b;">yes; Full compatibility (except for old anamorphic video, which i am converting slowly). Personally tested (what i use)</td></tr>
+        <tr><td>playstation 5:</td><td style="background-color: rgb(198, 198, 7)">i dont know, but im guessing same as xbox 1 s</td></tr>
+        <tr><td>chrome: </td><td  style="background-color: rgb(152, 23, 0)">no; doesn't like a lot of EAC3 files.</td></tr>
+        <tr><td>firefox: </td><td  style="background-color: rgb(152, 23, 0)">no; does not play mkv files or AC3 audio</td></tr>
+        <tr><td>edge: </td><td  style="background-color: rgb(152, 23, 0)"> probably no; requires hevc codec from microsoft store, idk about sound</td></tr>
+        <tr><td>safari</td><td  style="background-color: rgb(152, 23, 0)">no; mkv with hevc = no good</td></tr>
+        <tr><td>android TV/amazon fire</td><td  style="background-color: rgb(198, 198, 7)">most; with android 5.0+ ; however early amazon fire may not, device dependant</td></tr>
+       <!-- <tr><td>"amazon fire stick 4k select"</td><td  style="background-color: #25915b;">yes; personally tested</td></tr> -->
+        <tr><td>swiftfin (iOS): </td><td  style="background-color: rgb(198, 198, 7)"> most; with iOS 14 and A8X chip or newer</td></tr>
+        <tr><td>roku: </td><td  style="background-color: rgb(198, 198, 7)">some; hevc only supported on 4k devices. EAC3/AC3; probably? OPUS; yes</td></tr>
+        <tr><td>kodi with jellyfin plugin:</td><td  style="background-color: #25915b;">yes; I think. may depend some on device with kodi on it</td></tr>
+
     </table>
     <br>
-    <p>Asides from my xbox and google chrome, and an "amazon fire stick 4k select", I haven't tested the others.
+    <p>Asides from my xbox/the major browsers, I haven't tested the others.
         <br>So I'd say look up the specifications for your particular device, or if you would like. You can watch 2-3 minutes of the following files and ask me.
         <br>I will look in my servers log files wether it had to transcode for you or if they were compatible.
         <br>
@@ -160,6 +162,13 @@
     <br>If you end up wanting to watch something that is incompatible with your device, I'm open to temporarily allowing transcodes depending on current server load if its feasable. <br><br>Anyways thanks for reading, I know it was a bit wordy and I'm probably the only one interested in the juicy details but it seems relevant to everyone <br><br>-- Connor
     </p>
 </div>
+</div>
+<br>
+<div class="round">
+    <p>How to install jellyfin desktop client for your pc/laptop.<br><br>
+    Go to <a href="https://github.com/jellyfin-archive/jellyfin-desktop-qt/releases">THIS</a> github page and scroll down to version "v1.12.0 - Bugfix Release"<br>
+<br>Under "assets" choose the installer right for your operating system. For the most of you it will be windows-x64.exe [64 bit windows 10 or 11]<br><br>
+Download and then double click, follow installation instructions. Sign in to server (address is same as website; https://computer-wormhole.org) </p>
 </div>
 <p><a href="index.html">Return Home</a></p>
 </div>
