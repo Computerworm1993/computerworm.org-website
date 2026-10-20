@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:image" content="Art/isopod/sword.png" />
+	<meta name="description" content=".*✩⚬° debian linux °⚬✩*." />
+	<title> - Petri Dish - </title>
+	<style>
+	body{
+		padding: 1rem;
+		margin: 0 auto;
+		max-width: 640px;
+		background: #4287f5;
+        font-family: "Courier New", Times, serif;}
+	a {
+		color: red;}
+	p span{
+		position:relative;
+		display:inline-block;
+		text-align: center;}
+    .round3 {
+        border: 3px solid #95acca;
+        border-radius: 12px;
+        padding: 5px;
+        background: #e0e3ec;}
+	.row {
+  		display: flex;
+  		flex-wrap: wrap;
+  		padding: 0 2px;}
+
+/* Create two equal columns that sits next to each other */
+	.column img {
+  		vertical-align: middle;}
+    table {
+        text-align: center;}
+* {
+  box-sizing: border-box;}
+
+	.column{
+		float: left;
+    	text-align: center;
+		width: 50%;
+		padding: 1px;}
+	.row::after {
+  		content: "";
+  		clear: both;
+  		display: table;}
+	</style>
+</head>
+
+<body>
+    <h1><img src="Art/Home/comp worm.gif" style="width:100%" /></h1>
+<p><a href="index.html">Return Home</a></p>
+
+<div class="round3">
+    <p style="text-align: center"><strong>Livestreaming | Owncast</strong><br><small>self hosted twitch</small></p>
+</div>
+<p style="text-align: center"><small>October 19, 2026</small></p>
+<br>
+<div class="round3">
+    <img src="Art/cl/beecast/beecastLogo.png" style="width: 100%;">
+
+</div>
+<br>
+<div class="round3">
+	<p>Owncast as a self hosted FOSS alternative to services such as twitch, for live streaming. It actually works pretty well once you learn a bit about ffmpeg and optomizing bitrates.
+		It's a great way to stream a movie night for a bunch of people at once; without having a bunch of randoms have accounts on wormhole [jellyfin]. 
+		<br><br>
+		Also its great that it is just HLS stream so literally any device or browser can read it just fine. You can also grab the stream .m38u and play it in any old iptv app or vlc. I play it through vlc command line remotely on a raspberry pi connected to my CRT tv sometimes.
+	</p>
+</div>
+<br>
+<div class="round3">
+    <img src="Art/cl/beecast/beecastCRT.jpg" style="width: 100%;">
+
+</div>
+<br>
+<div class="round3">
+	<p>I sometimes broadcast from my laptop -> server over tailscale VPN; but as it stands now only I am able to. I can allow incoming rtmp streams over the internet, but it doesnt play nice with the reverse proxy I use [caddy]. In the future I will probably switch to nginx or something else that is compatable with rtmp specifically.</p>
+</div>
+<br>
+<div class="round3">ffmpeg is a bit annoying to have to fine tune the command for each individual movie I stream; to optimize it. But overall its not bad. Takes me about a minute. Just have to match up the bitrate and fps pretty much.
+	<img src="Art/cl/beecast/beecastFFMPEG.png" style="width: 100%;">
+</div>
+<br>
+<div class="round3">
+	Anyways, owncast is pretty cool. The live chat is a nice feature, and you can have all sorts of your own emojis etc. And theres ever username auth using your own domain.
+</div>
+<p><a href="index.html">Return Home</a></p>
+ </body>
+</html>
