@@ -36,7 +36,10 @@
      }
 </style>
 <script>
-    function nav2Qmmp() {
+    function nav2Echo() {
+    window.parent.location.href = "Blog_14_echo_mp3.html";
+}
+function nav2Qmmp() {
     window.parent.location.href = "Blog_13_qmmp.html";
 }
     function nav2Petri() {
@@ -82,6 +85,10 @@
                 <table>
 					<tr><th>title</th><th> date </th></tr>
 			<tr>
+			    <td style="text-wrap: nowrap;"><input type="button" onclick="nav2Echo()" value="echo .mp3" /></td>
+			    <td>Nov 19, 2026</td>
+			</tr>
+            <tr>
 			    <td style="text-wrap: nowrap;"><input type="button" onclick="nav2Qmmp()" value="qmmp - music" /></td>
 			    <td>Nov 15, 2026</td>
 			</tr>
